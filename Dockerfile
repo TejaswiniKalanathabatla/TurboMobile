@@ -1,9 +1,9 @@
-FROM 155400439473.dkr.ecr.us-east-1.amazonaws.com/poc-docker:BaseImage3
+FROM tejaswini25/dockerimage:PROD.5
 
 
 
 # Copy any additional files or configurations to the container
-COPY target/TurboMobile.war /usr/local/tomcat/webapps/ROOT.war
+COPY TurboMobile/target/TurboMobile.war /usr/local/tomcat/webapps/ROOT.war
 
 
 # Expose any necessary ports

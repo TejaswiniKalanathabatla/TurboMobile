@@ -1,0 +1,7 @@
+.wm-app .app-livelist.active-list[name="addonsDataList"]>.list-group.app-horizontal-list {
+    flex-wrap: wrap;
+}
+
+.wm-app .app-livelist.active-list[name="addonsDataList"]>.list-group.app-horizontal-list>.app-list-item {
+    width: max(calc(33.33% - 42px), 100px);
+}

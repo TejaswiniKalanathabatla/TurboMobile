@@ -1,0 +1,129 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "x-WM-API_ID" : "cea10a5e-0f9f-4066-b887-dec7086994f4",
+    "x-WM-SERVICE_ID" : "onwavemaker",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-USE_WITH_CREDENTIALS" : false
+  },
+  "host" : "dev-turboservices.onwavemaker.com",
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "GetUserByEmail"
+  } ],
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/GetUserByEmail/flanker_db/queryExecutor/queries/getUserFromEmail" : {
+      "get" : {
+        "tags" : [ "GetUserByEmail" ],
+        "operationId" : "GetUserByEmail_invoke",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "email",
+          "in" : "query",
+          "description" : "email",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-BASE_PATH" : "/GetUserByEmail/flanker_db",
+      "x-WM-TAG" : "GetUserByEmail",
+      "x-WM-RELATIVE_PATH" : "/queryExecutor/queries/getUserFromEmail",
+      "x-WM-COMPLETE_PATH" : "${rest.GetUserByEmail.scheme}://${rest.GetUserByEmail.host}${rest.GetUserByEmail.basepath}/flanker_db/queryExecutor/queries/getUserFromEmail"
+    }
+  },
+  "definitions" : {
+    "Response.contentEntryItem" : {
+      "required" : [ "email", "id", "name", "password" ],
+      "properties" : {
+        "password" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "email" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetUserByEmail.Response.contentEntryItem",
+      "x-WM-TAGS" : [ "GetUserByEmail" ]
+    },
+    "java.lang.Object" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetUserByEmail.java.lang.Object",
+      "x-WM-TAGS" : [ "GetUserByEmail" ]
+    },
+    "RootResponse" : {
+      "required" : [ "content", "empty", "first", "last", "number", "numberOfElements", "size", "sort", "totalElements", "totalPages" ],
+      "properties" : {
+        "number" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "last" : {
+          "type" : "boolean"
+        },
+        "size" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "numberOfElements" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "totalPages" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "sort" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/java.lang.Object"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "content" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Response.contentEntryItem"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "first" : {
+          "type" : "boolean"
+        },
+        "totalElements" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "empty" : {
+          "type" : "boolean"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetUserByEmail.RootResponse",
+      "x-WM-TAGS" : [ "GetUserByEmail" ]
+    }
+  }
+}

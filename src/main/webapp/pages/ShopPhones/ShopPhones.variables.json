@@ -1,0 +1,27 @@
+{
+  "wsGetPhoneVariant" : {
+    "_id" : "wm-wsGetPhoneVariant-wm.ServiceVariable-1691476579948",
+    "name" : "wsGetPhoneVariant",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "id",
+      "value" : "bind:pageParams.product_variant_id",
+      "type" : "integer"
+    } ],
+    "type" : "com.wavemaker.turbomobiles.FlankerAPI.PhoneVariant",
+    "service" : "FlankerAPI",
+    "operation" : "FlankerAPI_PhoneVariantController_getPhoneVariant",
+    "operationId" : "FlankerAPI_PhoneVariantController_getPhoneVariant",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "PhoneVariant"
+  }
+}

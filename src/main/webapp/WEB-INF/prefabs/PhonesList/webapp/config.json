@@ -1,0 +1,60 @@
+{
+  "displayName" : "PhonesList",
+  "group" : "",
+  "iconUrl" : "/resources/images/imagelists/Phones_list_Rectangle.png",
+  "resources" : {
+    "styles" : [ "/pages/Main/Main.css" ],
+    "scripts" : [ ]
+  },
+  "properties" : {
+    "selectedphone" : {
+      "type" : "number",
+      "displayName" : "Selectedphone",
+      "description" : "selected phone id",
+      "bindable" : "out-bound",
+      "value" : "bind:Widgets.PhoneslistList.selecteditem.id",
+      "widget" : "string",
+      "show" : false,
+      "showAt" : "",
+      "disabled" : true
+    },
+    "selectphonedetails" : {
+      "type" : "object",
+      "displayName" : "selectphonedetails",
+      "description" : "selectphonedetails",
+      "bindable" : "out-bound",
+      "value" : "",
+      "widget" : "string",
+      "show" : false,
+      "showAt" : "",
+      "disabled" : true
+    },
+    "produclistdirection" : {
+      "type" : "string",
+      "displayName" : "Produclistdirection",
+      "description" : "select the direction that to be diplayed",
+      "bindable" : "in-bound",
+      "value" : "bind:'vertical'",
+      "widget" : "list",
+      "options" : [ "horizontal", "vertical" ],
+      "show" : true,
+      "showAt" : "",
+      "disabled" : false
+    }
+  },
+  "events" : {
+    "onSelectphone" : {
+      "description" : "call bacl event on select of a phone",
+      "eventData" : "",
+      "displayName" : "Selectphone"
+    }
+  },
+  "methods" : {
+    "getselectphonedetails" : {
+      "description" : "selectphonedetails",
+      "parameters" : [ ],
+      "returnType" : "any",
+      "example" : ""
+    }
+  }
+}

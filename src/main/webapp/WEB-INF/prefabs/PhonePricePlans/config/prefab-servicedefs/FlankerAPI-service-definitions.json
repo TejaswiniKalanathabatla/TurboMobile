@@ -1,0 +1,55 @@
+{
+  "FlankerAPI_PhonePricePlanController_filterPhonePricePlans" : {
+    "id" : "FlankerAPI_PhonePricePlanController_filterPhonePricePlans",
+    "crudOperationId" : "FlankerAPI.PhonePricePlanController",
+    "service" : "FlankerAPI",
+    "controller" : "PhonePricePlanController",
+    "operationType" : null,
+    "type" : "com.wavemaker.phonepriceplans.FlankerAPI.Page",
+    "wmServiceOperationInfo" : {
+      "name" : "FlankerAPI_PhonePricePlanController_filterPhonePricePlans",
+      "methodType" : "post",
+      "relativePath" : "/FlankerAPI/flanker_db/PhonePricePlan/filter",
+      "directPath" : null,
+      "httpMethod" : "post",
+      "parameters" : [ {
+        "name" : "q",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "java.lang.String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "page",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : { },
+      "produces" : null,
+      "consumes" : [ "application/x-www-form-urlencoded" ],
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  }
+}

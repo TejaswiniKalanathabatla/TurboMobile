@@ -1,0 +1,23 @@
+<wm-partial name="leftnav" type="leftnav">
+    <wm-label name="label1" caption="My Account" class="small p font-medium text-muted" padding="24px 24px 0px 44px"></wm-label>
+    <wm-nav name="leftnavigation" type="pills" layout="stacked">
+        <wm-nav-item name="list_dashboard">
+            <wm-anchor caption="Profile" name="dashboardLink" iconclass="wmn-person-circle"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_order">
+            <wm-anchor caption="Billing" name="orderLink" iconclass="wmn-billing"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_inventory">
+            <wm-anchor caption="Orders" name="inventoryLink" iconclass="wmn-receipt" on-click="Actions.goToPage_OrdersList.invoke()"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="list_support">
+            <wm-anchor caption="Security" name="supportLink" iconclass="wmn-security-lock"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item5">
+            <wm-anchor name="anchor5" iconclass="wmn-privacy" caption="Privacy"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item6">
+            <wm-anchor name="anchor6" iconclass="wmn-rewards" caption="Rewards"></wm-anchor>
+        </wm-nav-item>
+    </wm-nav>
+</wm-partial>

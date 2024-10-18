@@ -1,0 +1,72 @@
+{
+  "displayName" : "ShopPhones",
+  "group" : "",
+  "iconUrl" : "/resources/images/imagelists/shop_mobile.png",
+  "resources" : {
+    "styles" : [ "/pages/Main/Main.css" ],
+    "scripts" : [ ]
+  },
+  "properties" : {
+    "phonevariant" : {
+      "type" : "object",
+      "displayName" : "Phonevariant",
+      "description" : "Phone variant",
+      "bindable" : "in-bound",
+      "widget" : "string",
+      "show" : "bind:type == 'Shop Phone'",
+      "showAt" : "",
+      "disabled" : false
+    },
+    "type" : {
+      "type" : "string",
+      "displayName" : "Type",
+      "description" : "Feature Type",
+      "bindable" : "in-bound",
+      "widget" : "list",
+      "options" : [ "Shop Phone", "Bring Your Own Phone" ],
+      "show" : true,
+      "showAt" : "",
+      "disabled" : false
+    },
+    "userid" : {
+      "type" : "string",
+      "displayName" : "Userid",
+      "description" : "loggedin user id",
+      "bindable" : "in-bound",
+      "widget" : "string",
+      "show" : true,
+      "showAt" : "",
+      "disabled" : false
+    },
+    "addonsview" : {
+      "type" : "string",
+      "displayName" : "Add-Ons View",
+      "description" : "Display view of Add-Ons",
+      "bindable" : "in-bound",
+      "value" : "Card",
+      "widget" : "list",
+      "options" : [ "Card", "List" ],
+      "show" : true,
+      "showAt" : "",
+      "disabled" : false
+    }
+  },
+  "events" : {
+    "onVieworders" : {
+      "description" : "Callback on click of view orders",
+      "eventData" : "",
+      "displayName" : "Vieworders"
+    },
+    "onContinueshopping" : {
+      "description" : "Callback on click of continue shopping",
+      "eventData" : "",
+      "displayName" : "Continueshopping"
+    },
+    "onCancel" : {
+      "description" : "Callback on wizard cancel",
+      "eventData" : "",
+      "displayName" : "Cancel"
+    }
+  },
+  "methods" : { }
+}

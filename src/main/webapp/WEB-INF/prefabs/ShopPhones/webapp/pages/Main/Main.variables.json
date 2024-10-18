@@ -1,0 +1,590 @@
+{
+  "GetPhoneBrandsInvoke" : {
+    "_id" : "wm-GetPhoneBrandsInvoke-wm.ServiceVariable-1691486460189",
+    "name" : "GetPhoneBrandsInvoke",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.wavemaker.shopphones.FlankerDBAPI.PhoneBrand",
+    "service" : "FlankerDBAPI",
+    "operation" : "FlankerDBAPI_PhoneBrandController_findPhoneBrands",
+    "operationId" : "FlankerDBAPI_PhoneBrandController_findPhoneBrands",
+    "operationType" : "list",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "PhoneBrand"
+  },
+  "nta_selectPlanWarn" : {
+    "_id" : "wm-nta_selectPlanWarn-wm.NotificationVariable-1683005530541",
+    "name" : "nta_selectPlanWarn",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "content",
+      "value" : "inline",
+      "type" : "string"
+    }, {
+      "target" : "text",
+      "value" : "Please select a plan",
+      "type" : "string"
+    }, {
+      "target" : "duration",
+      "value" : "3000",
+      "type" : "number"
+    }, {
+      "target" : "class",
+      "value" : "Warning",
+      "type" : "string"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "bottom right",
+      "type" : "string"
+    } ],
+    "operation" : "toast"
+  },
+  "stvCurrentMobileAddons" : {
+    "_id" : "wm-stvCurrentMobileAddons-wm.Variable-1693800251773",
+    "name" : "stvCurrentMobileAddons",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ ],
+    "type" : "entry",
+    "isList" : true,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "stvInternetActivities" : {
+    "_id" : "wm-staticVariableInternetActivities-wm.Variable-1682016241993",
+    "name" : "stvInternetActivities",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "name" : "Email, Browsing & Social Media",
+      "icon" : "wmn-phone-telephone-mail",
+      "isActive" : false
+    }, {
+      "name" : "Streaming TV & Movies",
+      "icon" : "wmn-play-button",
+      "isActive" : false
+    }, {
+      "name" : "Video Calls",
+      "icon" : "wmn-video-call",
+      "isActive" : false
+    }, {
+      "name" : "Downloading large files",
+      "icon" : "wmn-download",
+      "isActive" : false
+    } ],
+    "type" : "entry",
+    "isList" : true,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "stvInternetNoOfDevices" : {
+    "_id" : "wm-stvInternetNoOfDevices-wm.Variable-1682016306404",
+    "name" : "stvInternetNoOfDevices",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "dataValue" : "0-5 GB / mo."
+    }, {
+      "dataValue" : "6-15 GB / mo."
+    }, {
+      "dataValue" : "16-20 GB / mo."
+    }, {
+      "dataValue" : "20+ GB / mo."
+    } ],
+    "type" : "string",
+    "isList" : true,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "stvMobileAddons" : {
+    "_id" : "wm-stvMobileAddons-wm.Variable-1693799815404",
+    "name" : "stvMobileAddons",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ ],
+    "type" : "entry",
+    "isList" : true,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "stvPaymentFormFieldDetails" : {
+    "_id" : "wm-stvPaymentFormFieldDetails-wm.Variable-1682313780252",
+    "name" : "stvPaymentFormFieldDetails",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "paymnetType" : "",
+      "cardholderName" : "",
+      "cardNumber" : 123,
+      "expiryDate" : "12/23",
+      "cvv" : 123,
+      "rememberChoice" : true
+    },
+    "type" : "entry",
+    "isList" : false,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "stvPlanPlaceSizes" : {
+    "_id" : "wm-stvPlanPlaceSizes-wm.Variable-1682016362714",
+    "name" : "stvPlanPlaceSizes",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "name" : "Not often",
+      "value" : " (0 - 3 hours)"
+    }, {
+      "name" : "Some of the day",
+      "value" : " (3 - 6 hours)"
+    }, {
+      "name" : "Most of the day",
+      "value" : " (6 - 12 hours)"
+    }, {
+      "name" : "All the time",
+      "value" : " (12 - 24 hours)"
+    } ],
+    "type" : "entry",
+    "isList" : true,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "stvPortingCheckForm" : {
+    "_id" : "wm-stvPortingCheckForm-wm.Variable-1682316574635",
+    "name" : "stvPortingCheckForm",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "phoneNumber" : "",
+      "carrier" : "",
+      "accountNumber" : ""
+    },
+    "type" : "entry",
+    "isList" : false,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "stvRecommendedPlan" : {
+    "_id" : "wm-stvRecommendedPlan-wm.Variable-1682060961729",
+    "name" : "stvRecommendedPlan",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "name" : "name0",
+      "dataValue" : "dataValue0"
+    },
+    "type" : "entry",
+    "isList" : false,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "stvSelectedActivities" : {
+    "_id" : "wm-stvSelectedActivities-wm.Variable-1682016709348",
+    "name" : "stvSelectedActivities",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ ],
+    "type" : "entry",
+    "isList" : true,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "stvSelectedAddOns" : {
+    "_id" : "wm-stvSelectedAddOns-wm.Variable-1682072528779",
+    "name" : "stvSelectedAddOns",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ ],
+    "type" : "entry",
+    "isList" : true,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "stvSelectedMobileAddons" : {
+    "_id" : "wm-stvSelectedMobileAddons-wm.Variable-1693801765879",
+    "name" : "stvSelectedMobileAddons",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "id" : "",
+      "name" : "",
+      "categoryId" : "",
+      "frequencyId" : "",
+      "price" : "",
+      "description" : "",
+      "icon" : "",
+      "addOnCategory" : {
+        "id" : "",
+        "name" : "",
+        "icon" : ""
+      },
+      "addOnFrequency" : {
+        "id" : "",
+        "name" : ""
+      }
+    } ],
+    "type" : "com.wavemaker.shopphones.FlankerDBAPI.AddOns",
+    "isList" : true,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "stvSimTypes" : {
+    "_id" : "wm-stvSimTypes-wm.Variable-1682073573530",
+    "name" : "stvSimTypes",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "simType" : "physical",
+      "displayName" : "Physical SIM",
+      "features" : [ {
+        "value" : "A physical SIM card is a piece of plastic with a SIM on it. "
+      }, {
+        "value" : "The SIM contains your account information (like your phone number) and connects you to our network"
+      } ]
+    }, {
+      "simType" : "esim",
+      "displayName" : "eSIM",
+      "features" : [ {
+        "value" : "An eSIM is built right into your phone, skipping the plastic card part. "
+      }, {
+        "value" : "With an eSIM, you can easily transfer your account to another eSIM-capable phone with just a few simple steps."
+      } ]
+    } ],
+    "type" : "entry",
+    "isList" : true,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "stvTotal" : {
+    "_id" : "wm-stvTotal-wm.Variable-1682312858377",
+    "name" : "stvTotal",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ {
+      "target" : "dataValue",
+      "value" : "bind:(phonevariant ? phonevariant.price : 0) + (selectedPlan ? selectedPlan.price : 0) + 16"
+    } ],
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "type" : "string",
+    "isList" : false,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "supportedLocale" : {
+    "_id" : "wm-wm.Variable1402640443182",
+    "name" : "supportedLocale",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "en" : "English"
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "svCreateOrder" : {
+    "_id" : "wm-svCreateOrder-wm.ServiceVariable-1682344565495",
+    "name" : "svCreateOrder",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "Orders.statusId",
+      "value" : "bind:Variables.svGetOrderStatus.dataSet[0].id",
+      "type" : "java.lang.Integer"
+    }, {
+      "target" : "Orders.typeId",
+      "value" : "bind:Variables.svGetOrderType.dataSet[0].id",
+      "type" : "java.lang.Integer"
+    }, {
+      "target" : "Orders.customerId",
+      "value" : "bind:userid",
+      "type" : "java.lang.Integer"
+    } ],
+    "type" : "com.wavemaker.shopphones.FlankerDBAPI.Orders",
+    "service" : "FlankerDBAPI",
+    "operation" : "FlankerDBAPI_OrdersController_createOrders",
+    "operationId" : "FlankerDBAPI_OrdersController_createOrders",
+    "operationType" : "create",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onBeforeUpdate" : "svCreateOrderonBeforeUpdate(variable, inputData, options)",
+    "onSuccess" : "Variables.svCreatePhoneOrder.invoke()",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "Orders",
+    "spinnerContext" : "page"
+  },
+  "svCreatePhoneOrder" : {
+    "_id" : "wm-svCreatePhoneOrder-wm.ServiceVariable-1682344596471",
+    "name" : "svCreatePhoneOrder",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "PhoneOrders.orderId",
+      "value" : "bind:Variables.svCreateOrder.dataSet.id",
+      "type" : "java.lang.Integer"
+    }, {
+      "target" : "PhoneOrders.phoneVariantId",
+      "value" : "bind:phonevariant.id",
+      "type" : "java.lang.Integer"
+    }, {
+      "target" : "PhoneOrders.price",
+      "value" : "bind:Variables.stvTotal.dataSet.dataValue",
+      "type" : "java.lang.Double"
+    }, {
+      "target" : "PhoneOrders.simType",
+      "value" : "bind:selectedSim",
+      "type" : "java.lang.String"
+    }, {
+      "target" : "PhoneOrders.phonePlanId",
+      "value" : "bind:Widgets.PhonePricePlans1.selectedppriceplan ? Widgets.PhonePricePlans1.selectedppriceplan.id : selectedPlan.id",
+      "type" : "java.lang.Integer"
+    }, {
+      "target" : "PhoneOrders.isSimActivated",
+      "value" : "bind:false"
+    }, {
+      "target" : "PhoneOrders.phoneModelId",
+      "value" : "bind:Widgets.selectPhoneModel.datavalue"
+    } ],
+    "type" : "com.wavemaker.shopphones.FlankerDBAPI.PhoneOrders",
+    "service" : "FlankerDBAPI",
+    "operation" : "FlankerDBAPI_PhoneOrdersController_createPhoneOrders",
+    "operationId" : "FlankerDBAPI_PhoneOrdersController_createPhoneOrders",
+    "operationType" : "create",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onSuccess" : "Widgets.dialogPaymentConfirmation.close();Widgets.dialogPaymentSuccessful.open()",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "PhoneOrders",
+    "spinnerContext" : "page"
+  },
+  "svGetAddonCategories" : {
+    "_id" : "wm-svGetAddonCategories-wm.ServiceVariable-1693798900564",
+    "name" : "svGetAddonCategories",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "q",
+      "value" : "bind:\"isActive=true\"",
+      "type" : "string"
+    } ],
+    "type" : "com.wavemaker.shopphones.FlankerDBAPI.AddOnCategory",
+    "service" : "FlankerDBAPI",
+    "operation" : "FlankerDBAPI_AddOnCategoryController_filterAddOnCategories",
+    "operationId" : "FlankerDBAPI_AddOnCategoryController_filterAddOnCategories",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "AddOnCategory"
+  },
+  "svGetOrderStatus" : {
+    "_id" : "wm-svGetOrderStatus-wm.ServiceVariable-1682344803745",
+    "name" : "svGetOrderStatus",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "q",
+      "value" : "bind:\"status='Order Placed'\"",
+      "type" : "string"
+    } ],
+    "type" : "com.wavemaker.shopphones.FlankerDBAPI.OrderStatus",
+    "service" : "FlankerDBAPI",
+    "operation" : "FlankerDBAPI_OrderStatusController_filterOrderStatuses",
+    "operationId" : "FlankerDBAPI_OrderStatusController_filterOrderStatuses",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "OrderStatus"
+  },
+  "svGetOrderType" : {
+    "_id" : "wm-svGetOrderType-wm.ServiceVariable-1682344667213",
+    "name" : "svGetOrderType",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "q",
+      "value" : "bind:\"type='\" + type + \"'\"",
+      "type" : "string"
+    } ],
+    "type" : "com.wavemaker.shopphones.FlankerDBAPI.OrderType",
+    "service" : "FlankerDBAPI",
+    "operation" : "FlankerDBAPI_OrderTypeController_filterOrderTypes",
+    "operationId" : "FlankerDBAPI_OrderTypeController_filterOrderTypes",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "OrderType"
+  },
+  "svGetPhoneModels" : {
+    "_id" : "wm-svGetPhoneModels-wm.ServiceVariable-1691486523675",
+    "name" : "svGetPhoneModels",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "q",
+      "value" : "bind:Widgets.GetPhoneBrandsList1.selecteditem.id ? \"brandId=\" + Widgets.GetPhoneBrandsList1.selecteditem.id : ''",
+      "type" : "string"
+    } ],
+    "type" : "com.wavemaker.shopphones.FlankerDBAPI.PhoneModel",
+    "service" : "FlankerDBAPI",
+    "operation" : "FlankerDBAPI_PhoneModelController_findPhoneModels",
+    "operationId" : "FlankerDBAPI_PhoneModelController_findPhoneModels",
+    "operationType" : "list",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "PhoneModel"
+  },
+  "wsAddOnsList" : {
+    "_id" : "wm-wsAddOnsList-wm.ServiceVariable-1691486565656",
+    "name" : "wsAddOnsList",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "q",
+      "value" : "bind:\"addOnCategory.isActive=true\"",
+      "type" : "string"
+    } ],
+    "type" : "com.wavemaker.shopphones.FlankerDBAPI.AddOns",
+    "service" : "FlankerDBAPI",
+    "operation" : "FlankerDBAPI_AddOnsController_filterAddOns",
+    "operationId" : "FlankerDBAPI_AddOnsController_filterAddOns",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "onSuccess" : "wsAddOnsListonSuccess(variable, data, options)",
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "AddOns"
+  },
+  "wsGetStates" : {
+    "_id" : "wm-wsGetStates-wm.ServiceVariable-1691486598633",
+    "name" : "wsGetStates",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.wavemaker.shopphones.FlankerDBAPI.States",
+    "service" : "FlankerDBAPI",
+    "operation" : "FlankerDBAPI_StatesController_filterStates",
+    "operationId" : "FlankerDBAPI_StatesController_filterStates",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "States"
+  },
+  "wsGetUserAddressDetails" : {
+    "_id" : "wm-serviceVariable1-wm.ServiceVariable-1691486639428",
+    "name" : "wsGetUserAddressDetails",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "q",
+      "value" : "bind:\"customerId=\" + 1",
+      "type" : "string"
+    } ],
+    "type" : "com.wavemaker.shopphones.FlankerDBAPI.Address",
+    "service" : "FlankerDBAPI",
+    "operation" : "FlankerDBAPI_AddressController_filterAddresses",
+    "operationId" : "FlankerDBAPI_AddressController_filterAddresses",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "Address"
+  },
+  "wsPricePlansList" : {
+    "_id" : "wm-wsPricePlansList-wm.ServiceVariable-1691486677690",
+    "name" : "wsPricePlansList",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.wavemaker.shopphones.FlankerDBAPI.PhonePricePlan",
+    "service" : "FlankerDBAPI",
+    "operation" : "FlankerDBAPI_PhonePricePlanController_filterPhonePricePlans",
+    "operationId" : "FlankerDBAPI_PhonePricePlanController_filterPhonePricePlans",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "onBeforeDatasetReady" : "wsPricePlansListonBeforeDatasetReady(variable, data, options)",
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "PhonePricePlan"
+  }
+}

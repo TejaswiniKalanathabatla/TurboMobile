@@ -1,0 +1,6 @@
+{
+  "id" : "GetThemeType",
+  "type" : "RestService",
+  "title" : "GetThemeType",
+  "mockEnabled" : false
+}

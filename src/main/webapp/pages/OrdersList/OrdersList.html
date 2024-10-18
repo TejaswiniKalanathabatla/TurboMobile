@@ -1,0 +1,147 @@
+<wm-page pagetitle="Orders" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <!--<wm-layoutgrid name="layoutgrid1">-->
+            <!--    <wm-gridrow name="gridrow1">-->
+            <!--        <wm-gridcolumn columnwidth="8" name="gridcolumn1"></wm-gridcolumn>-->
+            <!--        <wm-gridcolumn columnwidth="4" name="gridcolumn2" horizontalalign="right">-->
+            <!--<wm-container class="col-md-9" name="container1" horizontalalign="right">-->
+            <!--            <wm-text name="text1" type="search" placeholder="Search Orders" textalign="left"></wm-text>-->
+            <!--</wm-container>-->
+            <!--        </wm-gridcolumn>-->
+            <!--    </wm-gridrow>-->
+            <!--    <wm-gridrow name="gridrow2">-->
+            <!--        <wm-gridcolumn columnwidth="12" name="gridcolumn3">-->
+            <!--            <wm-label padding="unset 0.5em" name="label1" caption="Delivery In Progress" class="h4"></wm-label>-->
+            <!--        </wm-gridcolumn>-->
+            <!--    </wm-gridrow>-->
+            <!--    <wm-gridrow name="gridrow3">-->
+            <!--        <wm-gridcolumn columnwidth="12" name="gridcolumn5">-->
+            <!--            <wm-list listclass="list-group" template="true" template-name="Product Thumbnail" itemsperrow="xs-1 sm-2 md-4 lg-4" class="list-card" statehandler="URL" name="stvInProgressOrderslistList1" dataset="bind:Variables.stvInProgressOrderslist.dataSet"-->
+            <!--                navigation="None">-->
+            <!--                <wm-listtemplate layout="media" name="listtemplate1">-->
+            <!--                    <wm-card name="Thumbnail">-->
+            <!--                        <wm-card-content name="card_content1">-->
+            <!--                            <wm-layoutgrid name="layoutgrid2">-->
+            <!--                                <wm-gridrow name="gridrow4">-->
+            <!--                                    <wm-gridcolumn columnwidth="9" horizontalalign="left" class="col-xs-6" name="gridcolumn6">-->
+            <!--                                        <wm-label name="Currency" caption="Bring Your Own  Phone" fontweight="bold"></wm-label>-->
+            <!--                                    </wm-gridcolumn>-->
+            <!--                                    <wm-gridcolumn columnwidth="3" horizontalalign="right" class="col-xs-6" name="gridcolumn7">-->
+            <!--                                        <wm-label name="Quantity" fontunit="em" caption="Today" margin="unset 0.2em unset unset"></wm-label>-->
+            <!--                                    </wm-gridcolumn>-->
+            <!--                                </wm-gridrow>-->
+            <!--                                <wm-gridrow name="gridrow5">-->
+            <!--                                    <wm-gridcolumn columnwidth="4" name="gridcolumn8">-->
+            <!--                                        <wm-label padding="unset 0.5em" name="label8" caption="PLUS Plan"></wm-label>-->
+            <!--                                    </wm-gridcolumn>-->
+            <!--                                    <wm-gridcolumn columnwidth="8" name="gridcolumn9">-->
+            <!--                                        <wm-label padding="unset 0.5em" name="label9" caption="Physical SIM"></wm-label>-->
+            <!--                                    </wm-gridcolumn>-->
+            <!--                                </wm-gridrow>-->
+            <!--                                <wm-gridrow name="gridrow6">-->
+            <!--                                    <wm-gridcolumn columnwidth="12" name="gridcolumn10">-->
+            <!--                                        <wm-label padding="unset 0.5em" name="label10" caption="Order No."></wm-label>-->
+            <!--                                        <wm-label padding="unset 0.5em" name="label12" caption="3500002"></wm-label>-->
+            <!--                                    </wm-gridcolumn>-->
+            <!--                                </wm-gridrow>-->
+            <!--                                <wm-gridrow name="gridrow7">-->
+            <!--                                    <wm-gridcolumn columnwidth="12" name="gridcolumn12">-->
+            <!--                                        <wm-label padding="unset 0.5em" name="label11" caption="Expacted Delivery Date"></wm-label>-->
+            <!--                                        <wm-label padding="unset 0.5em" name="label13" caption="31/4/2023(5days)"></wm-label>-->
+            <!--                                    </wm-gridcolumn>-->
+            <!--                                </wm-gridrow>-->
+            <!--                                <wm-gridrow name="gridrow8" padding="2em unset unset unset">-->
+            <!--                                    <wm-gridcolumn columnwidth="6" name="gridcolumn14">-->
+            <!--                                        <wm-anchor margin="unset 0.5em" name="anchor2" caption="How to Activate SIM?"></wm-anchor>-->
+            <!--                                    </wm-gridcolumn>-->
+            <!--                                    <wm-gridcolumn columnwidth="6" name="gridcolumn15" horizontalalign="right">-->
+            <!--                                        <wm-label padding="unset 0.5em" name="label14" caption="$ 89.00"></wm-label>-->
+            <!--                                    </wm-gridcolumn>-->
+            <!--                                </wm-gridrow>-->
+            <!--                                <wm-gridrow name="gridrow9" padding="2em unset unset unset">-->
+            <!--                                    <wm-gridcolumn columnwidth="12" name="gridcolumn16" horizontalalign="center">-->
+            <!--                                        <wm-button class="btn-default" caption="View Order Details" type="button" margin="unset 0.5em" name="button1" borderstyle="solid" bordercolor="#000" borderwidth="1px" padding="unset 3em"></wm-button>-->
+            <!--                                    </wm-gridcolumn>-->
+            <!--                                </wm-gridrow>-->
+            <!--                            </wm-layoutgrid>-->
+            <!--                        </wm-card-content>-->
+            <!--                        <wm-card-footer horizontalalign="center" name="card_footer1" show="false"></wm-card-footer>-->
+            <!--                    </wm-card>-->
+            <!--                </wm-listtemplate>-->
+            <!--            </wm-list>-->
+            <!--        </wm-gridcolumn>-->
+            <!--    </wm-gridrow>-->
+            <!--    <wm-gridrow name="gridrow10">-->
+            <!--        <wm-gridcolumn columnwidth="12" name="gridcolumn18">-->
+            <!--            <wm-label padding="unset 0.5em" name="label15" caption="Delivered" class="h4"></wm-label>-->
+            <!--        </wm-gridcolumn>-->
+            <!--    </wm-gridrow>-->
+            <!--    <wm-gridrow name="gridrow11">-->
+            <!--        <wm-gridcolumn columnwidth="12" name="gridcolumn19">-->
+            <!--            <wm-list listclass="list-group" template="true" template-name="Product Thumbnail" itemsperrow="xs-1 sm-2 md-4 lg-4" class="list-card" statehandler="URL" name="stvInProgressOrderslistList2" dataset="bind:Variables.stvInProgressOrderslist.dataSet"-->
+            <!--                navigation="None">-->
+            <!--                <wm-listtemplate layout="media" name="listtemplate2">-->
+            <!--                    <wm-card name="Thumbnail">-->
+            <!--                        <wm-card-content name="card_content1">-->
+            <!--                            <wm-layoutgrid name="layoutgrid3">-->
+            <!--                                <wm-gridrow name="gridrow10">-->
+            <!--                                    <wm-gridcolumn columnwidth="9" horizontalalign="left" class="col-xs-6" name="gridcolumn17">-->
+            <!--                                        <wm-label name="Currency" caption="Google Pixel  7" fontweight="bold"></wm-label>-->
+            <!--                                    </wm-gridcolumn>-->
+            <!--                                    <wm-gridcolumn columnwidth="3" horizontalalign="right" class="col-xs-6" name="gridcolumn18">-->
+            <!--                                        <wm-label name="Quantity" fontunit="em" caption="16/04/2023" margin="unset 0.2em unset unset"></wm-label>-->
+            <!--                                    </wm-gridcolumn>-->
+            <!--                                </wm-gridrow>-->
+            <!--                                <wm-gridrow name="gridrow11">-->
+            <!--                                    <wm-gridcolumn columnwidth="4" name="gridcolumn19">-->
+            <!--                                        <wm-label padding="unset 0.5em" name="label8" caption="PLUS Plan"></wm-label>-->
+            <!--                                    </wm-gridcolumn>-->
+            <!--                                    <wm-gridcolumn columnwidth="8" name="gridcolumn20">-->
+            <!--                                        <wm-label padding="unset 0.5em" name="label9" caption="eSIM"></wm-label>-->
+            <!--                                    </wm-gridcolumn>-->
+            <!--                                </wm-gridrow>-->
+            <!--                                <wm-gridrow name="gridrow12">-->
+            <!--                                    <wm-gridcolumn columnwidth="12" name="gridcolumn21">-->
+            <!--                                        <wm-label padding="unset 0.5em" name="label10" caption="Order No."></wm-label>-->
+            <!--                                        <wm-label padding="unset 0.5em" name="label12" caption="3500002"></wm-label>-->
+            <!--                                    </wm-gridcolumn>-->
+            <!--                                </wm-gridrow>-->
+            <!--                                <wm-gridrow name="gridrow13">-->
+            <!--                                    <wm-gridcolumn columnwidth="12" name="gridcolumn22">-->
+            <!--                                        <wm-label padding="unset 0.5em" name="label11" caption="Delivered on"></wm-label>-->
+            <!--                                        <wm-label padding="unset 0.5em" name="label13" caption="24/04/2023"></wm-label>-->
+            <!--                                    </wm-gridcolumn>-->
+            <!--                                </wm-gridrow>-->
+            <!--                                <wm-gridrow name="gridrow14" padding="2em unset unset unset">-->
+            <!--                                    <wm-gridcolumn columnwidth="12" name="gridcolumn24" horizontalalign="right">-->
+            <!--                                        <wm-label padding="unset 0.5em" name="label14" caption="$ 904.00"></wm-label>-->
+            <!--                                    </wm-gridcolumn>-->
+            <!--                                </wm-gridrow>-->
+            <!--                                <wm-gridrow name="gridrow15" padding="2em unset unset unset">-->
+            <!--                                    <wm-gridcolumn columnwidth="12" name="gridcolumn25" horizontalalign="center">-->
+            <!--                                        <wm-button class="btn-default" caption="View Order Details" type="button" margin="unset 0.5em" name="button1" borderstyle="solid" bordercolor="#000" borderwidth="1px" padding="unset 3em"></wm-button>-->
+            <!--                                    </wm-gridcolumn>-->
+            <!--                                </wm-gridrow>-->
+            <!--                            </wm-layoutgrid>-->
+            <!--                        </wm-card-content>-->
+            <!--                        <wm-card-footer horizontalalign="center" name="card_footer1" show="false"></wm-card-footer>-->
+            <!--                    </wm-card>-->
+            <!--                </wm-listtemplate>-->
+            <!--            </wm-list>-->
+            <!--        </wm-gridcolumn>-->
+            <!--    </wm-gridrow>-->
+            <!--</wm-layoutgrid>-->
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn3">
+                        <wm-prefab prefabname="OrdersList" name="OrdersList2" userid="bind:Variables.loggedInUser.dataSet.id"></wm-prefab>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

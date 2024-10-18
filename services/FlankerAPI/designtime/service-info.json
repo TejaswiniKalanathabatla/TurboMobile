@@ -1,0 +1,6 @@
+{
+  "id" : "FlankerAPI",
+  "type" : "OpenAPIService",
+  "title" : "FlankerAPI",
+  "mockEnabled" : false
+}

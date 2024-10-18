@@ -1,0 +1,154 @@
+<wm-partial name="CommonPage">
+    <wm-container name="container6"></wm-container>
+    <wm-logindialog modal="true" name="CommonLoginDialog" iconclass="" title="Sign In" class="modal-login">
+        <wm-form errormessage="" captionposition="floating" title="" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.stvLoginform.dataSet" captionalign="left" name="stvLoginformForm1" on-submit="Actions.la_login.invoke()" postmessage="">
+            <wm-layoutgrid columns="1" name="layoutgrid3">
+                <wm-gridrow name="gridrow5">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn7">
+                        <wm-form-field name="email" readonly="false" displayname="Email" key="email" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" defaultvalue="john.wick@gmail.com"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow6">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn8">
+                        <wm-form-field name="password" readonly="false" displayname="Password" key="password" type="string" show="true" widget="password" inputtype="password" placeholder="Enter value" margin="unset unset 0px unset" defaultvalue="Wavemaker@123"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow14_1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn14_1">
+                        <wm-container name="container2" class="form-group" margin="-12px unset unset unset">
+                            <wm-layoutgrid name="layoutgrid3_1" columns="1">
+                                <wm-gridrow name="gridrow17_1">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn19_1" horizontalalign="right">
+                                        <wm-anchor name="anchor1" caption="Forgot Password?" textdecoration="underline" margin="unset unset 12px unset"></wm-anchor>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow18_1">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn20_1">
+                                        <wm-button class="btn-primary btn-block text-uppercase" caption="Sign In" type="submit" name="button2" margin="12px unset unset unset"></wm-button>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow19" padding="24px unset unset unset">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn21" horizontalalign="center">
+                                        <wm-container name="container2_1" display="inline-flex">
+                                            <wm-label name="label7" caption="Don’t have an account?" class="font-medium"></wm-label>
+                                            <wm-anchor caption="Register" name="anchor2" on-click="anchor2Click($event, widget)" class="font-medium"></wm-anchor>
+                                        </wm-container>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow20">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn22" horizontalalign="center">
+                                        <wm-container name="container5" margin="42px unset unset unset">
+                                            <wm-layoutgrid name="layoutgrid5">
+                                                <wm-gridrow name="gridrow16_2">
+                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn16">
+                                                        <wm-label name="label8" caption="Or continue with" margin="unset unset 14px unset"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow17">
+                                                    <wm-gridcolumn columnwidth="4" name="gridcolumn18_2" padding="unset 8px">
+                                                        <wm-container name="container7" class="panel no-border" margin="unset 0px" backgroundcolor="rgba(217, 217, 217, 0.23)">
+                                                            <wm-picture resizemode="contain" name="picture1" height="20" picturesource="resources/images/imagelists/Facebook.svg" margin="12px unset"></wm-picture>
+                                                        </wm-container>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="4" name="gridcolumn19" padding="unset 8px">
+                                                        <wm-container class="panel no-border" margin="unset 0px" backgroundcolor="rgba(217, 217, 217, 0.23)" name="container8">
+                                                            <wm-picture resizemode="cover" name="picture2" picturesource="resources/images/imagelists/google.svg" margin="12px unset"></wm-picture>
+                                                        </wm-container>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="4" name="gridcolumn20_2" padding="unset 8px">
+                                                        <wm-container class="panel no-border" margin="unset 0px" backgroundcolor="rgba(217, 217, 217, 0.23)" name="container9">
+                                                            <wm-picture resizemode="cover" name="picture3" picturesource="resources/images/imagelists/Twitter.svg" margin="12px unset"></wm-picture>
+                                                        </wm-container>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-container>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-form>
+    </wm-logindialog>
+    <wm-alertdialog name="CommonAlertDialog" controller="NotificationDialogController" notificationdialog="alert" message="bind:notification.text" title="bind:notification.title" oktext="bind:notification.okButtonText" alerttype="bind:notification.alerttype"
+        on-ok="notification.onOk()" on-close="notification.onClose()"></wm-alertdialog>
+    <wm-confirmdialog name="CommonConfirmDialog" controller="NotificationDialogController" notificationdialog="confirm" message="bind:notification.text" title="bind:notification.title" oktext="bind:notification.okButtonText" canceltext="bind:notification.cancelButtonText"
+        on-ok="notification.onOk()" on-cancel="notification.onCancel()"></wm-confirmdialog>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Register" iconclass="" name="dialogRegister" class="modal-login">
+        <wm-dialogactions name="dialogactions1" show="false">
+            <wm-button class="btn-primary" caption="Close" on-click="closeDialog()" name="button1"></wm-button>
+        </wm-dialogactions>
+        <wm-form errormessage="" captionposition="floating" title="" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.stvRegisterForm.dataSet" captionalign="left" name="stvRegisterFormForm1" postmessage="">
+            <wm-layoutgrid columns="1" name="layoutgrid4">
+                <wm-gridrow name="gridrow11">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn13">
+                        <wm-form-field name="name" readonly="false" displayname="Full Name" key="name" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow12">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn14">
+                        <wm-form-field name="email" readonly="false" displayname="Email" key="email" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow13">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn15">
+                        <wm-form-field name="password" readonly="false" displayname="Password" key="password" type="string" show="true" widget="password" inputtype="password" placeholder="Enter value"></wm-form-field>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow16">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn18" horizontalalign="center">
+                        <wm-container name="container3" class="form-group">
+                            <wm-layoutgrid name="layoutgrid4_1" columns="1">
+                                <wm-gridrow name="gridrow16_1">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn18_1">
+                                        <wm-button class="btn-primary btn-block" caption="CREATE ACCOUNT" type="submit" name="button3" on-click="Variables.svCreateCustomer.invoke()"></wm-button>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow17_2">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn19_2">
+                                        <wm-container name="container4" display="inline-flex" margin="24px unset unset unset">
+                                            <wm-label caption="Already have an account?" name="label9" class="font-medium"></wm-label>
+                                            <wm-anchor margin="unset unset unset 8px" caption="Sign In" name="anchor6" on-click="anchor6Click($event, widget)" class="font-medium"></wm-anchor>
+                                        </wm-container>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow18">
+                                    <wm-gridcolumn columnwidth="12" name="gridcolumn20">
+                                        <wm-container name="container5" margin="42px unset unset unset">
+                                            <wm-layoutgrid name="layoutgrid5">
+                                                <wm-gridrow name="gridrow16_2">
+                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn16">
+                                                        <wm-label name="label8" caption="Or continue with" margin="unset unset 14px unset"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow17">
+                                                    <wm-gridcolumn columnwidth="4" name="gridcolumn18_2" padding="unset 8px">
+                                                        <wm-container name="container7" class="panel no-border" margin="unset 0px" backgroundcolor="rgba(217, 217, 217, 0.23)">
+                                                            <wm-picture resizemode="contain" name="picture1" height="20" picturesource="resources/images/imagelists/Facebook.svg" margin="12px unset"></wm-picture>
+                                                        </wm-container>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="4" name="gridcolumn19" padding="unset 8px">
+                                                        <wm-container class="panel no-border" margin="unset 0px" backgroundcolor="rgba(217, 217, 217, 0.23)" name="container8">
+                                                            <wm-picture resizemode="cover" name="picture2" picturesource="resources/images/imagelists/google.svg" margin="12px unset"></wm-picture>
+                                                        </wm-container>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="4" name="gridcolumn20_2" padding="unset 8px">
+                                                        <wm-container class="panel no-border" margin="unset 0px" backgroundcolor="rgba(217, 217, 217, 0.23)" name="container9">
+                                                            <wm-picture resizemode="cover" name="picture3" picturesource="resources/images/imagelists/Twitter.svg" margin="12px unset"></wm-picture>
+                                                        </wm-container>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-container>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-container>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-form>
+    </wm-dialog>
+</wm-partial>

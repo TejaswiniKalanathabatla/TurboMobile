@@ -1,0 +1,22 @@
+{
+  "displayName" : "OrdersList",
+  "group" : "",
+  "iconUrl" : "/resources/images/imagelists/orders_list.png",
+  "resources" : {
+    "styles" : [ "/pages/Main/Main.css" ],
+    "scripts" : [ ]
+  },
+  "properties" : {
+    "userid" : {
+      "type" : "string",
+      "displayName" : "Userid",
+      "description" : "loggedin user id",
+      "bindable" : "in-bound",
+      "widget" : "string",
+      "show" : true,
+      "disabled" : false
+    }
+  },
+  "events" : { },
+  "methods" : { }
+}

@@ -1,0 +1,83 @@
+<wm-page pagetitle="Home" name="page1">
+    <wm-header content="header" name="header1" class="landing"></wm-header>
+    <wm-content name="content1" backgroundimage="resources/images/imagelists/landing-bg.svg" backgroundrepeat="no-repeat" backgroundposition="top, center" backgroundsize="100%" backgroundattachment="scroll" class="landing">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow4">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn5_1">
+                        <wm-linearlayout direction="row" spacing="12" name="linearlayout1" verticalalign="center">
+                            <wm-linearlayoutitem name="linearlayoutitem1" flexgrow="6" padding="unset unset 160px unset">
+                                <wm-container name="container7" horizontalalign="left">
+                                    <wm-label name="label1" class="h1" caption="One-Stop Shop for All"></wm-label>
+                                    <wm-label class="h1" caption="Your Mobile Needs" name="label5"></wm-label>
+                                    <wm-label name="label3" caption="bind:appLocale.l_findPurchasePerfectPhone" class="h3"></wm-label>
+                                </wm-container>
+                            </wm-linearlayoutitem>
+                            <wm-linearlayoutitem flexgrow="6" name="linearlayoutitem2">
+                                <wm-container name="container8" horizontalalign="center">
+                                    <wm-picture resizemode="cover" name="picture1" picturesource="resources/images/imagelists/landing-banner-mobile.png" pictureaspect="None"></wm-picture>
+                                </wm-container>
+                            </wm-linearlayoutitem>
+                        </wm-linearlayout>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow5">
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn9_1" horizontalalign="left"></wm-gridcolumn>
+                    <wm-gridcolumn columnwidth="6" name="gridcolumn10"></wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn3" horizontalalign="center">
+                        <wm-label name="label4" caption="bind:appLocale.l_smartPhones" class="h2 m-vert-lg"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow3">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn5">
+                        <wm-prefab prefabname="PhonesList" name="PhonesList1" produclistdirection="horizontal" on-selectphone="PhonesList1Selectphone($event, $data)"></wm-prefab>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <!--<wm-gridrow name="gridrow1" padding="unset unset 20px unset">-->
+                <!--    <wm-gridcolumn columnwidth="6" name="gridcolumn1" padding="unset 5px unset unset">-->
+                <!--        <wm-container name="ctrShopPhonesImage" horizontalalign="center" borderwidth="1px" bordercolor="#dbdbdb" borderstyle="solid" on-click="Actions.goToPage_ProductList.invoke()">-->
+                <!--            <wm-picture resizemode="cover" name="picture3"></wm-picture>-->
+                <!--        </wm-container>-->
+                <!--    </wm-gridcolumn>-->
+                <!--    <wm-gridcolumn columnwidth="6" name="gridcolumn7" padding="unset unset unset 5px">-->
+                <!--        <wm-container name="ctrShopPhonesDescription" on-click="Actions.goToPage_ShopPhones.invoke()">-->
+                <!--            <wm-label padding="unset 0.5em" name="label1" caption="Shop Phones" fontweight="bold"></wm-label>-->
+                <!--            <wm-label padding="unset 0.5em" name="label2" caption="Dicover the latest smartphones unbeatable prices! Shop now and upgrade tech game."></wm-label>-->
+                <!--            <wm-label padding="unset 0.5em" name="label3" caption="Save up to 30% on over 50 smartphones. You won't get them cheaper"></wm-label>-->
+                <!--        </wm-container>-->
+                <!--    </wm-gridcolumn>-->
+                <!--</wm-gridrow>-->
+                <!--<wm-gridrow name="gridrow2" padding="unset unset 20px unset">-->
+                <!--    <wm-gridcolumn columnwidth="6" name="gridcolumn3" padding="unset 5px unset unset">-->
+                <!--        <wm-container name="ctrBringYourOwnPhoneDescription" on-click="Actions.goToPage_BringYourOwnPhone.invoke()">-->
+                <!--            <wm-label padding="unset 0.5em" name="label4" caption="Bring your own Phone" fontweight="bold"></wm-label>-->
+                <!--            <wm-label padding="unset 0.5em" name="label5" caption="Get the freedom to bring your own phone and chose the  plan that works best for you. See  if your phone is compatible and startsaving today!"></wm-label>-->
+                <!--            <wm-label padding="unset 0.5em" name="label6" caption="Bring your own phone and  save 10% on selected plans!"></wm-label>-->
+                <!--        </wm-container>-->
+                <!--    </wm-gridcolumn>-->
+                <!--    <wm-gridcolumn columnwidth="6" name="gridcolumn8" padding="unset unset unset 5px">-->
+                <!--        <wm-container name="ctrBringYourOwnPhoneImg" horizontalalign="center" borderwidth="1px" bordercolor="#dbdbdb" borderstyle="solid" on-click="Actions.goToPage_BringYourOwnPhone.invoke()">-->
+                <!--            <wm-picture resizemode="cover" name="picture2"></wm-picture>-->
+                <!--        </wm-container>-->
+                <!--    </wm-gridcolumn>-->
+                <!--</wm-gridrow>-->
+                <!--<wm-gridrow name="gridrow3">-->
+                <!--    <wm-gridcolumn columnwidth="6" name="gridcolumn5" padding="unset 5px unset unset">-->
+                <!--        <wm-container name="ctrShopBroadbandsImg" horizontalalign="center" borderwidth="1px" borderstyle="solid" bordercolor="#dbdbdb" on-click="Actions.goToPage_ShopBroadbands.invoke()">-->
+                <!--            <wm-picture resizemode="cover" name="picture4"></wm-picture>-->
+                <!--        </wm-container>-->
+                <!--    </wm-gridcolumn>-->
+                <!--    <wm-gridcolumn columnwidth="6" name="gridcolumn9" padding="unset unset unset 5px">-->
+                <!--        <wm-container name="ctrShopBroadbandDescription" on-click="Actions.goToPage_ShopBroadbands.invoke()">-->
+                <!--            <wm-label padding="unset 0.5em" name="label7" caption="Shop Broadbands" fontweight="bold"></wm-label>-->
+                <!--            <wm-label padding="unset 0.5em" name="label8" caption="Stream, work,  and play faster with our lightning- fast  broadband options. Shop now to find the prefect plan for your home."></wm-label>-->
+                <!--            <wm-label padding="unset 0.5em" name="label9" caption="You won't get it cheaper. Full stop!"></wm-label>-->
+                <!--        </wm-container>-->
+                <!--    </wm-gridcolumn>-->
+                <!--</wm-gridrow>-->
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <!--<wm-footer content="footer" name="footer1"></wm-footer>--></wm-page>

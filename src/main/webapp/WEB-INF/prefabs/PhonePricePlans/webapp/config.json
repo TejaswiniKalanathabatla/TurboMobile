@@ -1,0 +1,40 @@
+{
+  "displayName" : "PhonePricePlans",
+  "group" : "",
+  "iconUrl" : "/resources/images/imagelists/price_plan.png",
+  "resources" : {
+    "styles" : [ "/pages/Main/Main.css" ],
+    "scripts" : [ ]
+  },
+  "properties" : {
+    "selectedppriceplan" : {
+      "type" : "object",
+      "displayName" : "selected price plan",
+      "description" : "Selected Price Plan",
+      "bindable" : "out-bound",
+      "value" : "bind:Variables.stvPricePlan.dataSet",
+      "widget" : "string",
+      "show" : false,
+      "showAt" : "",
+      "disabled" : true
+    },
+    "prepopulatedplanid" : {
+      "type" : "number",
+      "displayName" : "Prepopulatedplanid",
+      "description" : "Prepopulated Plan Id",
+      "bindable" : "in-bound",
+      "widget" : "string",
+      "show" : true,
+      "showAt" : "",
+      "disabled" : false
+    }
+  },
+  "events" : {
+    "onPlanchange" : {
+      "description" : "callback on plan change",
+      "eventData" : "",
+      "displayName" : "Planchange"
+    }
+  },
+  "methods" : { }
+}

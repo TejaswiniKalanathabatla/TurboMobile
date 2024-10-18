@@ -1,0 +1,216 @@
+{
+  "nta_SimActivateSuccess" : {
+    "_id" : "wm-nta_SimActivateSuccess-wm.NotificationVariable-1682498906725",
+    "name" : "nta_SimActivateSuccess",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "content",
+      "value" : "inline",
+      "type" : "string"
+    }, {
+      "target" : "text",
+      "value" : "SIM activated successfully!!",
+      "type" : "string"
+    }, {
+      "target" : "duration",
+      "value" : "3000",
+      "type" : "number"
+    }, {
+      "target" : "class",
+      "value" : "Success",
+      "type" : "string"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "bottom right",
+      "type" : "string"
+    } ],
+    "operation" : "toast"
+  },
+  "stvESIMFeatures" : {
+    "_id" : "wm-stvESIMFeatures-wm.Variable-1682495245688",
+    "name" : "stvESIMFeatures",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "feature" : "On your phone go to Settings > Cellular > Add Cellular Plan"
+    }, {
+      "feature" : "Scan the QR Code"
+    }, {
+      "feature" : "If prompted to select a default line, choose your new Turbo Mobile line"
+    }, {
+      "feature" : "Wait for installation to complete."
+    }, {
+      "feature" : "Once you see the “Cellular Plan Added” confirmation, you can begin using your new Turbo Mobile service!"
+    }, {
+      "feature" : "Once the device has recognized the SIM card, it should automatically connect to the operator's network."
+    } ],
+    "type" : "entry",
+    "isList" : true,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "stvPhysicalSIMFeatures" : {
+    "_id" : "wm-stvPhysicalSIMFeatures-wm.Variable-1682495124029",
+    "name" : "stvPhysicalSIMFeatures",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "feature" : "Insert the SIM card. Locate the SIM card slot on your device and insert the SIM card with the metallic contacts facing downwards."
+    }, {
+      "feature" : "Power on the device and wait for it to recognize the SIM card."
+    }, {
+      "feature" : "Once the device has recognized the SIM card, it should automatically connect to the operator's network."
+    }, {
+      "feature" : "Test the connection by making a call or sending a text message"
+    } ],
+    "type" : "entry",
+    "isList" : true,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "supportedLocale" : {
+    "_id" : "wm-wm.Variable1402640443182",
+    "name" : "supportedLocale",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "en" : "English"
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "svGetDeliveredOrders" : {
+    "_id" : "wm-svGetDeliveredOrders-wm.ServiceVariable-1693894848568",
+    "name" : "svGetDeliveredOrders",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "q",
+      "value" : "bind:\"orderStatus.status='Delivered'\" + (userid ? (\" and customerId=\" + userid) : \"\")",
+      "type" : "string"
+    } ],
+    "type" : "com.wavemaker.orderslist.FlankerDBAPI.Orders",
+    "service" : "FlankerDBAPI",
+    "operation" : "FlankerDBAPI_OrdersController_filterOrders",
+    "operationId" : "FlankerDBAPI_OrdersController_filterOrders",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "Orders"
+  },
+  "svGetOrders" : {
+    "_id" : "wm-svGetOrders-wm.ServiceVariable-1682339340150",
+    "name" : "svGetOrders",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "q",
+      "value" : "bind:userid ? \"customerId=\" + userid : undefined",
+      "type" : "string"
+    } ],
+    "type" : "com.wavemaker.orderslist.FlankerDBAPI.Orders",
+    "service" : "FlankerDBAPI",
+    "operation" : "FlankerDBAPI_OrdersController_filterOrders",
+    "operationId" : "FlankerDBAPI_OrdersController_filterOrders",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "Orders"
+  },
+  "svGetPendingOrders" : {
+    "_id" : "wm-svGetPendingOrders-wm.ServiceVariable-1693894715365",
+    "name" : "svGetPendingOrders",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "q",
+      "value" : "bind:\"orderStatus.status='Order Placed'\" + (userid ? (\" and customerId=\" + userid) : \"\")",
+      "type" : "string"
+    } ],
+    "type" : "com.wavemaker.orderslist.FlankerDBAPI.Orders",
+    "service" : "FlankerDBAPI",
+    "operation" : "FlankerDBAPI_OrdersController_filterOrders",
+    "operationId" : "FlankerDBAPI_OrdersController_filterOrders",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "Orders"
+  },
+  "svUpdateSimActivatedStatus" : {
+    "_id" : "wm-svUpdateSimActivatedStatus-wm.ServiceVariable-1682498716511",
+    "name" : "svUpdateSimActivatedStatus",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "id",
+      "value" : "bind:Widgets.list1.selecteditem.phoneOrders.id",
+      "type" : "integer"
+    }, {
+      "target" : "PhoneOrders.isSimActivated",
+      "value" : "bind:true"
+    } ],
+    "type" : "com.wavemaker.orderslist.FlankerDBAPI.PhoneOrders",
+    "service" : "FlankerDBAPI",
+    "operation" : "FlankerDBAPI_PhoneOrdersController_patchPhoneOrders",
+    "operationId" : "FlankerDBAPI_PhoneOrdersController_patchPhoneOrders",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onSuccess" : "Widgets.dialogESIMActivate.close();Variables.svGetOrders.invoke();Actions.nta_SimActivateSuccess.invoke()",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "PhoneOrders",
+    "spinnerContext" : "page",
+    "spinnerMessage" : "Updating SIM Status"
+  },
+  "svUpdateSimActivatedStatusMobile" : {
+    "_id" : "wm-svUpdateSimActivatedStatusMobile-wm.ServiceVariable-1693905514672",
+    "name" : "svUpdateSimActivatedStatusMobile",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.wavemaker.orderslist.FlankerDBAPI.PhoneOrders",
+    "service" : "FlankerDBAPI",
+    "operation" : "FlankerDBAPI_PhoneOrdersController_patchPhoneOrders",
+    "operationId" : "FlankerDBAPI_PhoneOrdersController_patchPhoneOrders",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onSuccess" : "Actions.nta_SimActivateSuccess.invoke();Widgets.dialogActivateEsimMoile.close();Variables.svGetPendingOrders.invoke();Variables.svGetDeliveredOrders.invoke()",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "PhoneOrders",
+    "spinnerContext" : "page",
+    "spinnerMessage" : "Updating SIM Status"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "stvInProgressOrderslist" : {
+    "_id" : "wm-stvInProgressOrderslist-wm.Variable-1682328366258",
+    "name" : "stvInProgressOrderslist",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "orderNum" : "3500002",
+      "amount" : 891
+    } ],
+    "type" : "entry",
+    "isList" : true,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  }
+}

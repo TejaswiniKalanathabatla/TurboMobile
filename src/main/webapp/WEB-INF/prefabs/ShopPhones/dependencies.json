@@ -1,0 +1,17 @@
+[ {
+  "name" : "PhoneOrderSummary",
+  "version" : "1.0.9",
+  "platformVersion" : null,
+  "publisherId" : "ent126649177c14",
+  "publisherName" : "telco",
+  "artifactType" : "PREFAB",
+  "artifactDependencyList" : null
+}, {
+  "name" : "PhonePricePlans",
+  "version" : "1.0.22",
+  "platformVersion" : null,
+  "publisherId" : "ent126649177c14",
+  "publisherName" : "telco",
+  "artifactType" : "PREFAB",
+  "artifactDependencyList" : null
+} ]

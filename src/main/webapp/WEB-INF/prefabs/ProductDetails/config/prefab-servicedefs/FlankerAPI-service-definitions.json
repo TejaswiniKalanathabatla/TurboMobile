@@ -1,0 +1,87 @@
+{
+  "FlankerAPI_PhoneController_getPhone" : {
+    "id" : "FlankerAPI_PhoneController_getPhone",
+    "crudOperationId" : "FlankerAPI.PhoneController",
+    "service" : "FlankerAPI",
+    "controller" : "PhoneController",
+    "operationType" : null,
+    "type" : "com.wavemaker.productdetails.FlankerAPI.Phone",
+    "wmServiceOperationInfo" : {
+      "name" : "FlankerAPI_PhoneController_getPhone",
+      "methodType" : "get",
+      "relativePath" : "/FlankerAPI/flanker_db/Phone/{id}",
+      "directPath" : null,
+      "httpMethod" : "get",
+      "parameters" : [ {
+        "name" : "id",
+        "parameterType" : "path",
+        "required" : true,
+        "type" : "java.lang.Integer",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : { },
+      "produces" : null,
+      "consumes" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  },
+  "FlankerAPI_PhoneVariantController_findPhoneVariants" : {
+    "id" : "FlankerAPI_PhoneVariantController_findPhoneVariants",
+    "crudOperationId" : "FlankerAPI.PhoneVariantController",
+    "service" : "FlankerAPI",
+    "controller" : "PhoneVariantController",
+    "operationType" : "list",
+    "type" : "com.wavemaker.productdetails.FlankerAPI.Page",
+    "wmServiceOperationInfo" : {
+      "name" : "FlankerAPI_PhoneVariantController_findPhoneVariants",
+      "methodType" : "get",
+      "relativePath" : "/FlankerAPI/flanker_db/PhoneVariant",
+      "directPath" : null,
+      "httpMethod" : "get",
+      "parameters" : [ {
+        "name" : "q",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "java.lang.String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "page",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : { },
+      "produces" : null,
+      "consumes" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  }
+}

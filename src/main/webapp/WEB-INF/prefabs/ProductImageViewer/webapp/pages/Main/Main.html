@@ -1,0 +1,32 @@
+<wm-prefab-container name="prefab_container1">
+    <wm-layoutgrid name="layoutgrid1">
+        <wm-gridrow name="gridrow1">
+            <wm-gridcolumn columnwidth="12" name="gridcolumn1">
+                <wm-linearlayout direction="row" spacing="4" name="linearlayout1" show="false">
+                    <wm-linearlayoutitem name="linearlayoutitem1">
+                        <wm-list listclass="list-group" template="true" template-name="Business Card" itemsperrow="xs-1 sm-1 md-1 lg-1" class="list-card thumbnail-list" statehandler="URL" name="GetProductPicturesList1" dataset="bind:Variables.wsGetProductPictures.dataSet.content"
+                            navigation="None" selectfirstitem="true" direction="vertical">
+                            <wm-listtemplate layout="media" name="listtemplate1">
+                                <wm-card name="card1">
+                                    <wm-card-content name="card_content1">
+                                        <wm-picture name="Picture" width="100%" picturesource="bind:Variables.wsGetProductPictures.dataSet.content[$i].image" height="100%" class="thumbnail-list-pic"></wm-picture>
+                                    </wm-card-content>
+                                </wm-card>
+                            </wm-listtemplate>
+                        </wm-list>
+                    </wm-linearlayoutitem>
+                    <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem2" horizontalalign="center">
+                        <wm-picture resizemode="contain" name="picture2" picturesource="bind:Widgets.GetProductPicturesList1.selecteditem.image" height="500" class="thumb-original"></wm-picture>
+                    </wm-linearlayoutitem>
+                </wm-linearlayout>
+            </wm-gridcolumn>
+        </wm-gridrow>
+        <wm-gridrow name="gridrow2">
+            <wm-gridcolumn columnwidth="12" name="gridcolumn3">
+                <wm-container name="container1" horizontalalign="center" height="500px">
+                    <wm-spinner show="true" name="spinner1" servicevariabletotrack="wsGetProductPictures"></wm-spinner>
+                </wm-container>
+            </wm-gridcolumn>
+        </wm-gridrow>
+    </wm-layoutgrid>
+</wm-prefab-container>

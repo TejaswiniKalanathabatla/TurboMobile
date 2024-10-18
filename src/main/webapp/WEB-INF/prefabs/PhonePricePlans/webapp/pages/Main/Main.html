@@ -1,0 +1,75 @@
+<wm-prefab-container name="prefab_container1">
+    <wm-list listclass="list-group" itemclass="list-group-item col-xs-12 col-sm-4 col-md-4 col-lg-4" template="true" template-name="Contact List" itemsperrow="xs-1 sm-3 md-3 lg-3" class="media-list active-list plans-list" datafield="All Fields" statehandler="none"
+        name="pricePlanListList2" dataset="bind:Variables.wsPricePlansList.dataSet.content" navigation="Scroll" direction="horizontal" on-render="pricePlanListList2Render(widget, $data)">
+        <wm-listtemplate layout="inline" name="listtemplate5">
+            <wm-container name="container5" class="plan-header" showindevice="xs,sm">
+                <wm-label name="label8" class="h5 text-uppercase font-semibold text-muted-2" caption="bind:Widgets.pricePlanListList2.currentItem.name" margin="unset unset 8px unset" showindevice="xs,sm"></wm-label>
+                <wm-linearlayout direction="row" spacing="4" padding="0px" name="linearlayout2" verticalalign="bottom" showindevice="xs,sm">
+                    <wm-linearlayoutitem name="linearlayoutitem4" flexgrow="1">
+                        <wm-label name="label9" caption="bind:Widgets.pricePlanListList2.currentItem.price | toCurrency: '$': '2'" class="h1 font-semibold" margin="unset unset -10px unset"></wm-label>
+                    </wm-linearlayoutitem>
+                    <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem5" horizontalalign="right">
+                        <wm-label name="label10" caption="Taxes &amp; Fees included" class="small text-muted-3" margin="10px unset 0px unset" fontsize="13"></wm-label>
+                    </wm-linearlayoutitem>
+                </wm-linearlayout>
+            </wm-container>
+            <wm-container showindevice="md,lg" name="container6_1" class="plan-header">
+                <wm-label class="text-uppercase font-bold text-muted" caption="bind:Widgets.pricePlanListList2.currentItem.name" margin="unset unset 8px unset" showindevice="md,lg" name="label19"></wm-label>
+                <wm-label caption="bind:Widgets.pricePlanListList2.currentItem.price | toCurrency: '$': '2'" class="h1 font-semibold" margin="-8px unset" name="label20"></wm-label>
+                <wm-label caption="Taxes &amp; Fees included" class="small text-muted" margin="0px unset unset unset" name="label21"></wm-label>
+            </wm-container>
+            <wm-container name="container6" class="plan-body">
+                <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Contact List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list dummy-list" datafield="All Fields" statehandler="none" name="List1" dataset="bind:Widgets.pricePlanListList2.currentItem.phonePricePlanFeatureses"
+                    navigation="None" disableitem="true">
+                    <wm-listtemplate layout="inline" name="listtemplate5_1">
+                        <wm-layoutgrid name="layoutgrid8">
+                            <wm-gridrow name="gridrow25">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn26" padding="unset unset 8px unset">
+                                    <wm-linearlayout direction="row" spacing="8" padding="0px" name="linearlayout3_1" verticalalign="center">
+                                        <wm-linearlayoutitem name="linearlayoutitem5_1">
+                                            <wm-picture resizemode="contain" width="24px" height="24px" picturesource="bind:Widgets.List1.currentItem.category == &quot;Network&quot; ? &quot;resources/images/imagelists/network.png&quot; : &quot;resources/images/imagelists/travel.png&quot;" name="picture2"
+                                                pictureplaceholder="resources/images/imagelists/network.png"></wm-picture>
+                                        </wm-linearlayoutitem>
+                                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem6_1">
+                                            <wm-label name="label12" caption="bind:Widgets.List1.currentItem.category" class="h4 inline font-semibold"></wm-label>
+                                        </wm-linearlayoutitem>
+                                    </wm-linearlayout>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow27">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn28">
+                                    <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Contact List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list dummy-list" datafield="All Fields" statehandler="none" name="List1_1" dataset="bind:Widgets.List1.currentItem.planFeatures"
+                                        navigation="None" disableitem="true">
+                                        <wm-listtemplate layout="inline" name="listtemplate7">
+                                            <wm-linearlayout direction="row" spacing="8" padding="0px" name="linearlayout3" horizontalalign="left" verticalalign="top" showindevice="xs,sm">
+                                                <wm-linearlayoutitem name="linearlayoutitem6" horizontalalign="center" padding="1px 0px 0px 0px">
+                                                    <wm-picture resizemode="contain" name="picture1" width="20px" height="20px" picturesource="resources/images/imagelists/check-circle.png"></wm-picture>
+                                                </wm-linearlayoutitem>
+                                                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem7" horizontalalign="left">
+                                                    <wm-label name="label5" caption="bind:Widgets.List1_1.currentItem.value" class="h5 text-muted-3 max-text" margin="4px 0px 0px 0px"></wm-label>
+                                                </wm-linearlayoutitem>
+                                            </wm-linearlayout>
+                                            <wm-container name="container9" showindevice="md,lg">
+                                                <wm-container name="container7_1" class="media-left">
+                                                    <wm-icon name="icon1" iconclass="fa fa-circle small"></wm-icon>
+                                                </wm-container>
+                                                <wm-container name="container8" class="media-body">
+                                                    <wm-label caption="bind:Widgets.List1_1.currentItem.value" class="text-muted" margin="4px 0px 0px 0px" name="label9_1"></wm-label>
+                                                </wm-container>
+                                            </wm-container>
+                                        </wm-listtemplate>
+                                    </wm-list>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-listtemplate>
+                </wm-list>
+            </wm-container>
+            <wm-container name="container7" class="plan-footer" margin="20px unset unset unset">
+                <wm-button class="btn-secondary select-btn btn-block" caption="bind:&quot;Select &quot; + Widgets.pricePlanListList2.currentItem.name" type="button" name="buttonSelectPlan" on-click="buttonSelectPlanClick($event, widget, item, currentItemWidgets)" iconclass="wi wi-add"></wm-button>
+                <wm-button class="btn-secondary outline select-btn btn-block" caption="bind:&quot;Remove &quot; + Widgets.pricePlanListList2.currentItem.name" type="button" name="buttonRemovePlan" on-click="buttonRemovePlanClick($event, widget, item, currentItemWidgets)"
+                    show="false" iconclass="wi wi-minus"></wm-button>
+            </wm-container>
+        </wm-listtemplate>
+    </wm-list>
+</wm-prefab-container>

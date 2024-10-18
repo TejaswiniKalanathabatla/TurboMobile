@@ -1,0 +1,69 @@
+{
+  "stvMenuItems" : {
+    "_id" : "wm-stvShopMenuItems-wm.Variable-1682414126235",
+    "name" : "stvMenuItems",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "shop" : [ {
+        "name" : "Shop Phone",
+        "dataValue" : "shop_phone",
+        "icon" : "wi wi-phone-android",
+        "link" : "#ProductList"
+      }, {
+        "name" : "Bring Your Phone",
+        "dataValue" : "bring_your_phone",
+        "icon" : "wi wi-phonelink-setup",
+        "link" : "#BringYourOwnPhone"
+      }, {
+        "name" : "Shop Broadband",
+        "dataValue" : "shop_broadand",
+        "icon" : "wi wi-wifi",
+        "link" : "#ShopBroadbands"
+      } ],
+      "myaccount" : [ {
+        "name" : "Profile",
+        "dataValue" : "profile",
+        "icon" : "wmn-person-circle",
+        "link" : "#"
+      }, {
+        "name" : "Billing",
+        "dataValue" : "billing",
+        "icon" : "wmn-billing",
+        "link" : "#"
+      }, {
+        "name" : "Orders",
+        "dataValue" : "orders",
+        "icon" : "wmn-receipt",
+        "link" : "#OrdersList"
+      }, {
+        "name" : "Security",
+        "dataValue" : "security",
+        "icon" : "wmn-security-lock",
+        "link" : "#"
+      }, {
+        "name" : "Privacy",
+        "dataValue" : "privacy",
+        "icon" : "wmn-privacy",
+        "link" : "#"
+      }, {
+        "name" : "Rewards",
+        "dataValue" : "rewards",
+        "icon" : "wmn-rewards",
+        "link" : "#"
+      }, {
+        "name" : "Preferences",
+        "dataValue" : "preferences",
+        "icon" : "wm-sl-l sl-settings",
+        "link" : "#Configuration"
+      } ],
+      "aboutus" : [ ],
+      "support" : [ ]
+    },
+    "type" : "entry",
+    "isList" : false,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  }
+}

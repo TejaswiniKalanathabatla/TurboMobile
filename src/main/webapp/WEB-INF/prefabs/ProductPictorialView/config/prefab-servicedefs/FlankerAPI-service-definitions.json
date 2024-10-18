@@ -1,0 +1,55 @@
+{
+  "FlankerAPI_PhoneVariantPicturesController_findPhoneVariantPictures" : {
+    "id" : "FlankerAPI_PhoneVariantPicturesController_findPhoneVariantPictures",
+    "crudOperationId" : "FlankerAPI.PhoneVariantPicturesController",
+    "service" : "FlankerAPI",
+    "controller" : "PhoneVariantPicturesController",
+    "operationType" : "list",
+    "type" : "com.wavemaker.productpictorialview.FlankerAPI.Page",
+    "wmServiceOperationInfo" : {
+      "name" : "FlankerAPI_PhoneVariantPicturesController_findPhoneVariantPictures",
+      "methodType" : "get",
+      "relativePath" : "/FlankerAPI/flanker_db/PhoneVariantPictures",
+      "directPath" : null,
+      "httpMethod" : "get",
+      "parameters" : [ {
+        "name" : "q",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "java.lang.String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "page",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : { },
+      "produces" : null,
+      "consumes" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  }
+}

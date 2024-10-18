@@ -1,0 +1,24 @@
+{
+  "messages" : {
+    "l_cart" : "Cart",
+    "l_storeLocator" : "Store Locator",
+    "l_support" : "Support",
+    "l_aboutUs" : "About Us",
+    "l_myAccount" : "My Account",
+    "l_turboMobiles" : "TURBO  Mobiles",
+    "l_findPurchasePerfectPhone" : "Find, compare, and purchase perfect phone",
+    "l_smartPhones" : "Smart Phones",
+    "l_Shop" : "Shop"
+  },
+  "formats" : {
+    "date" : "MMM d, y",
+    "time" : "h:mm:ss a",
+    "currency" : "USD"
+  },
+  "files" : {
+    "angular" : "en",
+    "fullCalendar" : null,
+    "moment" : null
+  },
+  "prefabMessages" : { }
+}

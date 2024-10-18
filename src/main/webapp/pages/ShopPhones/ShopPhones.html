@@ -1,0 +1,21 @@
+<wm-page pagetitle="Shop Phones" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn1">
+                        <wm-breadcrumb dataset="bind:Variables.stvBreadcrumbDataset.dataSet" class="attribute-based" name="breadcrumb1" itemid="id" itemlabel="label" itemicon="icon" itemlink="link"></wm-breadcrumb>
+                        <wm-label caption="bind:Variables.wsGetPhoneVariant.dataSet.phone.name" class="h6" name="label2" show="false"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn3">
+                        <wm-prefab prefabname="ShopPhones" name="ShopPhones2" type="Shop Phone" phonevariant="bind:Variables.wsGetPhoneVariant.dataSet" userid="bind:Variables.loggedInUser.dataSet.id" on-vieworders="Actions.goToPage_OrdersList.invoke()" on-continueshopping="Actions.goToPage_Home.invoke()"
+                            on-cancel="Actions.goToPage_Home.invoke()" addonsview="Card"></wm-prefab>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+</wm-page>

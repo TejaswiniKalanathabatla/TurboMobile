@@ -1,0 +1,385 @@
+<wm-prefab-container name="prefab_container1">
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Activate Physical SIM Instructions" iconclass="" name="dialogPhysicalSimActivate" showheader="true" closable="false">
+        <wm-dialogactions name="dialogactions1" show="true">
+            <wm-linearlayout direction="row" spacing="4" padding="20px" name="linearlayout3">
+                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem8">
+                    <wm-button class="btn-primary btn-block" caption="Done" on-click="closeDialog()" name="button2"></wm-button>
+                </wm-linearlayoutitem>
+            </wm-linearlayout>
+        </wm-dialogactions>
+        <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Contact List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list dummy-list" datafield="All Fields" statehandler="URL" name="stvPhysicalSIMFeaturesList1"
+            dataset="bind:Variables.stvPhysicalSIMFeatures.dataSet" navigation="None">
+            <wm-listtemplate layout="inline" name="listtemplate2">
+                <wm-linearlayout direction="row" spacing="8" padding="4px unset" name="linearlayout2">
+                    <wm-linearlayoutitem name="linearlayoutitem4" horizontalalign="center">
+                        <wm-icon name="icon1" iconclass="fa fa-circle small" iconsize="6px"></wm-icon>
+                    </wm-linearlayoutitem>
+                    <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem5">
+                        <wm-label name="Name" caption="bind:Widgets.stvPhysicalSIMFeaturesList1.currentItem.feature" fontunit="em" class="h5 text-muted-3" margin="-3px unset unset unset"></wm-label>
+                    </wm-linearlayoutitem>
+                </wm-linearlayout>
+            </wm-listtemplate>
+        </wm-list>
+    </wm-dialog>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Activate eSIM" iconclass="" name="dialogESIMActivate" showheader="true" closable="false" on-opened="dialogESIMActivateOpened($event, widget)">
+        <wm-dialogactions name="dialogactions2" show="true">
+            <wm-button class="btn-default" caption="Cancel" on-click="closeDialog()" name="button3"></wm-button>
+            <wm-button class="btn-primary" caption="Finish" type="button" name="buttonESIMFinish" disabled="bind:!Widgets.containerESIMFinish.show" on-click="Variables.svUpdateSimActivatedStatus.invoke()"></wm-button>
+        </wm-dialogactions>
+        <wm-layoutgrid name="layoutgrid5">
+            <wm-gridrow name="gridrow12">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn20"></wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow13">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn21">
+                    <wm-container name="containerESIMInstructions">
+                        <wm-layoutgrid name="layoutgrid6">
+                            <wm-gridrow name="gridrow14">
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn22">
+                                    <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Contact List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list dummy-list" datafield="All Fields" statehandler="URL" name="stvESIMFeaturesList1"
+                                        dataset="bind:Variables.stvESIMFeatures.dataSet" navigation="None">
+                                        <wm-listtemplate layout="inline" name="listtemplate3">
+                                            <wm-container class="media-left" name="container4">
+                                                <wm-icon name="icon2" iconclass="fa fa-circle small"></wm-icon>
+                                            </wm-container>
+                                            <wm-container class="media-body" name="container5">
+                                                <wm-label name="Name" caption="bind:Widgets.stvESIMFeaturesList1.currentItem.feature" fontunit="em"></wm-label>
+                                            </wm-container>
+                                        </wm-listtemplate>
+                                    </wm-list>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn23" horizontalalign="center">
+                                    <wm-picture resizemode="contain" name="pictureESIMQRCode" on-click="pictureESIMQRCodeClick($event, widget)" picturesource="resources/images/imagelists/qrcode.svg" width="150" height="150"></wm-picture>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-container>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow16">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn26">
+                    <wm-container name="containerESIMDetection" on-click="containerESIMDetectionClick($event, widget)">
+                        <wm-layoutgrid name="layoutgrid7">
+                            <wm-gridrow name="gridrow18">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn28" horizontalalign="center">
+                                    <wm-picture resizemode="contain" name="picture2" picturesource="resources/images/imagelists/successfull.svg" margin="12px unset 8px unset"></wm-picture>
+                                    <wm-label name="label20" caption="Detection Successful!" class="h3 font-semibold" margin="unset unset 20px unset"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow20">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn24"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="10" name="gridcolumn32" horizontalalign="center">
+                                    <wm-label name="label21" caption="Cellular Plan detected!"></wm-label>
+                                    <wm-label caption="Activation is now in progress" name="label22" class="h5"></wm-label>
+                                    <wm-label caption="Please do not cancel!" name="label23" class="h5"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn25"></wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow21">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn33" horizontalalign="center">
+                                    <wm-container name="container8" horizontalalign="right">
+                                        <wm-progress-bar datavalue="63" name="progress_bar1" displayformat="9%" captionplacement="hidden" type="default" margin="20px unset 0px unset"></wm-progress-bar>
+                                        <wm-label name="label18_1" class="small text-muted" caption="63% complete"></wm-label>
+                                    </wm-container>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-container>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow17">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn27">
+                    <wm-container name="containerESIMFinish" show="false">
+                        <wm-layoutgrid name="layoutgrid8">
+                            <wm-gridrow name="gridrow22">
+                                <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn34">
+                                    <wm-picture resizemode="contain" picturesource="resources/images/imagelists/successfull.svg" margin="12px unset 8px unset" name="picture3"></wm-picture>
+                                    <wm-label caption="Activation Successful!" class="h3 font-semibold" name="label24" margin="unset unset 20px unset"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow24">
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn26_1"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="10" horizontalalign="center" name="gridcolumn36">
+                                    <wm-label caption="Cellular Plan has been successfully added to your phone. You can now begin using your new service!" class="h5" name="label25"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="1" name="gridcolumn27_1"></wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow25">
+                                <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn37">
+                                    <wm-container horizontalalign="right" name="container9">
+                                        <wm-progress-bar datavalue="100" displayformat="9%" captionplacement="hidden" type="default" margin="20px unset 0px unset" name="progress_bar3"></wm-progress-bar>
+                                        <wm-label class="small text-muted" caption="100% complete" name="label19"></wm-label>
+                                    </wm-container>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-container>
+                </wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+    </wm-dialog>
+    <wm-layoutgrid name="layoutgrid7_1">
+        <wm-gridrow name="gridrow17_1">
+            <wm-gridcolumn columnwidth="12" name="gridcolumn24_1">
+                <wm-list listclass="list-group" itemsperrow="xs-1 sm-2 md-3 lg-3" class="list-card orders" statehandler="URL" dataset="bind:Variables.svGetOrders.dataSet" navigation="None" name="list1" groupby="orderStatus.status" showindevice="md,lg">
+                    <wm-listtemplate layout="media" name="listtemplate1">
+                        <wm-card name="ContactCard">
+                            <wm-card-content name="card_content1">
+                                <wm-layoutgrid name="layoutgrid2">
+                                    <wm-gridrow name="gridrow2">
+                                        <wm-gridcolumn columnwidth="7" name="gridcolumn2">
+                                            <wm-label name="label1" caption="bind:Widgets.list1.currentItem.orderType.type == 'Shop Broadbands' ?  Widgets.list1.currentItem.broadbandOrders.broadbandPlan.name : Widgets.list1.currentItem.orderType.type == 'Bring your own phone' ? Widgets.list1.currentItem.phoneOrders.phoneModel.name : Widgets.list1.currentItem.phoneOrders.phoneVariant.phone.name"
+                                                class="h5 font-bold"></wm-label>
+                                            <wm-label caption="Bring your own phone" name="label18" class="h6 text-muted font-semibold" show="bind:Widgets.list1.currentItem.orderType.type == 'Bring your own phone'" margin="0px unset unset unset"></wm-label>
+                                            <wm-label caption="Broadband" class="h6 text-muted font-semibold" show="bind:Widgets.list1.currentItem.orderType.type == 'Shop Broadbands'" margin="0px unset unset unset" name="label49"></wm-label>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="5" name="gridcolumn3" horizontalalign="right">
+                                            <wm-label name="label2" caption="bind:Widgets.list1.currentItem.createdAt | timeFromNow" class="small text-muted"></wm-label>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow3">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn4">
+                                            <wm-container name="container10" class="panel no-border" backgroundcolor="rgba(230, 231, 239, 0.3)" padding="20px" margin="unset unset 8px unset">
+                                                <wm-layoutgrid name="layoutgrid7_2" columns="1">
+                                                    <wm-gridrow name="gridrow20_1">
+                                                        <wm-gridcolumn columnwidth="12" name="gridcolumn30">
+                                                            <wm-container name="container11" class="media-body">
+                                                                <wm-container name="container13">
+                                                                    <wm-label name="label3" caption="bind:Widgets.list1.currentItem.orderType.type == 'Shop Broadbands' ? Widgets.list1.currentItem.broadbandOrders.broadbandPlan.description : Widgets.list1.currentItem.phoneOrders.phonePricePlan.name"
+                                                                        class="h5 font-semibold inline"></wm-label>
+                                                                    <wm-label padding="unset unset unset 12px" caption="bind:Widgets.list1.currentItem.phoneOrders.simType" name="labelSimType" show="bind:Widgets.list1.currentItem.orderType.type != 'Shop Broadbands'"
+                                                                        class="h5 font-semibold inline border-left" margin="unset unset unset 12px"></wm-label>
+                                                                </wm-container>
+                                                                <wm-label name="label4" caption="OrderNo :" class="inline small font-medium text-muted"></wm-label>
+                                                                <wm-label caption="bind:Widgets.list1.currentItem.orderId" name="label8" class="inline small font-medium"></wm-label>
+                                                            </wm-container>
+                                                            <wm-container name="container12" class="media-right media-middle">
+                                                                <wm-picture resizemode="contain" name="picture4" height="36" picturesource="bind:Widgets.list1.currentItem.phoneOrders.simType == &quot;esim&quot; ? &quot;resources/images/imagelists/eSim.svg&quot; : &quot;resources/images/imagelists/sim.svg&quot;"
+                                                                    show="bind:Widgets.list1.currentItem.orderType.type != 'Shop Broadbands'"></wm-picture>
+                                                            </wm-container>
+                                                        </wm-gridcolumn>
+                                                    </wm-gridrow>
+                                                    <wm-gridrow name="gridrow21_2" padding="12px unset unset unset">
+                                                        <wm-gridcolumn columnwidth="12" name="gridcolumn31">
+                                                            <wm-label name="label5" caption="bind:Widgets.list1.currentItem.orderStatus.status == 'Order Placed' ? &quot;Expected Delivery Date : &quot; : &quot;Delivered on : &quot;" class="inline small font-medium text-muted"></wm-label>
+                                                            <wm-label caption="bind:Widgets.list1.currentItem.deliveryDate | timeFromNow" class="inline small font-semibold" name="label20_1"></wm-label>
+                                                        </wm-gridcolumn>
+                                                    </wm-gridrow>
+                                                </wm-layoutgrid>
+                                            </wm-container>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow5">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn7">
+                                            <wm-anchor name="anchor1" caption="How to Activate SIM?" show="bind:Widgets.list1.currentItem.phoneOrders.simType == 'physical'" on-click="Widgets.dialogPhysicalSimActivate.open()" margin="24px unset unset unset"></wm-anchor>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn8" horizontalalign="right">
+                                            <wm-label name="label7" caption="bind:(Widgets.list1.currentItem.orderType.type == 'Shop Broadbands' ? Widgets.list1.currentItem.broadbandOrders.broadbandPlan.price : Widgets.list1.currentItem.phoneOrders.price) | toCurrency: '$': '2'"
+                                                class="h2 font-semibold"></wm-label>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                            </wm-card-content>
+                            <wm-card-footer name="card_footer1" class="flex">
+                                <wm-button class="btn-primary" caption="View Order Details" type="button" name="button1"></wm-button>
+                                <wm-button class="btn-primary outline" caption="Activate SIM" type="button" name="button5" show="bind:Widgets.list1.currentItem.phoneOrders.simType == 'esim' &amp;&amp; !Widgets.list1.currentItem.phoneOrders.isSimActivated"
+                                    on-click="Widgets.dialogESIMActivate.open()"></wm-button>
+                            </wm-card-footer>
+                        </wm-card>
+                    </wm-listtemplate>
+                </wm-list>
+            </wm-gridcolumn>
+        </wm-gridrow>
+        <wm-gridrow name="gridrow18_1">
+            <wm-gridcolumn columnwidth="12" name="gridcolumn26_2">
+                <wm-tabs type="static" statehandler="URL" name="tabs1" showindevice="xs,sm">
+                    <wm-tabpane name="tabpane1" title="Pending">
+                        <wm-list listclass="list-group" itemsperrow="xs-1 sm-2 md-3 lg-3" class="list-card orders" statehandler="URL" dataset="bind:Variables.svGetPendingOrders.dataSet" navigation="None" name="list4">
+                            <wm-listtemplate layout="media" name="listtemplate4">
+                                <wm-card name="card2" class="order-card">
+                                    <wm-card-content name="card_content2" class="order-content">
+                                        <wm-layoutgrid name="layoutgrid8_1">
+                                            <wm-gridrow name="gridrow19" padding="unset 5px">
+                                                <wm-gridcolumn columnwidth="7" name="gridcolumn28_1" class="col-xs-6">
+                                                    <wm-label caption="bind:Widgets.list4.currentItem.orderType.type == 'Shop Broadbands' ?  Widgets.list4.currentItem.broadbandOrders.broadbandPlan.name : Widgets.list4.currentItem.orderType.type == 'Bring your own phone' ? Widgets.list4.currentItem.phoneOrders.phoneModel.name : Widgets.list4.currentItem.phoneOrders.phoneVariant.phone.name"
+                                                        class="h4 font-bold" name="label21_1"></wm-label>
+                                                    <wm-label caption="Bring your own phone" class="h6 text-muted-2 font-medium" show="bind:Widgets.list4.currentItem.orderType.type == 'Bring your own phone'" margin="0px unset unset unset" name="label22_1"></wm-label>
+                                                    <wm-label caption="Broadband" class="h6 text-muted-2 font-medium" show="bind:Widgets.list4.currentItem.orderType.type == 'Shop Broadbands'" margin="0px unset unset unset" name="label38_1"></wm-label>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="5" horizontalalign="right" name="gridcolumn29" class="col-xs-6">
+                                                    <wm-label caption="bind:Widgets.list4.currentItem.createdAt | timeFromNow" class="h6 text-muted" name="label23_1"></wm-label>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow20_2">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn30_1" class="col-xs-12">
+                                                    <wm-container class="panel no-border" margin="5px unset" name="container14">
+                                                        <wm-layoutgrid name="layoutgrid14">
+                                                            <wm-gridrow name="gridrow35">
+                                                                <wm-gridcolumn columnwidth="12" name="gridcolumn50" horizontalalign="left" class="col-xs-12">
+                                                                    <wm-label caption="bind:Widgets.list4.currentItem.orderType.type == 'Shop Broadbands' ? Widgets.list4.currentItem.broadbandOrders.broadbandPlan.description : Widgets.list4.currentItem.phoneOrders.phonePricePlan.name"
+                                                                        class="h5 font-semibold" name="label24_1" fontsize="14" margin="unset unset 4px unset"></wm-label>
+                                                                </wm-gridcolumn>
+                                                            </wm-gridrow>
+                                                            <wm-gridrow name="gridrow36">
+                                                                <wm-gridcolumn columnwidth="9" name="gridcolumn52" horizontalalign="left" class="col-xs-9">
+                                                                    <wm-label caption="OrderNo :" class="font-medium text-muted-2" name="label26" fontsize="12"></wm-label>
+                                                                    <wm-label caption="bind:Widgets.list4.currentItem.orderId" class="font-medium" name="label27" fontsize="12" margin="unset unset unset 4px"></wm-label>
+                                                                    <wm-container name="container18" width="100%" margin="10px unset unset unset">
+                                                                        <wm-label caption="bind:Widgets.list1.currentItem.orderStatus.status == 'Order Placed' ? &quot;Expected Delivery Date : &quot; : &quot;Delivered on : &quot;" class="font-medium text-muted-2"
+                                                                            name="label28" width="100%" fontsize="12"></wm-label>
+                                                                        <wm-label caption="bind:Widgets.list4.currentItem.deliveryDate | timeFromNow" class="font-semibold" name="label29" fontsize="12" width="100%"></wm-label>
+                                                                    </wm-container>
+                                                                </wm-gridcolumn>
+                                                                <wm-gridcolumn columnwidth="3" name="gridcolumn53" horizontalalign="right" class="col-xs-3">
+                                                                    <wm-picture resizemode="contain" height="36" picturesource="bind:Widgets.list4.currentItem.phoneOrders.simType == &quot;esim&quot; ? &quot;resources/images/imagelists/eSim.png&quot; : &quot;resources/images/imagelists/sim.png&quot;"
+                                                                        name="picture5" show="bind:Widgets.list4.currentItem.orderType.type != 'Shop Broadbands'"></wm-picture>
+                                                                </wm-gridcolumn>
+                                                            </wm-gridrow>
+                                                        </wm-layoutgrid>
+                                                    </wm-container>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow23" padding="4px unset unset unset">
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn33_1" class="col-xs-6">
+                                                    <wm-anchor caption="How to Activate SIM?" show="bind:Widgets.list4.currentItem.phoneOrders.simType == 'physical'" on-click="Widgets.dialogPhysicalSimActivate.open()" margin="14px unset unset unset" name="anchor2"></wm-anchor>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="6" horizontalalign="right" name="gridcolumn34_1" class="col-xs-6">
+                                                    <wm-label caption="bind:(Widgets.list4.currentItem.orderType.type == 'Shop Broadbands' ? Widgets.list4.currentItem.broadbandOrders.broadbandPlan.price : Widgets.list4.currentItem.phoneOrders.price) | toCurrency: '$': '2'"
+                                                        class="h2 font-semibold" name="label30"></wm-label>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                        </wm-layoutgrid>
+                                    </wm-card-content>
+                                    <wm-card-footer class="flex" name="card_footer2">
+                                        <wm-button class="select-btn btn-block" caption="View Order Details" type="button" name="button6" margin="5px"></wm-button>
+                                        <wm-button class="btn-primary outline btn-block" caption="Activate SIM" type="button" show="bind:Widgets.list4.currentItem.phoneOrders.simType == 'esim' &amp;&amp; !Widgets.list4.currentItem.phoneOrders.isSimActivated"
+                                            on-click="Widgets.dialogActivateEsimMoile.open();button7Click($event, widget, item, currentItemWidgets)" name="button7" margin="5px"></wm-button>
+                                    </wm-card-footer>
+                                </wm-card>
+                            </wm-listtemplate>
+                        </wm-list>
+                    </wm-tabpane>
+                    <wm-tabpane name="tabpane2" title="Delivered">
+                        <wm-list listclass="list-group" itemsperrow="xs-1 sm-2 md-3 lg-3" class="list-card orders" statehandler="URL" dataset="bind:Variables.svGetDeliveredOrders.dataSet" navigation="None" name="list5">
+                            <wm-listtemplate layout="media" name="listtemplate5">
+                                <wm-card name="card3" class="order-card">
+                                    <wm-card-content name="card_content3" class="order-card-content">
+                                        <wm-layoutgrid name="layoutgrid12">
+                                            <wm-gridrow name="gridrow30">
+                                                <wm-gridcolumn columnwidth="7" name="gridcolumn43" class="col-xs-6">
+                                                    <wm-label caption="bind:Widgets.list5.currentItem.orderType.type == 'Shop Broadbands' ?  Widgets.list5.currentItem.broadbandOrders.broadbandPlan.name : Widgets.list5.currentItem.orderType.type == 'Bring your own phone' ? Widgets.list5.currentItem.phoneOrders.phoneModel.name : Widgets.list5.currentItem.phoneOrders.phoneVariant.phone.name"
+                                                        class="h5 font-bold" name="label39"></wm-label>
+                                                    <wm-label caption="Bring your own phone" class="h6 text-muted font-semibold" show="bind:Widgets.list5.currentItem.orderType.type == 'Bring your own phone'" margin="0px unset unset unset" name="label40"></wm-label>
+                                                    <wm-label caption="Broadband" class="h6 text-muted font-semibold" show="bind:Widgets.list5.currentItem.orderType.type == 'Shop Broadbands'" margin="0px unset unset unset" name="label41"></wm-label>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="5" horizontalalign="right" name="gridcolumn44" class="col-xs-6">
+                                                    <wm-label caption="bind:Widgets.list5.currentItem.createdAt | timeFromNow" class="small text-muted" name="label42"></wm-label>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow31" class="col-xs-12">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn45">
+                                                    <wm-container class="panel no-border" margin="5px unset" name="container22">
+                                                        <wm-layoutgrid name="layoutgrid15">
+                                                            <wm-gridrow name="gridrow38">
+                                                                <wm-gridcolumn columnwidth="12" name="gridcolumn56" horizontalalign="left" class="col-xs-12">
+                                                                    <wm-label caption="bind:Widgets.list5.currentItem.orderType.type == 'Shop Broadbands' ? Widgets.list5.currentItem.broadbandOrders.broadbandPlan.description : Widgets.list5.currentItem.phoneOrders.phonePricePlan.name"
+                                                                        class="h5 font-semibold inline" name="label43"></wm-label>
+                                                                </wm-gridcolumn>
+                                                            </wm-gridrow>
+                                                            <wm-gridrow name="gridrow40">
+                                                                <wm-gridcolumn columnwidth="9" name="gridcolumn60" horizontalalign="left" class="col-xs-9">
+                                                                    <wm-label caption="OrderNo :" class="inline small font-medium text-muted" width="100%" name="label44"></wm-label>
+                                                                    <wm-label caption="bind:Widgets.list5.currentItem.orderId" class="inline small font-medium" name="label45"></wm-label>
+                                                                </wm-gridcolumn>
+                                                                <wm-gridcolumn columnwidth="3" name="gridcolumn61" horizontalalign="right" class="col-xs-3">
+                                                                    <wm-picture resizemode="contain" height="36" picturesource="bind:Widgets.list5.currentItem.phoneOrders.simType == &quot;esim&quot; ? &quot;resources/images/imagelists/eSim.svg&quot; : &quot;resources/images/imagelists/sim.svg&quot;"
+                                                                        show="bind:Widgets.list5.currentItem.orderType.type != 'Shop Broadbands'" name="picture8"></wm-picture>
+                                                                </wm-gridcolumn>
+                                                            </wm-gridrow>
+                                                            <wm-gridrow name="gridrow39">
+                                                                <wm-gridcolumn columnwidth="12" name="gridcolumn58" horizontalalign="left" class="col-xs-12">
+                                                                    <wm-label caption="bind:Widgets.list1.currentItem.orderStatus.status == 'Order Placed' ? &quot;Expected Delivery Date : &quot; : &quot;Delivered on : &quot;" class="inline small font-medium text-muted"
+                                                                        width="100%" name="label46"></wm-label>
+                                                                    <wm-label caption="bind:Widgets.list5.currentItem.deliveryDate | timeFromNow" class="inline small font-semibold" name="label47"></wm-label>
+                                                                </wm-gridcolumn>
+                                                            </wm-gridrow>
+                                                        </wm-layoutgrid>
+                                                    </wm-container>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow34">
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn48" class="col-xs-6">
+                                                    <wm-anchor caption="How to Activate SIM?" show="bind:Widgets.list5.currentItem.phoneOrders.simType == 'physical'" on-click="Widgets.dialogPhysicalSimActivate.open()" margin="24px unset unset unset" name="anchor3"></wm-anchor>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="6" horizontalalign="right" name="gridcolumn49" class="col-xs-6">
+                                                    <wm-label caption="bind:(Widgets.list5.currentItem.orderType.type == 'Shop Broadbands' ? Widgets.list5.currentItem.broadbandOrders.broadbandPlan.price : Widgets.list5.currentItem.phoneOrders.price) | toCurrency: '$': '2'"
+                                                        class="h2 font-semibold" name="label48"></wm-label>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                        </wm-layoutgrid>
+                                    </wm-card-content>
+                                    <wm-card-footer class="flex" name="card_footer3"></wm-card-footer>
+                                </wm-card>
+                            </wm-listtemplate>
+                        </wm-list>
+                    </wm-tabpane>
+                </wm-tabs>
+            </wm-gridcolumn>
+        </wm-gridrow>
+    </wm-layoutgrid>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Activate eSim" iconclass="" name="dialogActivateEsimMoile" on-opened="dialogActivateEsimMoileOpened($event, widget)" closable="false">
+        <wm-dialogactions name="dialogactions3">
+            <wm-linearlayout direction="row" spacing="12" padding="20px" name="linearlayout1">
+                <wm-linearlayoutitem name="linearlayoutitem1" flexgrow="1">
+                    <wm-button class="btn-default btn-block" caption="Cancel" on-click="closeDialog()" name="button8"></wm-button>
+                </wm-linearlayoutitem>
+                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem2">
+                    <wm-button class="btn-primary btn-block" caption="Finish" type="button" name="button9" disabled="bind:!Widgets.containerActivationFinishMobile.show" on-click="button9Click($event, widget)"></wm-button>
+                </wm-linearlayoutitem>
+            </wm-linearlayout>
+        </wm-dialogactions>
+        <wm-container on-click="containerEsimDetectionMobileClick($event, widget)" name="containerEsimDetectionMobile">
+            <wm-layoutgrid name="layoutgrid11">
+                <wm-gridrow name="gridrow26">
+                    <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn37_1">
+                        <wm-picture resizemode="contain" picturesource="resources/images/imagelists/sucess.png" margin="12px unset 8px unset" name="picture6" height="82px"></wm-picture>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow27">
+                    <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn39">
+                        <wm-label caption="Detection Successful!" class="h3 font-semibold" margin="unset unset 20px unset" name="label34" textalign="center"></wm-label>
+                        <wm-label caption="Cellular Plan “AT&amp;T Plus Plan” detected! Installation is now in progress." name="label35" width="100%" textalign="center" class="h4 text-muted-3"></wm-label>
+                        <wm-label caption="Please do not cancel!" class="h4 text-muted-3 font-semibold" name="label37" textalign="center" width="100%" margin="3px unset unset unset"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow28">
+                    <wm-gridcolumn columnwidth="12" horizontalalign="right" name="gridcolumn41">
+                        <wm-progress-bar datavalue="63" displayformat="9%" captionplacement="hidden" type="default" margin="30px unset 10px unset" name="progress_bar3_1" width="63%" height="4px"></wm-progress-bar>
+                        <wm-label class="h6 text-muted-3" caption="63% complete" name="label38" fontstyle="italic"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-container>
+        <wm-container name="containerActivationFinishMobile" show="false">
+            <wm-layoutgrid name="layoutgrid11_1">
+                <wm-gridrow name="gridrow27_1">
+                    <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn38_1">
+                        <wm-picture resizemode="contain" picturesource="resources/images/imagelists/sucess.png" margin="12px unset 8px unset" name="picture7" height="82px"></wm-picture>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow28_1">
+                    <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn40_1">
+                        <wm-label caption="Activation Successful!" class="h3 font-semibold" margin="unset unset 20px unset" name="label35_1" width="100%" textalign="center"></wm-label>
+                        <wm-label caption="Cellular Plan has been successfully added to your phone. You can now begin using your new service!" name="label36_1" width="100%" textalign="center" class="h4 text-muted-3"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow29">
+                    <wm-gridcolumn columnwidth="12" horizontalalign="right" name="gridcolumn42">
+                        <wm-progress-bar datavalue="100" displayformat="9%" captionplacement="hidden" type="default" margin="30px unset 10px unset" name="progress_bar4" width="100%" height="4px"></wm-progress-bar>
+                        <wm-label class="h6 text-muted-3" caption="100% complete" name="label37_1" fontstyle="italic"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-container>
+    </wm-dialog>
+</wm-prefab-container>

@@ -1,0 +1,26 @@
+<wm-page pagetitle="Configuration" name="page1">
+    <wm-header content="header" name="header1"></wm-header>
+    <wm-content name="content1">
+        <wm-left-panel columnwidth="2" content="leftnav" name="left_panel1"></wm-left-panel>
+        <wm-page-content columnwidth="10" name="page_content1">
+            <wm-layoutgrid name="layoutgrid1">
+                <wm-gridrow name="gridrow1">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn1">
+                        <wm-label name="label1" caption="Configuartion" class="h3"></wm-label>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+                <wm-gridrow name="gridrow2">
+                    <wm-gridcolumn columnwidth="12" name="gridcolumn3">
+                        <wm-table statehandler="none" name="GetAddOnCategoriesTable1" title="Categories List" dataset="bind:Variables.wsGetAddOnCategories.dataSet.content" navigation="Basic" showrowindex="true">
+                            <wm-table-column binding="name" caption="Name" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                            <wm-table-column binding="isActive" caption="Is Active" widget-type="checkbox" edit-widget-type="text" type="string" show="true" readonly="false">
+                                <wm-checkbox datavalue="bind:row.getProperty('isActive')" disabled="bind:colDef.readonly" class="" conditionalclass="" conditionalstyle="" on-click="Variables.wsPatchAddOnCategory.invoke()"></wm-checkbox>
+                            </wm-table-column>
+                        </wm-table>
+                    </wm-gridcolumn>
+                </wm-gridrow>
+            </wm-layoutgrid>
+        </wm-page-content>
+    </wm-content>
+    <wm-footer content="footer" name="footer1"></wm-footer>
+</wm-page>

@@ -1,0 +1,119 @@
+{
+  "la_login" : {
+    "_id" : "wm-la_login-wm.LoginVariable-1682509516153",
+    "name" : "la_login",
+    "owner" : "Page",
+    "category" : "wm.LoginVariable",
+    "dataBinding" : [ {
+      "target" : "j_username",
+      "value" : "bind:Widgets.stvLoginformForm1.formWidgets.email.datavalue"
+    }, {
+      "target" : "j_password",
+      "value" : "bind:Widgets.stvLoginformForm1.formWidgets.password.datavalue"
+    } ],
+    "dataSet" : {
+      "j_username" : "",
+      "j_password" : "",
+      "j_rememberme" : false
+    },
+    "type" : "string",
+    "saveInPhonegap" : false,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "useDefaultSuccessHandler" : true
+  },
+  "la_loginAfterRegister" : {
+    "_id" : "wm-la_loginAfterRegister-wm.LoginVariable-1682513052956",
+    "name" : "la_loginAfterRegister",
+    "owner" : "Page",
+    "category" : "wm.LoginVariable",
+    "dataBinding" : [ {
+      "target" : "j_username",
+      "value" : "bind:Widgets.stvRegisterFormForm1.formWidgets.email.datavalue"
+    }, {
+      "target" : "j_password",
+      "value" : "bind:Widgets.stvRegisterFormForm1.formWidgets.password.datavalue"
+    } ],
+    "dataSet" : {
+      "j_username" : "",
+      "j_password" : "",
+      "j_rememberme" : false
+    },
+    "type" : "string",
+    "saveInPhonegap" : false,
+    "onSuccess" : "Widgets.dialogRegister.close()",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "useDefaultSuccessHandler" : true
+  },
+  "stvLoginform" : {
+    "_id" : "wm-stvLoginform-wm.Variable-1682509185802",
+    "name" : "stvLoginform",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "email" : "",
+      "password" : ""
+    },
+    "type" : "entry",
+    "isList" : false,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "stvRegisterForm" : {
+    "_id" : "wm-stvRegisterForm-wm.Variable-1682511930119",
+    "name" : "stvRegisterForm",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "name" : "",
+      "email" : "",
+      "password" : ""
+    },
+    "type" : "entry",
+    "isList" : false,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "svCreateCustomer" : {
+    "_id" : "wm-svCreateCustomer-wm.ServiceVariable-1691476728093",
+    "name" : "svCreateCustomer",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "Customer.email",
+      "value" : "bind:Widgets.stvRegisterFormForm1.formWidgets.email.datavalue",
+      "type" : "java.lang.String"
+    }, {
+      "target" : "Customer.name",
+      "value" : "bind:Widgets.stvRegisterFormForm1.formWidgets.name.datavalue",
+      "type" : "java.lang.String"
+    }, {
+      "target" : "Customer.password",
+      "value" : "bind:Widgets.stvRegisterFormForm1.formWidgets.password.datavalue",
+      "type" : "java.lang.String"
+    } ],
+    "type" : "com.wavemaker.turbomobiles.FlankerAPI.Customer",
+    "service" : "FlankerAPI",
+    "operation" : "FlankerAPI_CustomerController_createCustomer",
+    "operationId" : "FlankerAPI_CustomerController_createCustomer",
+    "operationType" : "create",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onSuccess" : "Actions.la_loginAfterRegister.invoke()",
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "Customer"
+  }
+}

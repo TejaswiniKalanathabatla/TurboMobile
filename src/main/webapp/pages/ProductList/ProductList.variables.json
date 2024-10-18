@@ -1,0 +1,28 @@
+{
+  "wsGetSelectedProductDetails" : {
+    "_id" : "wm-wsGetSelectedProductDetails-wm.ServiceVariable-1682673477256",
+    "name" : "wsGetSelectedProductDetails",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "id",
+      "value" : "bind:Widgets.PhonesList1.selectedphone",
+      "type" : "string"
+    } ],
+    "type" : "GetSelectedProductDetails.RootResponse",
+    "service" : "GetSelectedProductDetails",
+    "operation" : "invoke",
+    "operationId" : "GetSelectedProductDetails_invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "GetSelectedProductDetails"
+  }
+}

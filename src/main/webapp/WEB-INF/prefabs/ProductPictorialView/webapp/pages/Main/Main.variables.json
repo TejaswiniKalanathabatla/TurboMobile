@@ -1,0 +1,41 @@
+{
+  "supportedLocale" : {
+    "_id" : "wm-wm.Variable1402640443182",
+    "name" : "supportedLocale",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "en" : "English"
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "wsGetProductPictures" : {
+    "_id" : "wm-wsGetProductPictures-wm.ServiceVariable-1693898428605",
+    "name" : "wsGetProductPictures",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "q",
+      "value" : "bind:'phoneColorId ='+productcolorid",
+      "type" : "string"
+    } ],
+    "type" : "com.wavemaker.productpictorialview.FlankerAPI.PhoneVariantPictures",
+    "service" : "FlankerAPI",
+    "operation" : "FlankerAPI_PhoneVariantPicturesController_findPhoneVariantPictures",
+    "operationId" : "FlankerAPI_PhoneVariantPicturesController_findPhoneVariantPictures",
+    "operationType" : "list",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "onSuccess" : "wsGetProductPicturesonSuccess(variable, data, options)",
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "PhoneVariantPictures"
+  }
+}

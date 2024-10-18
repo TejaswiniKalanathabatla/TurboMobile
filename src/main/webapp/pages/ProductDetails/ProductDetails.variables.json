@@ -1,0 +1,20 @@
+{
+  "nav_goto_shopPhones" : {
+    "_id" : "wm-av_goto_shopPhones-wm.NavigationVariable-1682332580373",
+    "name" : "nav_goto_shopPhones",
+    "owner" : "Page",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "ShopPhones",
+      "type" : "string"
+    } ],
+    "operation" : "gotoPage",
+    "dataSet" : [ {
+      "type" : "integer",
+      "target" : "product_variant_id",
+      "value" : "bind:Widgets.ProductDetails1.productvariantid"
+    } ],
+    "pageTransitions" : "none"
+  }
+}

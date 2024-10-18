@@ -1,0 +1,71 @@
+{
+  "stvPhoneslist" : {
+    "_id" : "wm-stvPhoneslist-wm.Variable-1681724511370",
+    "name" : "stvPhoneslist",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "id" : 1,
+      "brand" : "Apple",
+      "model" : "iphone 14",
+      "price" : 1099.99,
+      "image" : ""
+    }, {
+      "id" : 2,
+      "brand" : "Apple",
+      "model" : "iphone 14",
+      "price" : 899.99,
+      "image" : ""
+    }, {
+      "id" : 3,
+      "brand" : "Google",
+      "model" : "pixel 8",
+      "price" : 99.99,
+      "image" : ""
+    }, {
+      "id" : 4,
+      "brand" : "Google",
+      "model" : "pixel 7",
+      "price" : 799.99,
+      "image" : ""
+    } ],
+    "type" : "entry",
+    "isList" : true,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "supportedLocale" : {
+    "_id" : "wm-wm.Variable1402640443182",
+    "name" : "supportedLocale",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "en" : "English"
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "wsGetPhonesList" : {
+    "_id" : "wm-wsGetPhonesList-wm.ServiceVariable-1691486199206",
+    "name" : "wsGetPhonesList",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.wavemaker.phoneslist.FlankerAPI.Phone",
+    "service" : "FlankerAPI",
+    "operation" : "FlankerAPI_PhoneController_filterPhones",
+    "operationId" : "FlankerAPI_PhoneController_filterPhones",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "Phone"
+  }
+}

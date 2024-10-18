@@ -1,0 +1,110 @@
+<wm-prefab-container name="prefab_container1">
+    <wm-layoutgrid name="layoutgrid1">
+        <wm-gridrow name="gridrow2">
+            <wm-gridcolumn columnwidth="7" name="gridcolumn3">
+                <wm-prefab prefabname="ProductPictorialView" name="ProductPictorialView1" productcolorid="bind:Widgets.listPhoneColorsMobile ? Widgets.listPhoneColorsMobile.selecteditem.id : Widgets.GetPhoneColorsList1.selecteditem.id" class="panel"></wm-prefab>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="5" name="gridcolumn4" class="spacing-left-md">
+                <wm-layoutgrid name="layoutgrid3" columns="1">
+                    <wm-gridrow name="gridrow11">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn14">
+                            <wm-tabs type="static" statehandler="URL" name="tabs1">
+                                <wm-tabpane name="tabpaneOverview" title="Overview">
+                                    <wm-layoutgrid name="layoutgrid2">
+                                        <wm-gridrow name="gridrow3">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn5">
+                                                <wm-label name="labelCompanyAndModal" caption="bind:(Variables.wsGetProductDetails.dataSet.company ? Variables.wsGetProductDetails.dataSet.company : '') +' '+ (Variables.wsGetProductDetails.dataSet.name ? Variables.wsGetProductDetails.dataSet.name : '')"
+                                                    class="h2 font-bold" margin="unset unset 12px unset"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow11">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn13_1">
+                                                <wm-label name="labelPrice" caption="Price" class="h5 text-muted" margin="24px unset 0px unset" showindevice="md,lg"></wm-label>
+                                                <wm-label name="labelPriceVal" caption="bind:Variables.wsGetProductVariantDetails.dataSet.content[$i].price | toCurrency: '$': '2'" class="h2 font-semibold" margin="0px unset unset unset" showindevice="md,lg"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow4">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn7">
+                                                <wm-label name="labelColors" caption="Colors" class="h5 text-muted" margin="20px unset unset unset"></wm-label>
+                                                <wm-container name="container3_1" display="inline-block" showindevice="md,lg">
+                                                    <wm-list listclass="list-group" itemclass="list-group-item  my-item" template="true" template-name="Action List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list color-list" statehandler="URL" name="GetPhoneColorsList1" dataset="bind:Variables.wsGetProductDetails.dataSet.phoneColorses"
+                                                        navigation="None" selectfirstitem="true" direction="horizontal" nodatamessage="" showindevice="md,lg">
+                                                        <wm-listtemplate layout="inline" name="listtemplate1">
+                                                            <wm-container class="color-indicator" name="container3" conditionalstyle="bind:{'background-color' : Widgets.GetPhoneColorsList1.currentItem.color.hexcode}"></wm-container>
+                                                        </wm-listtemplate>
+                                                    </wm-list>
+                                                </wm-container>
+                                                <wm-container name="container5" showindevice="xs,sm">
+                                                    <wm-list listclass="list-group" itemclass="list-group-item  my-item" template="true" template-name="Action List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list color-list" statehandler="URL" dataset="bind:Variables.wsGetProductDetails.dataSet.phoneColorses"
+                                                        navigation="None" selectfirstitem="true" direction="horizontal" nodatamessage="" showindevice="xs,sm" name="listPhoneColorsMobile">
+                                                        <wm-listtemplate layout="inline" name="listtemplate3">
+                                                            <wm-container class="color-indicator" backgroundcolor="bind:Widgets.listPhoneColorsMobile.currentItem.color.hexcode" name="container4_1" width="32px" height="32px" margin="5px 2px"></wm-container>
+                                                        </wm-listtemplate>
+                                                    </wm-list>
+                                                </wm-container>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow5">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn9">
+                                                <wm-label name="labelCapacity" caption="Storage" class="h5 text-muted" margin="20px unset 4px unset"></wm-label>
+                                                <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Action List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list chip-list" statehandler="URL" dataset="bind:Variables.wsGetProductDetails.dataSet.phoneStorageSizeses"
+                                                    navigation="None" name="listPhoneStorage" direction="horizontal" selectfirstitem="true" nodatamessage="" showindevice="all">
+                                                    <wm-listtemplate layout="inline" name="listtemplatePhoneStorage">
+                                                        <wm-container name="container4" class="storage" margin="unset unset -5px unset">
+                                                            <wm-label name="Name" caption="bind:Widgets.listPhoneStorage.currentItem.storageSizes.size" fontunit="px" class="storage-label"></wm-label>
+                                                        </wm-container>
+                                                    </wm-listtemplate>
+                                                </wm-list>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow13">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn16">
+                                                <wm-label name="labelInsurance" caption="Insurance" class="h5 text-muted" margin="20px unset 4px unset"></wm-label>
+                                                <wm-label name="labelInsuranceDesc" caption="Don't let a cracked screen disrupt your mobile experience. Our insurance includes coverage for screen repairs or replacements." class="h5" margin="0px unset 10px unset"></wm-label>
+                                                <wm-switch datavalue="Add insurance" name="switch1" dataset="Add insurance, Don't Add Insurance" class="insurance-btn"></wm-switch>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow6">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn10">
+                                                <wm-label name="labelSim" caption="SIM" class="h5 text-muted" margin="20px unset 4px unset"></wm-label>
+                                                <wm-label name="labelSimDesc" caption="Bothe physical &amp; eSIMS are supported in this device" class="h5" margin="0px unset unset unset"></wm-label>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow7">
+                                            <wm-gridcolumn columnwidth="12" name="gridcolumn11"></wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                </wm-tabpane>
+                                <wm-tabpane name="tabpaneFeatures" title="Features"></wm-tabpane>
+                                <wm-tabpane name="tabpaneSpecs" title="Specs"></wm-tabpane>
+                            </wm-tabs>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow12">
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn15">
+                            <wm-button class="btn-primary btn-block" caption="Continue" type="button" name="buttonContinue" on-click="buttonContinueClick($event, widget)" showindevice="md,lg"></wm-button>
+                        </wm-gridcolumn>
+                        <wm-gridcolumn columnwidth="6" name="gridcolumn18"></wm-gridcolumn>
+                    </wm-gridrow>
+                    <wm-gridrow name="gridrow13_1" class="sticky-footer">
+                        <wm-gridcolumn columnwidth="12" name="gridcolumn18_2">
+                            <wm-linearlayout direction="row" spacing="4" padding="20px" name="linearlayout1" class="footer-fixed-bottom" verticalalign="center" showindevice="xs,sm">
+                                <wm-linearlayoutitem name="linearlayoutitem1" flexgrow="1">
+                                    <wm-label caption="bind:Variables.wsGetProductVariantDetails.dataSet.content[$i].price | toCurrency: '$': '2'" class="h2 font-semibold" margin="0px unset" showindevice="xs,sm" name="label11"></wm-label>
+                                </wm-linearlayoutitem>
+                                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem2" horizontalalign="right">
+                                    <wm-button class="btn-transparent" caption="Back" type="button" margin="unset 20px unset unset" name="button3" padding="unset 0px" on-click="button3Click($event, widget)"></wm-button>
+                                    <wm-button class="btn-primary buy-btn" caption="Buy" type="button" margin="unset" name="button2" showindevice="xs,sm" on-click="button2Click($event, widget)"></wm-button>
+                                </wm-linearlayoutitem>
+                            </wm-linearlayout>
+                        </wm-gridcolumn>
+                    </wm-gridrow>
+                </wm-layoutgrid>
+            </wm-gridcolumn>
+        </wm-gridrow>
+    </wm-layoutgrid>
+    <wm-gridrow name="gridrow11_1">
+        <wm-gridcolumn columnwidth="7" name="gridcolumn13"></wm-gridcolumn>
+        <wm-gridcolumn columnwidth="5" name="gridcolumn14_1"></wm-gridcolumn>
+    </wm-gridrow>
+</wm-prefab-container>

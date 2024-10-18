@@ -1,0 +1,6 @@
+{
+  "id" : "GetUserByEmail",
+  "type" : "RestService",
+  "title" : "GetUserByEmail",
+  "mockEnabled" : false
+}

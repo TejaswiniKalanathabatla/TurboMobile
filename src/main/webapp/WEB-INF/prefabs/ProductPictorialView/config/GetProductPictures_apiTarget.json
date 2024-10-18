@@ -1,0 +1,196 @@
+{
+  "basePath" : "${rest.GetProductPictures.basepath}",
+  "paths" : {
+    "/FlankerAPIs/services/flanker_db/PhoneVariantPictures" : {
+      "x-WM-BASE_PATH" : "/FlankerAPIs/services/flanker_db/PhoneVariantPictures",
+      "x-WM-TAG" : "GetProductPictures",
+      "x-WM-RELATIVE_PATH" : "",
+      "get" : {
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "operationId" : "GetProductPictures_invoke",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "x-WM-VARIABLE_KEY" : "",
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "q",
+          "format" : "string",
+          "description" : "q",
+          "type" : "string",
+          "required" : false,
+          "x-WM-VARIABLE_TYPE" : "PROMPT"
+        } ],
+        "tags" : [ "GetProductPictures" ],
+        "consumes" : [ "application/json" ]
+      },
+      "x-WM-COMPLETE_PATH" : "${rest.GetProductPictures.scheme}://${rest.GetProductPictures.host}${rest.GetProductPictures.basepath}/FlankerAPIs/services/flanker_db/PhoneVariantPictures"
+    }
+  },
+  "host" : "${rest.GetProductPictures.host}",
+  "schemes" : [ "${rest.GetProductPictures.scheme}" ],
+  "definitions" : {
+    "Response.contentEntryItem" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetProductPictures.Response.contentEntryItem",
+      "x-WM-TAGS" : [ "GetProductPictures" ],
+      "required" : [ "id", "image", "phoneColorId", "phoneColors" ],
+      "properties" : {
+        "image" : {
+          "type" : "string"
+        },
+        "phoneColors" : {
+          "$ref" : "#/definitions/Response.phoneColors"
+        },
+        "phoneColorId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "id" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    },
+    "Response.phoneColors" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetProductPictures.Response.phoneColors",
+      "x-WM-TAGS" : [ "GetProductPictures" ],
+      "required" : [ "color", "colorId", "id", "phone", "phoneId" ],
+      "properties" : {
+        "color" : {
+          "$ref" : "#/definitions/Response.color"
+        },
+        "phone" : {
+          "$ref" : "#/definitions/Response.phone"
+        },
+        "colorId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "phoneId" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "id" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    },
+    "java.lang.Object" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetProductPictures.java.lang.Object",
+      "x-WM-TAGS" : [ "GetProductPictures" ]
+    },
+    "Response.color" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetProductPictures.Response.color",
+      "x-WM-TAGS" : [ "GetProductPictures" ],
+      "required" : [ "hexcode", "id", "name" ],
+      "properties" : {
+        "hexcode" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "id" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    },
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetProductPictures.RootResponse",
+      "x-WM-TAGS" : [ "GetProductPictures" ],
+      "required" : [ "content", "empty", "first", "last", "number", "numberOfElements", "size", "sort", "totalElements", "totalPages" ],
+      "properties" : {
+        "number" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "last" : {
+          "type" : "boolean"
+        },
+        "numberOfElements" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "size" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "totalPages" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "sort" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/java.lang.Object"
+          }
+        },
+        "content" : {
+          "x-WM-IS_LIST" : true,
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/Response.contentEntryItem"
+          }
+        },
+        "first" : {
+          "type" : "boolean"
+        },
+        "totalElements" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "empty" : {
+          "type" : "boolean"
+        }
+      }
+    },
+    "Response.phone" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "GetProductPictures.Response.phone",
+      "x-WM-TAGS" : [ "GetProductPictures" ],
+      "required" : [ "baseImage", "company", "id", "name", "startingPrice" ],
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "baseImage" : {
+          "type" : "string"
+        },
+        "company" : {
+          "type" : "string"
+        },
+        "id" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "startingPrice" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    }
+  },
+  "swagger" : "2.0",
+  "info" : {
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "x-WM-API_ID" : "af49d7fa-9b8e-48f8-9ef5-4ee215652509",
+    "x-WM-SERVICE_ID" : "wavemakeronline",
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-USE_WITH_CREDENTIALS" : false
+  },
+  "tags" : [ {
+    "name" : "GetProductPictures"
+  } ]
+}

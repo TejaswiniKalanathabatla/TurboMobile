@@ -1,0 +1,48 @@
+{
+  "stvPricePlan" : {
+    "_id" : "wm-stvPricePlan-wm.Variable-1682070401889",
+    "name" : "stvPricePlan",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : { },
+    "type" : "entry",
+    "isList" : false,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "supportedLocale" : {
+    "_id" : "wm-wm.Variable1402640443182",
+    "name" : "supportedLocale",
+    "owner" : "Page",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "en" : "English"
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "wsPricePlansList" : {
+    "_id" : "wm-wsPricePlansList-wm.ServiceVariable-1691485551117",
+    "name" : "wsPricePlansList",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.wavemaker.phonepriceplans.FlankerAPI.PhonePricePlan",
+    "service" : "FlankerAPI",
+    "operation" : "FlankerAPI_PhonePricePlanController_filterPhonePricePlans",
+    "operationId" : "FlankerAPI_PhonePricePlanController_filterPhonePricePlans",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "onBeforeDatasetReady" : "wsPricePlansListonBeforeDatasetReady(variable, data, options)",
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "PhonePricePlan"
+  }
+}

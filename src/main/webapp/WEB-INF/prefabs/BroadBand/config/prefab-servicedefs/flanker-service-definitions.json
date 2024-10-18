@@ -1,0 +1,1254 @@
+{
+  "flanker_StatesController_filterStates" : {
+    "id" : "flanker_StatesController_filterStates",
+    "crudOperationId" : "flanker.StatesController",
+    "service" : "flanker",
+    "controller" : "StatesController",
+    "operationType" : null,
+    "type" : "com.wavemaker.broadband.flanker.Page",
+    "wmServiceOperationInfo" : {
+      "name" : "flanker_StatesController_filterStates",
+      "methodType" : "post",
+      "relativePath" : "/flanker/flanker_db/States/filter",
+      "directPath" : null,
+      "httpMethod" : "post",
+      "parameters" : [ {
+        "name" : "q",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "java.lang.String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "page",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : { },
+      "produces" : null,
+      "consumes" : [ "application/x-www-form-urlencoded" ],
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  },
+  "flanker_BroadbandPlanController_filterBroadbandPlans" : {
+    "id" : "flanker_BroadbandPlanController_filterBroadbandPlans",
+    "crudOperationId" : "flanker.BroadbandPlanController",
+    "service" : "flanker",
+    "controller" : "BroadbandPlanController",
+    "operationType" : null,
+    "type" : "com.wavemaker.broadband.flanker.Page",
+    "wmServiceOperationInfo" : {
+      "name" : "flanker_BroadbandPlanController_filterBroadbandPlans",
+      "methodType" : "post",
+      "relativePath" : "/flanker/flanker_db/BroadbandPlan/filter",
+      "directPath" : null,
+      "httpMethod" : "post",
+      "parameters" : [ {
+        "name" : "q",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "java.lang.String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "page",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : { },
+      "produces" : null,
+      "consumes" : [ "application/x-www-form-urlencoded" ],
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  },
+  "flanker_AddressController_exportAddresses" : {
+    "id" : "flanker_AddressController_exportAddresses",
+    "crudOperationId" : "flanker.AddressController",
+    "service" : "flanker",
+    "controller" : "AddressController",
+    "operationType" : null,
+    "type" : "com.wavemaker.broadband.flanker.Downloadable",
+    "wmServiceOperationInfo" : {
+      "name" : "flanker_AddressController_exportAddresses",
+      "methodType" : "get",
+      "relativePath" : "/flanker/flanker_db/Address/export/{exportType}",
+      "directPath" : null,
+      "httpMethod" : "get",
+      "parameters" : [ {
+        "name" : "exportType",
+        "parameterType" : "path",
+        "required" : true,
+        "type" : "com.wavemaker.runtime.data.export.ExportType",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "q",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "java.lang.String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "page",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : { },
+      "produces" : [ "application/octet-stream" ],
+      "consumes" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  },
+  "flanker_AddressController_deleteAddress" : {
+    "id" : "flanker_AddressController_deleteAddress",
+    "crudOperationId" : "flanker.AddressController",
+    "service" : "flanker",
+    "controller" : "AddressController",
+    "operationType" : "delete",
+    "type" : "boolean",
+    "wmServiceOperationInfo" : {
+      "name" : "flanker_AddressController_deleteAddress",
+      "methodType" : "delete",
+      "relativePath" : "/flanker/flanker_db/Address/{id}",
+      "directPath" : null,
+      "httpMethod" : "delete",
+      "parameters" : [ {
+        "name" : "id",
+        "parameterType" : "path",
+        "required" : true,
+        "type" : "java.lang.Integer",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : { },
+      "produces" : null,
+      "consumes" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  },
+  "flanker_AddressController_getAddress" : {
+    "id" : "flanker_AddressController_getAddress",
+    "crudOperationId" : "flanker.AddressController",
+    "service" : "flanker",
+    "controller" : "AddressController",
+    "operationType" : null,
+    "type" : "com.wavemaker.broadband.flanker.Address",
+    "wmServiceOperationInfo" : {
+      "name" : "flanker_AddressController_getAddress",
+      "methodType" : "get",
+      "relativePath" : "/flanker/flanker_db/Address/{id}",
+      "directPath" : null,
+      "httpMethod" : "get",
+      "parameters" : [ {
+        "name" : "id",
+        "parameterType" : "path",
+        "required" : true,
+        "type" : "java.lang.Integer",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : { },
+      "produces" : null,
+      "consumes" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  },
+  "flanker_AddressController_countAddresses" : {
+    "id" : "flanker_AddressController_countAddresses",
+    "crudOperationId" : "flanker.AddressController",
+    "service" : "flanker",
+    "controller" : "AddressController",
+    "operationType" : null,
+    "type" : "integer",
+    "wmServiceOperationInfo" : {
+      "name" : "flanker_AddressController_countAddresses",
+      "methodType" : "get",
+      "relativePath" : "/flanker/flanker_db/Address/count",
+      "directPath" : null,
+      "httpMethod" : "get",
+      "parameters" : [ {
+        "name" : "q",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "java.lang.String",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : { },
+      "produces" : null,
+      "consumes" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  },
+  "flanker_AddressController_searchAddressesByQueryFilters" : {
+    "id" : "flanker_AddressController_searchAddressesByQueryFilters",
+    "crudOperationId" : "flanker.AddressController",
+    "service" : "flanker",
+    "controller" : "AddressController",
+    "operationType" : null,
+    "type" : "com.wavemaker.broadband.flanker.Page",
+    "wmServiceOperationInfo" : {
+      "name" : "flanker_AddressController_searchAddressesByQueryFilters",
+      "methodType" : "post",
+      "relativePath" : "/flanker/flanker_db/Address/search",
+      "directPath" : null,
+      "httpMethod" : "post",
+      "parameters" : [ {
+        "name" : "page",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "QueryFilter",
+        "parameterType" : "body",
+        "required" : true,
+        "type" : "com.wavemaker.runtime.data.expression.QueryFilter",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : {
+        "com.wavemaker.broadband.flanker.QueryFilter" : [ {
+          "name" : "attributeType",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "attributeName",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "attributeValue",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "com.wavemaker.broadband.flanker.Object",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "filterCondition",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        } ]
+      },
+      "produces" : null,
+      "consumes" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  },
+  "flanker_OrderTypeController_findOrderTypes" : {
+    "id" : "flanker_OrderTypeController_findOrderTypes",
+    "crudOperationId" : "flanker.OrderTypeController",
+    "service" : "flanker",
+    "controller" : "OrderTypeController",
+    "operationType" : "list",
+    "type" : "com.wavemaker.broadband.flanker.Page",
+    "wmServiceOperationInfo" : {
+      "name" : "flanker_OrderTypeController_findOrderTypes",
+      "methodType" : "get",
+      "relativePath" : "/flanker/flanker_db/OrderType",
+      "directPath" : null,
+      "httpMethod" : "get",
+      "parameters" : [ {
+        "name" : "q",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "java.lang.String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "page",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : { },
+      "produces" : null,
+      "consumes" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  },
+  "flanker_AddressController_createAddress" : {
+    "id" : "flanker_AddressController_createAddress",
+    "crudOperationId" : "flanker.AddressController",
+    "service" : "flanker",
+    "controller" : "AddressController",
+    "operationType" : "create",
+    "type" : "com.wavemaker.broadband.flanker.Address",
+    "wmServiceOperationInfo" : {
+      "name" : "flanker_AddressController_createAddress",
+      "methodType" : "post",
+      "relativePath" : "/flanker/flanker_db/Address",
+      "directPath" : null,
+      "httpMethod" : "post",
+      "parameters" : [ {
+        "name" : "Address",
+        "parameterType" : "body",
+        "required" : true,
+        "type" : "com.wavemaker.flankerapis.flanker_db.Address",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : {
+        "com.wavemaker.broadband.flanker.Address" : [ {
+          "name" : "states",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "com.wavemaker.broadband.flanker.States",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "id",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "customerId",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "city",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "zipCode",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "addressLine2",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "customer",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "com.wavemaker.broadband.flanker.Customer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "state",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "addressLine1",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "country",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        } ]
+      },
+      "produces" : null,
+      "consumes" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  },
+  "flanker_AddressController_getAddressAggregatedValues" : {
+    "id" : "flanker_AddressController_getAddressAggregatedValues",
+    "crudOperationId" : "flanker.AddressController",
+    "service" : "flanker",
+    "controller" : "AddressController",
+    "operationType" : null,
+    "type" : "com.wavemaker.broadband.flanker.Page",
+    "wmServiceOperationInfo" : {
+      "name" : "flanker_AddressController_getAddressAggregatedValues",
+      "methodType" : "post",
+      "relativePath" : "/flanker/flanker_db/Address/aggregations",
+      "directPath" : null,
+      "httpMethod" : "post",
+      "parameters" : [ {
+        "name" : "AggregationInfo",
+        "parameterType" : "body",
+        "required" : true,
+        "type" : "com.wavemaker.runtime.data.model.AggregationInfo",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "page",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : {
+        "com.wavemaker.broadband.flanker.AggregationInfo" : [ {
+          "name" : "filter",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "groupByFields",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.util.List",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "aggregations",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.util.List",
+          "readOnly" : false,
+          "contentType" : null
+        } ]
+      },
+      "produces" : null,
+      "consumes" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  },
+  "flanker_AddressController_patchAddress" : {
+    "id" : "flanker_AddressController_patchAddress",
+    "crudOperationId" : "flanker.AddressController",
+    "service" : "flanker",
+    "controller" : "AddressController",
+    "operationType" : null,
+    "type" : "com.wavemaker.broadband.flanker.Address",
+    "wmServiceOperationInfo" : {
+      "name" : "flanker_AddressController_patchAddress",
+      "methodType" : "patch",
+      "relativePath" : "/flanker/flanker_db/Address/{id}",
+      "directPath" : null,
+      "httpMethod" : "patch",
+      "parameters" : [ {
+        "name" : "id",
+        "parameterType" : "path",
+        "required" : true,
+        "type" : "java.lang.Integer",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "Address",
+        "parameterType" : "body",
+        "required" : true,
+        "type" : "com.wavemaker.flankerapis.flanker_db.Address",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : {
+        "com.wavemaker.broadband.flanker.Address" : [ {
+          "name" : "states",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "com.wavemaker.broadband.flanker.States",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "id",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "customerId",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "city",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "zipCode",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "addressLine2",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "customer",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "com.wavemaker.broadband.flanker.Customer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "state",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "addressLine1",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "country",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        } ]
+      },
+      "produces" : null,
+      "consumes" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  },
+  "flanker_AddressController_editAddress" : {
+    "id" : "flanker_AddressController_editAddress",
+    "crudOperationId" : "flanker.AddressController",
+    "service" : "flanker",
+    "controller" : "AddressController",
+    "operationType" : "update",
+    "type" : "com.wavemaker.broadband.flanker.Address",
+    "wmServiceOperationInfo" : {
+      "name" : "flanker_AddressController_editAddress",
+      "methodType" : "put",
+      "relativePath" : "/flanker/flanker_db/Address/{id}",
+      "directPath" : null,
+      "httpMethod" : "put",
+      "parameters" : [ {
+        "name" : "id",
+        "parameterType" : "path",
+        "required" : true,
+        "type" : "java.lang.Integer",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "Address",
+        "parameterType" : "body",
+        "required" : true,
+        "type" : "com.wavemaker.flankerapis.flanker_db.Address",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : {
+        "com.wavemaker.broadband.flanker.Address" : [ {
+          "name" : "states",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "com.wavemaker.broadband.flanker.States",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "id",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "customerId",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "city",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "zipCode",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "addressLine2",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "customer",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "com.wavemaker.broadband.flanker.Customer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "state",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "addressLine1",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "country",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        } ]
+      },
+      "produces" : null,
+      "consumes" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  },
+  "flanker_AddressController_exportAddressesAndGetURL" : {
+    "id" : "flanker_AddressController_exportAddressesAndGetURL",
+    "crudOperationId" : "flanker.AddressController",
+    "service" : "flanker",
+    "controller" : "AddressController",
+    "operationType" : null,
+    "type" : "com.wavemaker.broadband.flanker.StringWrapper",
+    "wmServiceOperationInfo" : {
+      "name" : "flanker_AddressController_exportAddressesAndGetURL",
+      "methodType" : "post",
+      "relativePath" : "/flanker/flanker_db/Address/export",
+      "directPath" : null,
+      "httpMethod" : "post",
+      "parameters" : [ {
+        "name" : "DataExportOptions",
+        "parameterType" : "body",
+        "required" : true,
+        "type" : "com.wavemaker.runtime.data.export.DataExportOptions",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "page",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : { },
+      "produces" : null,
+      "consumes" : [ "application/json" ],
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  },
+  "flanker_BroadbandOrdersController_createBroadbandOrders" : {
+    "id" : "flanker_BroadbandOrdersController_createBroadbandOrders",
+    "crudOperationId" : "flanker.BroadbandOrdersController",
+    "service" : "flanker",
+    "controller" : "BroadbandOrdersController",
+    "operationType" : "create",
+    "type" : "com.wavemaker.broadband.flanker.BroadbandOrders",
+    "wmServiceOperationInfo" : {
+      "name" : "flanker_BroadbandOrdersController_createBroadbandOrders",
+      "methodType" : "post",
+      "relativePath" : "/flanker/flanker_db/BroadbandOrders",
+      "directPath" : null,
+      "httpMethod" : "post",
+      "parameters" : [ {
+        "name" : "BroadbandOrders",
+        "parameterType" : "body",
+        "required" : true,
+        "type" : "com.wavemaker.flankerapis.flanker_db.BroadbandOrders",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : {
+        "com.wavemaker.broadband.flanker.BroadbandOrders" : [ {
+          "name" : "broadbandPlanId",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "orders",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "com.wavemaker.broadband.flanker.Orders",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "broadbandPlan",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "com.wavemaker.broadband.flanker.BroadbandPlan",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "id",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "orderId",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        } ]
+      },
+      "produces" : null,
+      "consumes" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  },
+  "flanker_OrderStatusController_findOrderStatuses" : {
+    "id" : "flanker_OrderStatusController_findOrderStatuses",
+    "crudOperationId" : "flanker.OrderStatusController",
+    "service" : "flanker",
+    "controller" : "OrderStatusController",
+    "operationType" : "list",
+    "type" : "com.wavemaker.broadband.flanker.Page",
+    "wmServiceOperationInfo" : {
+      "name" : "flanker_OrderStatusController_findOrderStatuses",
+      "methodType" : "get",
+      "relativePath" : "/flanker/flanker_db/OrderStatus",
+      "directPath" : null,
+      "httpMethod" : "get",
+      "parameters" : [ {
+        "name" : "q",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "java.lang.String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "page",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : { },
+      "produces" : null,
+      "consumes" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  },
+  "flanker_OrdersController_createOrders" : {
+    "id" : "flanker_OrdersController_createOrders",
+    "crudOperationId" : "flanker.OrdersController",
+    "service" : "flanker",
+    "controller" : "OrdersController",
+    "operationType" : "create",
+    "type" : "com.wavemaker.broadband.flanker.Orders",
+    "wmServiceOperationInfo" : {
+      "name" : "flanker_OrdersController_createOrders",
+      "methodType" : "post",
+      "relativePath" : "/flanker/flanker_db/Orders",
+      "directPath" : null,
+      "httpMethod" : "post",
+      "parameters" : [ {
+        "name" : "Orders",
+        "parameterType" : "body",
+        "required" : true,
+        "type" : "com.wavemaker.flankerapis.flanker_db.Orders",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : {
+        "com.wavemaker.broadband.flanker.Orders" : [ {
+          "name" : "broadbandOrders",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "com.wavemaker.broadband.flanker.BroadbandOrders",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "orderId",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "deliveryDate",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.sql.Timestamp",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "phoneOrders",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "com.wavemaker.broadband.flanker.PhoneOrders",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "id",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "customerId",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "orderType",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "com.wavemaker.broadband.flanker.OrderType",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "typeId",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "customer",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "com.wavemaker.broadband.flanker.Customer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "orderStatus",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "com.wavemaker.broadband.flanker.OrderStatus",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "createdAt",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.sql.Timestamp",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "statusId",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        } ]
+      },
+      "produces" : null,
+      "consumes" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  },
+  "flanker_AddressController_filterAddresses" : {
+    "id" : "flanker_AddressController_filterAddresses",
+    "crudOperationId" : "flanker.AddressController",
+    "service" : "flanker",
+    "controller" : "AddressController",
+    "operationType" : null,
+    "type" : "com.wavemaker.broadband.flanker.Page",
+    "wmServiceOperationInfo" : {
+      "name" : "flanker_AddressController_filterAddresses",
+      "methodType" : "post",
+      "relativePath" : "/flanker/flanker_db/Address/filter",
+      "directPath" : null,
+      "httpMethod" : "post",
+      "parameters" : [ {
+        "name" : "q",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "java.lang.String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "page",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : { },
+      "produces" : null,
+      "consumes" : [ "application/x-www-form-urlencoded" ],
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  },
+  "flanker_AddressController_findAddresses" : {
+    "id" : "flanker_AddressController_findAddresses",
+    "crudOperationId" : "flanker.AddressController",
+    "service" : "flanker",
+    "controller" : "AddressController",
+    "operationType" : "list",
+    "type" : "com.wavemaker.broadband.flanker.Page",
+    "wmServiceOperationInfo" : {
+      "name" : "flanker_AddressController_findAddresses",
+      "methodType" : "get",
+      "relativePath" : "/flanker/flanker_db/Address",
+      "directPath" : null,
+      "httpMethod" : "get",
+      "parameters" : [ {
+        "name" : "q",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "java.lang.String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "page",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : { },
+      "produces" : null,
+      "consumes" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  },
+  "flanker_OrdersController_findOrders" : {
+    "id" : "flanker_OrdersController_findOrders",
+    "crudOperationId" : "flanker.OrdersController",
+    "service" : "flanker",
+    "controller" : "OrdersController",
+    "operationType" : "list",
+    "type" : "com.wavemaker.broadband.flanker.Page",
+    "wmServiceOperationInfo" : {
+      "name" : "flanker_OrdersController_findOrders",
+      "methodType" : "get",
+      "relativePath" : "/flanker/flanker_db/Orders",
+      "directPath" : null,
+      "httpMethod" : "get",
+      "parameters" : [ {
+        "name" : "q",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "java.lang.String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "page",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : { },
+      "produces" : null,
+      "consumes" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  }
+}

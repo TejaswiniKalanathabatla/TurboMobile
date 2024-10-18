@@ -1,0 +1,56 @@
+{
+  "displayName" : "ProductDetails",
+  "group" : "",
+  "iconUrl" : "/resources/images/imagelists/product_details.png",
+  "resources" : {
+    "styles" : [ "/pages/Main/Main.css" ],
+    "scripts" : [ ]
+  },
+  "properties" : {
+    "selectedproductid" : {
+      "type" : "number",
+      "displayName" : "Selectedproductid",
+      "description" : "bind the select product id",
+      "bindable" : "in-bound",
+      "widget" : "string",
+      "show" : true,
+      "showAt" : "",
+      "disabled" : false
+    },
+    "productvariant" : {
+      "type" : "object",
+      "displayName" : "Productvariant",
+      "description" : "selected Product variant details",
+      "bindable" : "out-bound",
+      "value" : "bind:Variables.wsGetProductVariantDetails.dataSet[0]",
+      "widget" : "string",
+      "show" : false,
+      "showAt" : "",
+      "disabled" : true
+    },
+    "productvariantid" : {
+      "type" : "number",
+      "displayName" : "Productvariantid",
+      "description" : "selected Product variant ]id",
+      "bindable" : "out-bound",
+      "value" : "bind:Variables.wsGetProductVariantDetails.dataSet[0].id",
+      "widget" : "string",
+      "show" : false,
+      "showAt" : "",
+      "disabled" : true
+    }
+  },
+  "events" : {
+    "onContinue" : {
+      "description" : "call back on continue",
+      "eventData" : "",
+      "displayName" : "Continue"
+    },
+    "onCancel" : {
+      "description" : "callback on cancel",
+      "eventData" : "",
+      "displayName" : "Cancel"
+    }
+  },
+  "methods" : { }
+}

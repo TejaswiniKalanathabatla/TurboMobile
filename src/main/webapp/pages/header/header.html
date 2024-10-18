@@ -1,0 +1,50 @@
+<wm-partial name="header" type="header">
+    <wm-layoutgrid name="headerlayout">
+        <wm-gridrow name="headerrow">
+            <wm-gridcolumn name="headerleft" verticalalign="middle" columnwidth="3" horizontalalign="left">
+                <wm-container name="container3" display="inline-block" cursor="pointer" on-click="Actions.goToPage_Home.invoke()" class="app-logo">
+                    <wm-picture resizemode="contain" cursor="pointer" pictureplaceholder="resources/images/logos/your-logo.png" picturesource="resources/images/logos/logo.svg" name="picture2"></wm-picture>
+                </wm-container>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="5" name="headercenter" horizontalalign="center">
+                <wm-container name="container1" display="inline-block">
+                    <wm-nav type="pills" autoclose="outsideClick" name="nav1">
+                        <wm-nav-item name="nav_item1">
+                            <wm-menu caption="bind:appLocale.l_Shop" autoclose="always" name="menuShop" iconclass="" type="anchor" dataset="bind:Variables.stvMenuItems.dataSet.shop" itemlabel="name" itemicon="icon" itemlink="link"></wm-menu>
+                        </wm-nav-item>
+                        <wm-nav-item name="nav_item2">
+                            <wm-menu caption="bind:appLocale.l_myAccount" autoclose="always" name="menuMyAccount" iconclass="" type="anchor" dataset="bind:Variables.stvMenuItems.dataSet.myaccount" itemlabel="name" itemicon="icon" itemlink="link"></wm-menu>
+                        </wm-nav-item>
+                        <wm-nav-item name="nav_item3" show="false">
+                            <wm-menu caption="bind:appLocale.l_aboutUs" autoclose="outsideClick" name="menuAboutUs" iconclass="" type="anchor" dataset="bind:Variables.stvMenuItems.dataSet.aboutus"></wm-menu>
+                        </wm-nav-item>
+                        <wm-nav-item name="nav_item4" show="false">
+                            <wm-menu caption="bind:appLocale.l_support" autoclose="outsideClick" name="menuSupport" iconclass="" type="anchor" dataset="bind:Variables.stvMenuItems.dataSet.support"></wm-menu>
+                        </wm-nav-item>
+                        <wm-nav-item name="nav_item8_1">
+                            <wm-anchor name="anchorAboutUs" iconclass="" caption="bind:appLocale.l_aboutUs"></wm-anchor>
+                        </wm-nav-item>
+                        <wm-nav-item name="nav_item10">
+                            <wm-anchor name="anchorSupport" iconclass="" caption="bind:appLocale.l_support"></wm-anchor>
+                        </wm-nav-item>
+                    </wm-nav>
+                </wm-container>
+            </wm-gridcolumn>
+            <wm-gridcolumn name="headerright" horizontalalign="right" verticalalign="middle" columnwidth="4">
+                <wm-container name="container2" display="inline-block">
+                    <wm-nav type="pills" autoclose="outsideClick" name="nav2" class="nav-separator">
+                        <wm-nav-item name="nav_item6">
+                            <wm-anchor name="anchorStoreLocator" iconclass="wmn-location" caption="bind:appLocale.l_storeLocator"></wm-anchor>
+                        </wm-nav-item>
+                        <wm-nav-item name="nav_item7">
+                            <wm-anchor name="anchor7" iconclass="wmn-cart" caption="bind:appLocale.l_cart"></wm-anchor>
+                        </wm-nav-item>
+                        <wm-nav-item name="nav_item8">
+                            <wm-anchor name="anchor8" iconclass="wmn-user-circle" caption="" on-click="Actions.logoutAction.invoke()"></wm-anchor>
+                        </wm-nav-item>
+                    </wm-nav>
+                </wm-container>
+            </wm-gridcolumn>
+        </wm-gridrow>
+    </wm-layoutgrid>
+</wm-partial>

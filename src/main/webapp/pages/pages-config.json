@@ -1,0 +1,71 @@
+[ {
+  "name" : "BringYourOwnPhone",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Common",
+  "type" : "PARTIAL",
+  "params" : [ ]
+}, {
+  "name" : "Configuration",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Home",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Login",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "Main",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "OrdersList",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "ProductDetails",
+  "type" : "PAGE",
+  "params" : [ {
+    "name" : "product_id",
+    "type" : "integer"
+  } ]
+}, {
+  "name" : "ProductList",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "ShopBroadbands",
+  "type" : "PAGE",
+  "params" : [ ]
+}, {
+  "name" : "ShopPhones",
+  "type" : "PAGE",
+  "params" : [ {
+    "name" : "product_variant_id",
+    "type" : "integer"
+  } ]
+}, {
+  "name" : "footer",
+  "type" : "FOOTER",
+  "params" : [ ]
+}, {
+  "name" : "header",
+  "type" : "HEADER",
+  "params" : [ ]
+}, {
+  "name" : "leftnav",
+  "type" : "LEFTNAV",
+  "params" : [ ]
+}, {
+  "name" : "rightnav",
+  "type" : "RIGHTNAV",
+  "params" : [ ]
+}, {
+  "name" : "topnav",
+  "type" : "TOPNAV",
+  "params" : [ ]
+} ]

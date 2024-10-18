@@ -1,0 +1,40 @@
+{
+  "displayName" : "BroadBand",
+  "group" : "",
+  "iconUrl" : "/resources/images/imagelists/broad_brand.png",
+  "resources" : {
+    "styles" : [ "/pages/Main/Main.css" ],
+    "scripts" : [ ]
+  },
+  "properties" : {
+    "loggedinuserid" : {
+      "type" : "number",
+      "displayName" : "Loggedinuserid",
+      "description" : "pass the logged in user _id",
+      "bindable" : "in-bound",
+      "value" : "bind:1",
+      "widget" : "string",
+      "show" : true,
+      "showAt" : "",
+      "disabled" : false
+    }
+  },
+  "events" : {
+    "onConfirmorder" : {
+      "description" : "call back event on confirm order",
+      "eventData" : "",
+      "displayName" : "Confirmorder"
+    },
+    "onVieworder" : {
+      "description" : "Call back even to naviagate to orders page",
+      "eventData" : "",
+      "displayName" : "Vieworder"
+    },
+    "onContinueshopping" : {
+      "description" : "Call back even to Continue hopping",
+      "eventData" : "",
+      "displayName" : "Continueshopping"
+    }
+  },
+  "methods" : { }
+}

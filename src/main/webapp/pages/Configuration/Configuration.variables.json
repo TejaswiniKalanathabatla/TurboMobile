@@ -1,0 +1,51 @@
+{
+  "wsGetAddOnCategories" : {
+    "_id" : "wm-wsGetAddOnCategories-wm.ServiceVariable-1691476185988",
+    "name" : "wsGetAddOnCategories",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ ],
+    "type" : "com.wavemaker.turbomobiles.FlankerAPI.AddOnCategory",
+    "service" : "FlankerAPI",
+    "operation" : "FlankerAPI_AddOnCategoryController_filterAddOnCategories",
+    "operationId" : "FlankerAPI_AddOnCategoryController_filterAddOnCategories",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : true,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "AddOnCategory"
+  },
+  "wsPatchAddOnCategory" : {
+    "_id" : "wm-wsPatchAddOnCategory-wm.ServiceVariable-1691476201752",
+    "name" : "wsPatchAddOnCategory",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "id",
+      "value" : "bind:Widgets.GetAddOnCategoriesTable1.selecteditem.id",
+      "type" : "integer"
+    }, {
+      "target" : "AddOnCategory.isActive",
+      "value" : "bind:Widgets.GetAddOnCategoriesTable1.selecteditem.isActive"
+    } ],
+    "type" : "com.wavemaker.turbomobiles.FlankerAPI.AddOnCategory",
+    "service" : "FlankerAPI",
+    "operation" : "FlankerAPI_AddOnCategoryController_patchAddOnCategory",
+    "operationId" : "FlankerAPI_AddOnCategoryController_patchAddOnCategory",
+    "serviceType" : "OpenAPIService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "AddOnCategory"
+  }
+}

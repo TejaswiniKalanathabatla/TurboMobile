@@ -1,0 +1,610 @@
+<wm-prefab-container name="prefab_container1">
+    <wm-layoutgrid name="layoutgrid1">
+        <wm-gridrow name="gridrow1">
+            <wm-gridcolumn columnwidth="3" name="gridcolumn96"></wm-gridcolumn>
+            <wm-gridcolumn columnwidth="6" name="gridcolumn1">
+                <wm-container name="containerCoverage" padding="20px">
+                    <wm-form errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.stvCoverage.dataSet" captionalign="left" name="stvCoverageForm1" on-submit="Widgets.dialogCoverageSucess.open()"
+                        postmessage="">
+                        <wm-layoutgrid columns="1" name="layoutgrid3">
+                            <wm-gridrow name="gridrow50_1">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn84">
+                                    <wm-container name="container9_2" class="form-group" margin="unset unset 20px unset">
+                                        <wm-label name="label36_2" caption="Check Coverage" class="h4 font-medium" margin="unset unset 8px unset"></wm-label>
+                                        <wm-label caption="Please eneter ZIP to check for coverage in your area" name="label37_1" margin="0px unset unset unset" class="h6 text-muted font-medium"></wm-label>
+                                    </wm-container>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow6">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn8">
+                                    <wm-form-field name="zipcode" readonly="false" displayname="Zip Code" key="zip code" type="string" show="true" widget="text" required="true" validationmessage="Enter valid ZIP code" inputtype="text" placeholder="" maxchars="6"
+                                        regexp="^[0-9]{5,6}$"></wm-form-field>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="8" name="gridcolumn10">
+                                    <wm-form-field name="country" readonly="false" displayname="Country" key="country" type="string" show="true" widget="text" placeholder="United States" disabled="true" inputtype="text"></wm-form-field>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                        <wm-form-action key="save" display-name="Check Coverage" show="true" class="form-save btn-primary" iconclass="" title="Check Coverage" action="" disabled="false" widget-type="button" type="submit" update-mode="true"></wm-form-action>
+                    </wm-form>
+                </wm-container>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="3" name="gridcolumn97"></wm-gridcolumn>
+        </wm-gridrow>
+        <wm-gridrow name="gridrow4">
+            <wm-gridcolumn columnwidth="12" name="gridcolumn6"></wm-gridcolumn>
+        </wm-gridrow>
+        <wm-gridrow name="gridrow3">
+            <wm-gridcolumn columnwidth="12" name="gridcolumn5"></wm-gridcolumn>
+        </wm-gridrow>
+        <wm-gridrow name="gridrow2">
+            <wm-gridcolumn columnwidth="12" name="gridcolumn3">
+                <wm-container name="containerWizard" show="false" showindevice="all">
+                    <wm-wizard stepstyle="justified" class="number" name="wizardBroadband" on-cancel="wizardBroadbandCancel(widget, steps)" cancelable="true" show="true" actionsalignment="right" previousbtnlabel="Back" nextbtnlabel="Continue" donebtnlabel="Continue"
+                        on-done="Widgets.dialogConfirmOrder.open()" defaultstep="wizardstepPricePaln" showindevice="md,lg">
+                        <wm-wizardstep name="wizardstepPricePaln" title="Price Paln" show="true">
+                            <wm-list listclass="list-group app-horizontal-list" template="true" template-name="Business Card" itemsperrow="xs-1 sm-2 md-3 lg-3" class="media-list active-list plans-list" statehandler="none" name="GetBroadbandPlanList1" dataset="bind:Variables.wsGetBroadbandPlan.dataSet.content"
+                                navigation="On-Demand" paginationclass="btn-default" itemclass="list-group-item col-xs-12 col-sm-4 col-md-4 col-lg-4" direction="horizontal">
+                                <wm-listtemplate layout="media" name="listtemplate1">
+                                    <wm-container name="container10" class="plan-header">
+                                        <wm-label padding="unset 0.5em" caption="Recommended" name="labelRecommended" show="bind:Widgets.GetBroadbandPlanList1.currentItem.isRecommended ===true" class="highlight"></wm-label>
+                                        <wm-label name="labelBroadbandPlanName" caption="bind:Widgets.GetBroadbandPlanList1.currentItem.name" class="h5 text-uppercase font-semibold text-muted-2"></wm-label>
+                                        <wm-label name="labelPrice" caption="bind:Widgets.GetBroadbandPlanList1.currentItem.price | toCurrency: '$': '2'" class="h1 font-semibold" margin="-8px unset"></wm-label>
+                                        <wm-label name="labelInfo" caption="Taxes &amp; Fee included" class="small text-muted" margin="0px unset unset unset"></wm-label>
+                                        <wm-label name="labelTag" caption="bind:Widgets.GetBroadbandPlanList1.currentItem.tag" class="h4"></wm-label>
+                                        <wm-label name="labelDescription" caption="bind:Widgets.GetBroadbandPlanList1.currentItem.description" class="small panel no-border bg-tertiary" margin="0px"></wm-label>
+                                        <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Action List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list dummy-list" statehandler="URL" name="GetBroadbandPlanFeaturesList1"
+                                            dataset="bind:Widgets.GetBroadbandPlanList1.currentItem.broadbandPlanFeatureses" navigation="None" disableitem="true">
+                                            <wm-listtemplate layout="inline" name="listtemplate2">
+                                                <wm-container class="media-left" name="container4">
+                                                    <wm-icon name="icon4" iconclass="bind:Widgets.GetBroadbandPlanList1.currentItem.broadbandPlanFeatureses[$i].image + &quot; icon-lg text-primary&quot;"></wm-icon>
+                                                </wm-container>
+                                                <wm-container class="media-body" name="container5">
+                                                    <wm-label name="BroadbandFeature" class="h5 font-semibold" caption="bind:Widgets.GetBroadbandPlanList1.currentItem.broadbandPlanFeatureses[$i].feature" fontunit="em" margin="unset unset 0px unset"></wm-label>
+                                                    <wm-label name="BroadbandFeatureDesc" caption="bind:Widgets.GetBroadbandPlanList1.currentItem.broadbandPlanFeatureses[$i].description" class="text-muted" margin="0px unset unset unset"></wm-label>
+                                                </wm-container>
+                                            </wm-listtemplate>
+                                        </wm-list>
+                                    </wm-container>
+                                    <wm-container name="container11" class="plan-body">
+                                        <wm-label caption="Physical Broadband equipment inc." name="labelCommonDesc" class="h4"></wm-label>
+                                    </wm-container>
+                                    <wm-container name="container12" class="plan-footer">
+                                        <wm-button class="btn-secondary btn-block" caption="bind:'Add '+Widgets.GetBroadbandPlanList1.currentItem.name" type="button" name="buttonAdd" iconclass="" on-click="buttonAddClick($event, widget, item, currentItemWidgets)"></wm-button>
+                                        <wm-button class="btn-secondary  btn-block outline" caption="bind:'Remove '+Widgets.GetBroadbandPlanList1.currentItem.name" type="button" iconclass="" name="buttonRemove" on-click="buttonRemoveClick($event, widget, item, currentItemWidgets)"
+                                            show="false"></wm-button>
+                                    </wm-container>
+                                </wm-listtemplate>
+                            </wm-list>
+                        </wm-wizardstep>
+                        <wm-wizardstep name="wizardstepSummary" title="Summary" on-load="wizardstepSummaryLoad(widget, stepIndex)" showindevice="md,lg">
+                            <wm-layoutgrid name="layoutgrid6">
+                                <wm-gridrow name="gridrow26">
+                                    <wm-gridcolumn columnwidth="9" name="gridcolumn33">
+                                        <wm-label name="labelOrderSummary" caption="Order Summary" class="h3"></wm-label>
+                                        <wm-list listclass="list-group" template="true" template-name="Business Card" itemsperrow="xs-1 sm-2 md-3 lg-3" class="list-card active-card" statehandler="none" name="ListSelectedProductDetails" dataset="bind:Variables.stvSelectedProduct.dataSet"
+                                            navigation="Scroll" disableitem="false">
+                                            <wm-listtemplate layout="media" name="listtemplateSelectedProduct">
+                                                <wm-card name="card2">
+                                                    <wm-card-content fontsize="0.8" fontunit="em" name="card_content2">
+                                                        <wm-layoutgrid columns="2" name="layoutgrid6">
+                                                            <wm-gridrow name="gridrow24">
+                                                                <wm-gridcolumn columnwidth="12" name="gridcolumn32">
+                                                                    <wm-container name="containerProductFeatures">
+                                                                        <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Action List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list dummny-list" statehandler="none"
+                                                                            name="ListSelectedProductFeatures" dataset="bind:Widgets.ListSelectedProductDetails.currentItem.broadbandPlanFeatureses" navigation="Scroll" disableitem="true" show="bind:Widgets.ListSelectedProductDetails.currentItem.broadbandPlanFeatureses.length >0">
+                                                                            <wm-listtemplate layout="inline" name="listtemplateProductFeatures">
+                                                                                <wm-container class="media-body" padding="unset unset unset 1.25em" name="container9">
+                                                                                    <wm-icon name="icon2" iconclass="bind:Widgets.ListSelectedProductDetails.currentItem.broadbandPlanFeatureses[$i].image + ' icon-md'"></wm-icon>
+                                                                                    <wm-label name="Name" class="small" caption="bind:Widgets.ListSelectedProductDetails.currentItem.broadbandPlanFeatureses[$i].feature" fontunit="em"></wm-label>
+                                                                                </wm-container>
+                                                                            </wm-listtemplate>
+                                                                        </wm-list>
+                                                                    </wm-container>
+                                                                    <wm-container name="containerInstallationKit" show="bind:Widgets.ListSelectedProductDetails.currentItem.isInstallationKit" on-load="containerInstallationKitLoad(widget, item, currentItemWidgets)"
+                                                                        horizontalalign="center">
+                                                                        <wm-picture resizemode="cover" name="pictureInstallationKit" show="true" picturesource="resources/images/imagelists/installation-kit.svg"></wm-picture>
+                                                                    </wm-container>
+                                                                </wm-gridcolumn>
+                                                            </wm-gridrow>
+                                                            <wm-gridrow name="gridrow25">
+                                                                <wm-gridcolumn columnwidth="12" name="gridcolumn33"></wm-gridcolumn>
+                                                            </wm-gridrow>
+                                                            <wm-gridrow name="gridrow26">
+                                                                <wm-gridcolumn columnwidth="12" name="gridcolumn34"></wm-gridcolumn>
+                                                            </wm-gridrow>
+                                                            <wm-gridrow name="gridrow27">
+                                                                <wm-gridcolumn columnwidth="6" name="gridcolumn35">
+                                                                    <wm-label name="labelPaln" caption="bind:Widgets.ListSelectedProductDetails.currentItem.name" class="font-semibold"></wm-label>
+                                                                </wm-gridcolumn>
+                                                                <wm-gridcolumn columnwidth="6" name="gridcolumn38" horizontalalign="right">
+                                                                    <wm-label name="labePrice" caption="bind:Widgets.ListSelectedProductDetails.currentItem.price | toCurrency: '$': '2'"></wm-label>
+                                                                </wm-gridcolumn>
+                                                            </wm-gridrow>
+                                                            <wm-gridrow name="gridrow28">
+                                                                <wm-gridcolumn columnwidth="6" name="gridcolumn36"></wm-gridcolumn>
+                                                                <wm-gridcolumn columnwidth="6" name="gridcolumn37" horizontalalign="right">
+                                                                    <wm-anchor margin="unset 0.5em" name="anchorEdit" caption="Edit" textdecoration="underline" on-click="anchorEditClick($event, widget, item, currentItemWidgets)" class="small"></wm-anchor>
+                                                                    <wm-anchor margin="unset unset unset 0.5em" name="anchorViewDetails" caption="View details" textdecoration="underline" on-click="anchorViewDetailsClick($event, widget, item, currentItemWidgets)"
+                                                                        class="btn-transparent small"></wm-anchor>
+                                                                </wm-gridcolumn>
+                                                            </wm-gridrow>
+                                                        </wm-layoutgrid>
+                                                    </wm-card-content>
+                                                </wm-card>
+                                            </wm-listtemplate>
+                                        </wm-list>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="3" name="gridcolumn34">
+                                        <wm-container name="container23" class="summary-amount">
+                                            <wm-container name="container25" class="summary-amount-body">
+                                                <wm-layoutgrid name="layoutgrid18">
+                                                    <wm-gridrow name="gridrow47_1" padding="24px unset unset unset">
+                                                        <wm-gridcolumn columnwidth="5" name="gridcolumn52">
+                                                            <wm-label name="label18_2" caption="Subtotal" class="h6 font-medium text-muted"></wm-label>
+                                                        </wm-gridcolumn>
+                                                        <wm-gridcolumn columnwidth="7" name="gridcolumn53_1" horizontalalign="right">
+                                                            <wm-label name="label19_1" caption="bind:getSubTotal(Variables.stvSelectedProduct.dataSet) | toCurrency: '$': '2'" class="h5 font-semibold"></wm-label>
+                                                        </wm-gridcolumn>
+                                                    </wm-gridrow>
+                                                    <wm-gridrow name="gridrow48_1" padding="24px unset">
+                                                        <wm-gridcolumn columnwidth="5" name="gridcolumn54_2">
+                                                            <wm-label name="label20_1" caption="Taxes" class="h6 font-medium text-muted"></wm-label>
+                                                        </wm-gridcolumn>
+                                                        <wm-gridcolumn columnwidth="7" name="gridcolumn55" horizontalalign="right">
+                                                            <wm-label name="label22" caption="bind:0 | toCurrency: '$': '2'" class="h5 font-semibold"></wm-label>
+                                                        </wm-gridcolumn>
+                                                    </wm-gridrow>
+                                                    <wm-gridrow name="gridrow50" class="border-top" padding="24px unset">
+                                                        <wm-gridcolumn columnwidth="5" name="gridcolumn58">
+                                                            <wm-label name="label24" caption="SIM Card" class="h6 font-medium text-muted"></wm-label>
+                                                        </wm-gridcolumn>
+                                                        <wm-gridcolumn columnwidth="7" name="gridcolumn59" horizontalalign="right">
+                                                            <wm-label name="label25" caption="bind:0 | toCurrency: '$': '2'" class="h5 font-semibold"></wm-label>
+                                                        </wm-gridcolumn>
+                                                    </wm-gridrow>
+                                                    <wm-gridrow name="gridrow51" class="border-top" padding="24px unset unset unset">
+                                                        <wm-gridcolumn columnwidth="12" name="gridcolumn60">
+                                                            <wm-composite name="composite2_1" captionposition="top">
+                                                                <wm-label class="h6 font-medium text-muted" name="label28" caption="Promo/ Referral Code" margin="unset unset 12px unset"></wm-label>
+                                                                <wm-container name="container39" class="form-group input-group">
+                                                                    <wm-text name="text1" placeholder="Enter Coupon Code"></wm-text>
+                                                                    <wm-anchor name="anchor4" caption="Apply" class="input-group-addon"></wm-anchor>
+                                                                </wm-container>
+                                                            </wm-composite>
+                                                        </wm-gridcolumn>
+                                                    </wm-gridrow>
+                                                </wm-layoutgrid>
+                                            </wm-container>
+                                            <wm-container name="container26" class="summary-amount-footer">
+                                                <wm-layoutgrid name="layoutgrid27_1">
+                                                    <wm-gridrow name="gridrow88_1">
+                                                        <wm-gridcolumn columnwidth="5" name="gridcolumn114">
+                                                            <wm-label name="label26" caption="Total" class="h5 font-medium text-muted" margin="8px unset unset unset"></wm-label>
+                                                        </wm-gridcolumn>
+                                                        <wm-gridcolumn columnwidth="7" name="gridcolumn115" horizontalalign="right">
+                                                            <wm-label name="label27" caption="bind:getSubTotal(Variables.stvSelectedProduct.dataSet) | toCurrency: '$': '2'" class="h3 font-semibold"></wm-label>
+                                                        </wm-gridcolumn>
+                                                    </wm-gridrow>
+                                                </wm-layoutgrid>
+                                            </wm-container>
+                                        </wm-container>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow27">
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn35"></wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn36"></wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-wizardstep>
+                        <wm-wizardstep name="wizardstepAddress" title="Address">
+                            <wm-form errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded" method="get" dataset="bind:Variables.wsGetUserAddressDetails.dataSet.content" captionalign="left" name="UserAddressDetailsForm1">
+                                <wm-layoutgrid columns="2" name="layoutgrid8">
+                                    <wm-gridrow name="gridrow40_1">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn60_1">
+                                            <wm-form-field name="IsAddressSameAsPrimary" key="IsAddressSameAsPrimary" show="true" type="boolean" widget="checkbox" on-click="IsAddressSameAsPrimaryClick($event, widget)" placeholder="" caption="Same Address As Primary Address"></wm-form-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn62"></wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow37">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn55_1">
+                                            <wm-form-field name="addressLine1" key="addressLine1" displayname="Address Line1" show="true" type="string" widget="text" inputtype="text" placeholder="Enter value" required="true"></wm-form-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn name="gridcolumn1" columnwidth="6">
+                                            <wm-form-field name="addressLine2" key="addressLine2" displayname="Address Line2" show="true" type="string" widget="text" inputtype="text" placeholder="Enter value" required="false"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow1">
+                                        <wm-gridcolumn name="gridcolumn3" columnwidth="6">
+                                            <wm-form-field name="city" key="city" displayname="City" show="true" type="string" widget="text" inputtype="text" placeholder="Enter value" required="true"></wm-form-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn name="gridcolumn2" columnwidth="6">
+                                            <wm-form-field name="state" key="state" displayname="State" show="true" type="list" widget="select" placeholder="Select value" dataset="bind:Variables.wsGetStates.dataSet.content" datafield="id" displayfield="name"
+                                                required="true"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow2">
+                                        <wm-gridcolumn name="gridcolumn5" columnwidth="6">
+                                            <wm-form-field name="zipCode" key="zipCode" displayname="Zip Code" show="true" type="string" widget="text" inputtype="text" placeholder="Enter value" required="true" regexp="^[0-9]{5,6}$"></wm-form-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn name="gridcolumn4" columnwidth="6">
+                                            <wm-form-field name="country" key="country" displayname="Country" show="true" type="string" widget="text" inputtype="text" placeholder="Enter value" required="true"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                            </wm-form>
+                        </wm-wizardstep>
+                        <wm-wizardstep name="wizardstepPayment" title="Payment" on-load="wizardstepPaymentLoad(widget, stepIndex)">
+                            <wm-layoutgrid name="layoutgrid9">
+                                <wm-gridrow name="gridrow42">
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn63"></wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn64"></wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow43">
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn65">
+                                        <wm-container name="container17" showindevice="md,lg">
+                                            <wm-layoutgrid name="layoutgrid11">
+                                                <wm-gridrow name="gridrow36">
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn63_1">
+                                                        <wm-label padding="unset" name="label38" caption="Order Details"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn64_1"></wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow47_1">
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn70_1">
+                                                        <wm-container class="media-body" padding="unset unset unset 1.25em" name="container9_1">
+                                                            <wm-label name="Name" class="p media-heading" caption="bind:Widgets.GetBroadbandPlanList1.selecteditem.name" fontsize="1.143" fontunit="em"></wm-label>
+                                                            <wm-label name="Tag" caption="bind:Widgets.GetBroadbandPlanList1.selecteditem.tag" class="p text-muted"></wm-label>
+                                                        </wm-container>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn71_1">
+                                                        <wm-label class="p media-heading" caption="bind:Widgets.GetBroadbandPlanList1.selecteditem.price | toCurrency: '$': '2'" fontsize="1.143" fontunit="em" name="labelAmoutnt"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-container>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn66">
+                                        <wm-form errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.stvPaymentFormFieldDetails.dataSet" captionalign="left" name="stvPaymentFormFieldDetailsForm1">
+                                            <wm-layoutgrid columns="1" name="layoutgrid10">
+                                                <wm-gridrow name="gridrow44">
+                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn67">
+                                                        <wm-form-field name="paymnetType" readonly="false" displayname="Paymnet Type" key="paymnetType" type="string" show="true" widget="switch" placeholder="" dataset="Card, Paypal" datafield="All Fields"
+                                                            defaultvalue="Card"></wm-form-field>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow45">
+                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn68">
+                                                        <wm-form-field name="cardholderName" readonly="false" displayname="Cardholder Name" key="cardholderName" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" required="true"></wm-form-field>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow46">
+                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn69">
+                                                        <wm-form-field name="cardNumber" readonly="false" displayname="Card Number" key="cardNumber" type="string" show="true" widget="text" inputtype="text" placeholder="" required="true" displayformat="9999 9999 9999 9999"></wm-form-field>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow47">
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn70">
+                                                        <wm-form-field name="expiryDate" displayname="Expiry Date" key="expiryDate" type="string" show="true" widget="text" inputtype="text" placeholder="" required="true" displayformat="99/99"></wm-form-field>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn73">
+                                                        <wm-form-field name="cvv" displayname="CVV" key="cvv" type="string" show="true" widget="text" required="true"></wm-form-field>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow48">
+                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn71">
+                                                        <wm-form-field name="rememberChoice" readonly="false" displayname="Remember Choice" key="rememberChoice" type="string" show="true" widget="checkbox" placeholder=""></wm-form-field>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-form>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow49">
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn74">
+                                        <wm-container name="container18" showindevice="md,lg">
+                                            <wm-label class="p media-heading" caption="Total" fontsize="1.143" fontunit="em" name="labelCartTotal"></wm-label>
+                                            <wm-label class="p media-heading" caption="bind:Widgets.GetBroadbandPlanList1.selecteditem.price | toCurrency: '$': '2'" fontsize="1.143" fontunit="em" name="labelCartTotalVal"></wm-label>
+                                        </wm-container>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn75"></wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-wizardstep>
+                    </wm-wizard>
+                    <wm-wizard stepstyle="justified" class="number" on-cancel="wizardBroadbandCancel(widget, steps)" cancelable="false" show="true" actionsalignment="right" previousbtnlabel="Back" nextbtnlabel="Continue" donebtnlabel="Continue" on-done="Widgets.dialogConfirmOrder.open()"
+                        defaultstep="null" name="wizardBroadbandMobile" showindevice="xs,sm">
+                        <wm-wizardstep title="Price Paln" show="true" name="wizardstep5">
+                            <wm-list listclass="list-group app-horizontal-list" template="true" template-name="Business Card" itemsperrow="xs-1 sm-2 md-3 lg-3" class="media-list active-list plans-list" statehandler="none" dataset="bind:Variables.wsGetBroadbandPlan.dataSet.content"
+                                navigation="On-Demand" paginationclass="btn-default" itemclass="list-group-item col-xs-12 col-sm-4 col-md-4 col-lg-4" direction="horizontal" name="listPlansMobile">
+                                <wm-listtemplate layout="media" name="listtemplate5">
+                                    <wm-container class="plan-header" name="container21" height="360px" overflow="auto" bordercolor="rgba(88,70,223,0.1)" borderstyle="solid" borderwidth="0px 0px 1px 0px">
+                                        <wm-container name="container28" horizontalalign="center" show="false">
+                                            <wm-label padding="unset 0.5em" caption="Recommended" show="bind:Widgets.listPlansMobile.currentItem.isRecommended ===true" class="highlight label-highlight" name="label43" required="true"></wm-label>
+                                        </wm-container>
+                                        <wm-container name="container29">
+                                            <wm-linearlayout direction="column" spacing="4" name="linearlayout8">
+                                                <wm-linearlayoutitem name="linearlayoutitem17">
+                                                    <wm-linearlayout direction="column" name="linearlayout9">
+                                                        <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem20">
+                                                            <wm-label caption="bind:Widgets.listPlansMobile.currentItem.name" class="text-uppercase font-bold text-muted" name="label44_1"></wm-label>
+                                                        </wm-linearlayoutitem>
+                                                        <wm-linearlayoutitem name="linearlayoutitem23" flexgrow="1">
+                                                            <wm-linearlayout direction="row" name="linearlayout5_1" verticalalign="bottom" horizontalalign="left">
+                                                                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem12">
+                                                                    <wm-label caption="bind:Widgets.listPlansMobile.currentItem.price | toCurrency: '$': '2'" class="h1 font-semibold" margin="unset unset -10px unset" name="label45_1"></wm-label>
+                                                                </wm-linearlayoutitem>
+                                                                <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem13">
+                                                                    <wm-label caption="Taxes &amp; Fee included" class="small text-muted-3" margin="0px unset" name="label46_1" fontsize="13"></wm-label>
+                                                                </wm-linearlayoutitem>
+                                                            </wm-linearlayout>
+                                                        </wm-linearlayoutitem>
+                                                    </wm-linearlayout>
+                                                </wm-linearlayoutitem>
+                                                <wm-linearlayoutitem name="linearlayoutitem14" flexgrow="0"></wm-linearlayoutitem>
+                                            </wm-linearlayout>
+                                            <wm-label caption="bind:Widgets.listPlansMobile.currentItem.tag" class="h4" name="label47_1" margin="6px unset"></wm-label>
+                                            <wm-label caption="bind:Widgets.listPlansMobile.currentItem.description" class="save-label h6 font-semibold" margin="0px" name="label48" width="100%"></wm-label>
+                                        </wm-container>
+                                        <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Action List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list dummy-list" statehandler="URL" dataset="bind:Widgets.listPlansMobile.currentItem.broadbandPlanFeatureses"
+                                            navigation="None" disableitem="true" name="list6" padding="24px unset unset unset">
+                                            <wm-listtemplate layout="inline" name="listtemplate6">
+                                                <wm-linearlayout direction="row" spacing="8" name="linearlayout5" horizontalalign="center" verticalalign="center">
+                                                    <wm-linearlayoutitem name="linearlayoutitem15">
+                                                        <wm-picture resizemode="contain" name="picture4" width="24px" height="24px" picturesource="resources/images/imagelists/data.png"></wm-picture>
+                                                    </wm-linearlayoutitem>
+                                                    <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem16">
+                                                        <wm-linearlayout direction="column" name="linearlayout6" spacing="4">
+                                                            <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem18">
+                                                                <wm-label class="h5 font-semibold" caption="bind:Widgets.listPlansMobile.currentItem.broadbandPlanFeatureses[$i].feature" fontunit="em" margin="unset unset -4px unset" name="label49"></wm-label>
+                                                            </wm-linearlayoutitem>
+                                                            <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem19">
+                                                                <wm-label caption="bind:Widgets.listPlansMobile.currentItem.broadbandPlanFeatureses[$i].description" class="h6 text-muted-3" name="label50"></wm-label>
+                                                            </wm-linearlayoutitem>
+                                                        </wm-linearlayout>
+                                                    </wm-linearlayoutitem>
+                                                </wm-linearlayout>
+                                            </wm-listtemplate>
+                                        </wm-list>
+                                    </wm-container>
+                                    <wm-container class="plan-body" name="container24">
+                                        <wm-label caption="Physical Broadband equipment inc." class="h5" name="label51" margin="20px unset"></wm-label>
+                                    </wm-container>
+                                    <wm-container class="plan-footer" name="container25_1">
+                                        <wm-button class="select-btn btn-block" caption="bind:'Add '+Widgets.listPlansMobile.currentItem.name" type="button" iconclass="" on-click="buttonAddPlanMobileClick($event, widget, item, currentItemWidgets)" name="buttonAddPlanMobile"></wm-button>
+                                        <wm-button class="select-btn btn-block" caption="bind:'Remove '+Widgets.listPlansMobile.currentItem.name" type="button" iconclass="" on-click="buttonRemovePlanMobileClick($event, widget, item, currentItemWidgets)"
+                                            show="false" name="buttonRemovePlanMobile"></wm-button>
+                                    </wm-container>
+                                </wm-listtemplate>
+                            </wm-list>
+                        </wm-wizardstep>
+                        <wm-wizardstep title="Address" name="wizardstep7">
+                            <wm-form errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.FlankerAddressController.dataSet" captionalign="left" name="AddressControllerForm1">
+                                <wm-layoutgrid columns="2" name="layoutgrid19">
+                                    <wm-gridrow name="gridrow53_2">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn87">
+                                            <wm-form-field show="true" type="boolean" widget="checkbox" on-click="form_field35Click($event, widget)" placeholder="" caption="Same Address As Primary Address" name="form_field35" key="form_field35"></wm-form-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn88"></wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow50_2">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn81">
+                                            <wm-form-field name="addressLine1" readonly="false" displayname="Address Line1" key="addressLine1" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" required="true"></wm-form-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn82_1">
+                                            <wm-form-field name="addressLine2" readonly="false" displayname="Address Line2" key="addressLine2" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow51_1">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn83">
+                                            <wm-form-field name="city" readonly="false" displayname="City" key="city" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" required="true"></wm-form-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn84_1">
+                                            <wm-form-field name="states" readonly="false" displayname="States" key="states" type="list" show="true" widget="select" placeholder="Select value" dataset="bind:Variables.wsGetStates.dataSet" datafield="id" displayfield="name"
+                                                required="true"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow52">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn85">
+                                            <wm-form-field name="zipCode" readonly="false" displayname="Zip Code" key="zipCode" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" required="true"></wm-form-field>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn86">
+                                            <wm-form-field name="country" readonly="false" displayname="Country" key="country" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" required="true"></wm-form-field>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                            </wm-form>
+                        </wm-wizardstep>
+                        <wm-wizardstep title="Payment" on-load="wizardstepPaymentLoad(widget, stepIndex)" name="wizardstep8">
+                            <wm-layoutgrid name="layoutgrid20">
+                                <wm-gridrow name="gridrow53_1">
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn93"></wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn94_1"></wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow54">
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn95_1">
+                                        <wm-container showindevice="md,lg" name="container33">
+                                            <wm-layoutgrid name="layoutgrid21">
+                                                <wm-gridrow name="gridrow55">
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn96_1">
+                                                        <wm-label padding="unset" caption="Order Details" name="label65"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn97_1"></wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow56">
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn98">
+                                                        <wm-container class="media-body" padding="unset unset unset 1.25em" name="container34">
+                                                            <wm-label class="p media-heading" caption="bind:Widgets.GetBroadbandPlanList1.selecteditem.name" fontsize="1.143" fontunit="em" name="label66"></wm-label>
+                                                            <wm-label caption="bind:Widgets.GetBroadbandPlanList1.selecteditem.tag" class="p text-muted" name="label67"></wm-label>
+                                                        </wm-container>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn99">
+                                                        <wm-label class="p media-heading" caption="bind:Widgets.GetBroadbandPlanList1.selecteditem.price | toCurrency: '$': '2'" fontsize="1.143" fontunit="em" name="label68"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-container>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn100">
+                                        <wm-form errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.stvPaymentFormFieldDetails.dataSet" captionalign="left" name="form5">
+                                            <wm-layoutgrid columns="1" name="layoutgrid22">
+                                                <wm-gridrow name="gridrow57">
+                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn101">
+                                                        <wm-form-field readonly="false" displayname="Paymnet Type" type="string" show="true" widget="switch" placeholder="" dataset="Card, Paypal" datafield="All Fields" defaultvalue="Card" name="form_field23"
+                                                            key="form_field23"></wm-form-field>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow58">
+                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn102">
+                                                        <wm-form-field readonly="false" displayname="Cardholder Name" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" required="true" name="form_field24" key="form_field24"></wm-form-field>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow59">
+                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn103">
+                                                        <wm-form-field readonly="false" displayname="Card Number" type="string" show="true" widget="text" inputtype="text" placeholder="" required="true" displayformat="9999 9999 9999 9999" name="form_field25"
+                                                            key="form_field25"></wm-form-field>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow60">
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn104">
+                                                        <wm-form-field displayname="Expiry Date" type="string" show="true" widget="text" inputtype="text" placeholder="" required="true" displayformat="99/99" name="form_field26" key="form_field26"></wm-form-field>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="6" name="gridcolumn105">
+                                                        <wm-form-field displayname="CVV" type="string" show="true" widget="text" required="true" name="form_field27" key="form_field27"></wm-form-field>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow61">
+                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn106">
+                                                        <wm-form-field readonly="false" displayname="Remember Choice" type="string" show="true" widget="checkbox" placeholder="" name="form_field28" key="form_field28"></wm-form-field>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-form>
+                                    </wm-gridcolumn>
+                                </wm-gridrow>
+                                <wm-gridrow name="gridrow62">
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn107">
+                                        <wm-container showindevice="md,lg" name="container35">
+                                            <wm-label class="p media-heading" caption="Total" fontsize="1.143" fontunit="em" name="label69"></wm-label>
+                                            <wm-label class="p media-heading" caption="bind:Widgets.GetBroadbandPlanList1.selecteditem.price | toCurrency: '$': '2'" fontsize="1.143" fontunit="em" name="label70"></wm-label>
+                                        </wm-container>
+                                    </wm-gridcolumn>
+                                    <wm-gridcolumn columnwidth="6" name="gridcolumn108"></wm-gridcolumn>
+                                </wm-gridrow>
+                            </wm-layoutgrid>
+                        </wm-wizardstep>
+                    </wm-wizard>
+                    <wm-container name="container20" showindevice="xs,sm" class="col-xs-5  footer-fixed-left">
+                        <wm-label class="h2 font-semibold" caption="bind:selectedPlan.id ? (selectedPlan.price| toCurrency: '$': '2') : (0 | toCurrency: '$': '2')" fontunit="px" name="label47" showindevice="xs,sm"></wm-label>
+                        <wm-button class="btn-transparent p-0" caption="Order details" type="button" margin="unset" name="button11" on-click="Widgets.dialogOrderDetails.open()" iconclass="wi wi-keyboard-arrow-down" iconposition="right" fontsize="12"
+                            showindevice="xs,sm"></wm-button>
+                    </wm-container>
+                </wm-container>
+            </wm-gridcolumn>
+        </wm-gridrow>
+    </wm-layoutgrid>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Coverage Check" iconclass="" name="dialogCoverageSucess" showheader="false" closable="true" class="modal-login">
+        <wm-layoutgrid name="layoutgrid3_1">
+            <wm-gridrow name="gridrow7">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn8_1" horizontalalign="center">
+                    <wm-picture resizemode="cover" name="picture2" picturesource="resources/images/imagelists/sucess.png" margin="24px unset 8px unset" height="82px"></wm-picture>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow51_2">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn89" horizontalalign="center">
+                    <wm-label caption="Congratulations" name="labelCoverageSucessDesc" class="h3 font-bold" textalign="center"></wm-label>
+                    <wm-label caption="Great news! Your address falls comfortably within our expansive coverage zone." name="label36_1" width="100%" textalign="center" class="h4 text-muted-3" margin="6px unset unset unset"></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow53_3">
+                <wm-gridcolumn columnwidth="3" name="gridcolumn91_1"></wm-gridcolumn>
+                <wm-gridcolumn columnwidth="6" name="gridcolumn92_1">
+                    <wm-button class="btn-primary btn-block" caption="Browse Broadbrand Plans" on-click="Widgets.dialogCoverageSucess.close();buttonBrowsePlansClick($event, widget)" name="buttonBrowsePlans" textalign="center" margin="20px unset"></wm-button>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="3" name="gridcolumn93_2"></wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+    </wm-dialog>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Payment Confirmation" iconclass="" name="dialogConfirmOrder" showheader="true" class="modal-login" closable="false">
+        <wm-layoutgrid name="layoutgrid13">
+            <wm-gridrow name="gridrow53">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn82" horizontalalign="center">
+                    <wm-label padding="unset 0.5em" caption="bind:'You will be redirected for OTP verification once you confirm to pay for the following amount'" name="label39" width="100%" margin="8px unset" textalign="left" class="h4 text-muted-3"></wm-label>
+                    <wm-label caption="bind:getSubTotal(Variables.stvSelectedProduct.dataSet) | toCurrency: '$': '2'" name="labelAmount" class="h1 font-semibold" textalign="left" margin="12px unset" width="100%"></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow52_1">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn93_1" class="col-xs-6" padding="10px 6px 10px unset">
+                    <wm-button class="btn-default  btn-block" caption="Cancel" type="button" name="button7" on-click="Widgets.dialogConfirmOrder.close()"></wm-button>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="6" name="gridcolumn94_2" class="col-xs-6" padding="10px unset 10px 6px">
+                    <wm-button class="btn-primary  btn-block" caption="Confirm" type="button" name="buttonConfirm" on-click="Variables.swCreateOrder.invoke()"></wm-button>
+                </wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+    </wm-dialog>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Information" iconclass="wi wi-file-text" name="dialogPaymentSucess" showheader="false" closable="true" class="modal-login">
+        <wm-layoutgrid name="layoutgrid12">
+            <wm-gridrow name="gridrow50">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn76" horizontalalign="center">
+                    <wm-picture resizemode="cover" picturesource="resources/images/imagelists/sucess.png" name="picture3" margin="24px unset 8px unset" height="82px"></wm-picture>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow54_1">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn94" horizontalalign="center">
+                    <wm-label caption="Payment Successful!" name="labelPaymnetSucess" class="h3 font-bold" textalign="center" margin="unset unset 12px unset"></wm-label>
+                    <wm-label name="label36" caption="bind:'Your order was placed successfully!'" width="100%" textalign="center" class="h4 font-medium text-muted-3"></wm-label>
+                    <wm-label caption="You can view your order details in the Orders section of your Account page." name="label37" width="100%" textalign="center" class="h4 text-muted-3" margin="unset unset 10px unset"></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow56_1">
+                <wm-gridcolumn columnwidth="2" name="gridcolumn96_2"></wm-gridcolumn>
+                <wm-gridcolumn columnwidth="8" name="gridcolumn97_2">
+                    <wm-button class="btn-primary btn-block" caption="Go to Orders" type="button" margin="8px unset" name="buttonViewOrders" on-click="Widgets.dialogPaymentSucess.close();buttonViewOrdersClick($event, widget)"></wm-button>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="2" name="gridcolumn98_1"></wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow57_1">
+                <wm-gridcolumn columnwidth="2" name="gridcolumn99_1"></wm-gridcolumn>
+                <wm-gridcolumn columnwidth="8" name="gridcolumn100_1">
+                    <wm-button class="btn-link  btn-block" caption="Continue Shopping" type="button" name="buttonContinueShopping" on-click="Widgets.dialogPaymentSucess.close();buttonContinueShoppingClick($event, widget)" margin="8px unset"></wm-button>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="2" name="gridcolumn101_1"></wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+    </wm-dialog>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="OrderDetails" iconclass="" name="dialogOrderDetails">
+        <wm-dialogactions name="dialogactions1" show="false">
+            <wm-button class="btn-primary" caption="Close" on-click="closeDialog()" name="button8"></wm-button>
+        </wm-dialogactions>
+        <wm-layoutgrid name="layoutgrid15">
+            <wm-gridrow name="gridrow39">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn69_1" horizontalalign="left">
+                    <wm-container class="media-body" padding="unset unset unset 1.25em" name="container19" horizontalalign="left">
+                        <wm-label class="p media-heading" caption="bind:selectedPlan.name" fontunit="em" name="label44" width="100%"></wm-label>
+                        <wm-label caption="bind:selectedPlan.tag" class="p text-muted-3" name="label45" width="100%"></wm-label>
+                    </wm-container>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="6" name="gridcolumn70_2" horizontalalign="right">
+                    <wm-label class="p media-heading" caption="bind:selectedPlan.price | toCurrency: '$': '2'" fontunit="em" name="label46" width="100%" textalign="right"></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow58_1">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn100_2">
+                    <wm-container name="container29_1" show="bind:selectedPlan.name">
+                        <wm-layoutgrid name="layoutgrid19_1">
+                            <wm-gridrow name="gridrow59_1">
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn102_1" horizontalalign="left">
+                                    <wm-label class="p media-heading" caption="Installation Kit" fontunit="em" width="100%" name="label59"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn103_1" horizontalalign="right">
+                                    <wm-label class="p media-heading" caption="bind:0 | toCurrency: '$': '2'" fontunit="em" width="100%" name="label60" textalign="right"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-container>
+                </wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+    </wm-dialog>
+</wm-prefab-container>

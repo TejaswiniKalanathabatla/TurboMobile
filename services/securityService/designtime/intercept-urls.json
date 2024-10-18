@@ -1,0 +1,166 @@
+[ {
+  "urlPattern" : "/pages/Configuration/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/Home/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/Login/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/Main/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/ProductDetails/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/ProductList/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/footer/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/header/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/leftnav/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/rightnav/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/topnav/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/prefabs/BroadBand/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/prefabs/OrdersList/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/prefabs/PhoneOrderSummary/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/prefabs/PhonePricePlans/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/prefabs/PhonesList/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/prefabs/ProductDetails/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/prefabs/ProductPictorialView/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/prefabs/ShopPhones/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/prefabs/PhoneDetails/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/services/FlankerAPI/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/services/GetThemeDetail/DemoThemeConfig/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/services/GetThemeDetail/DemoThemeConfig/services/ThemeConfig/Themedetail",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : "GET"
+}, {
+  "urlPattern" : "/services/GetThemeType/DemoThemeConfig/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/services/GetThemeType/DemoThemeConfig/services/ThemeConfig/Themetype",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : "GET"
+}, {
+  "urlPattern" : "/services/GetThemeDetail/ent126649177c14/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/services/GetThemeDetail/ent126649177c14/FlankerConfigurator_master/services/ThemeConfig/Themedetail",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : "GET"
+}, {
+  "urlPattern" : "/services/GetThemeType/ent126649177c14/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/services/GetThemeType/ent126649177c14/FlankerConfigurator_master/services/ThemeConfig/Themetype",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : "GET"
+}, {
+  "urlPattern" : "/services/GetThemeDetail/themeconfig/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/services/GetThemeDetail/themeconfig/Themedetail",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : "GET"
+}, {
+  "urlPattern" : "/services/GetThemeType/themeconfig/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/services/GetThemeType/themeconfig/Themetype",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : "GET"
+} ]

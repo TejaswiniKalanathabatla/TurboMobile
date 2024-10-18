@@ -1,0 +1,104 @@
+<wm-prefab-container name="prefab_container1">
+    <wm-layoutgrid name="layoutgrid2">
+        <wm-gridrow name="gridrow7">
+            <wm-gridcolumn columnwidth="12" name="gridcolumn7_1">
+                <wm-list listclass="list-group" template="true" template-name="Business Card" itemsperrow="xs-1 sm-2 md-3 lg-4" class="list-card phones-list" statehandler="none" name="PhoneslistList" dataset="bind:Variables.wsGetPhonesList.dataSet" navigation="Scroll"
+                    horizontalalign="left" direction="horizontal" showindevice="md,lg">
+                    <wm-listtemplate layout="media" name="listtemplate1">
+                        <wm-card name="card1">
+                            <wm-card-content name="card_content1">
+                                <wm-layoutgrid columns="2" name="layoutgrid1">
+                                    <wm-gridrow name="gridrow1">
+                                        <wm-gridcolumn colwidth="6" columnwidth="12" class="col-xs-6" name="gridcolumn1" horizontalalign="center">
+                                            <wm-picture name="Picture" picturesource="bind:Widgets.PhoneslistList.currentItem.baseImage" height="220px" resizemode="contain"></wm-picture>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow2">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn3" horizontalalign="center">
+                                            <wm-label caption="bind:Widgets.PhoneslistList.currentItem.company+' '+Widgets.PhoneslistList.currentItem.name" class="h5 font-medium" margin="24px unset 12px unset" whitespace="nowrap" name="labelBrandAndModel"></wm-label>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow3">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn5" horizontalalign="center">
+                                            <wm-label caption="From" class="h6 text-muted" margin="0px unset" whitespace="nowrap" name="labelFrom"></wm-label>
+                                            <wm-label caption="bind:Widgets.PhoneslistList.currentItem.startingPrice | toCurrency: '$': '2'" class="h2 font-medium" margin="0px unset" whitespace="nowrap" name="labelPrice"></wm-label>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow4">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn6" horizontalalign="center">
+                                            <wm-label caption="Colors" class="h6 text-muted" margin="12px unset 0px unset" whitespace="nowrap" name="labelColors"></wm-label>
+                                            <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Action List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list color-list" statehandler="none" name="ListPhoneColors"
+                                                dataset="bind:Widgets.PhoneslistList.currentItem.phoneColorses" navigation="Scroll" disableitem="true" direction="horizontal">
+                                                <wm-listtemplate layout="inline" name="listtemplate2">
+                                                    <wm-container class="color-indicator" name="container2" conditionalstyle="bind:{'background' : Widgets.PhoneslistList.currentItem.phoneColorses[$i].color.hexcode}"></wm-container>
+                                                </wm-listtemplate>
+                                            </wm-list>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow5">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn7" horizontalalign="center">
+                                            <wm-button class="btn-secondary" caption="Select Phone" type="button" margin="20px unset" name="buttonSelectPhone" on-click="buttonSelectPhoneClick($event, widget, item, currentItemWidgets)"></wm-button>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow6">
+                                        <wm-gridcolumn columnwidth="12" name="gridcolumn8" horizontalalign="center">
+                                            <wm-button class="btn-transparent" caption="Check availablity in your area" type="button" name="buttonCheckAvailability" textdecoration="underline"></wm-button>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                            </wm-card-content>
+                        </wm-card>
+                    </wm-listtemplate>
+                </wm-list>
+            </wm-gridcolumn>
+        </wm-gridrow>
+        <wm-gridrow name="gridrow8">
+            <wm-gridcolumn columnwidth="12" name="gridcolumn9">
+                <wm-list listclass="list-group" template="true" template-name="Business Card" itemsperrow="xs-1 sm-2 md-3 lg-4" class="list-card phones-list  Mobilelist" statehandler="none" dataset="bind:Variables.wsGetPhonesList.dataSet.content" navigation="Scroll"
+                    direction="horizontal" showindevice="xs,sm" name="listPhonesMobile" on-select="listPhonesMobileSelect(widget, $data)" width="100%">
+                    <wm-listtemplate layout="media" name="listtemplate3">
+                        <wm-card name="card2" width="100%" class="phonelist-card">
+                            <wm-card-content name="card_content2" class="phonelist">
+                                <wm-layoutgrid columns="2" name="layoutgrid3">
+                                    <wm-gridrow name="gridrow9">
+                                        <wm-gridcolumn colwidth="6" columnwidth="4" class="col-xs-5" horizontalalign="left" name="gridcolumn11">
+                                            <wm-picture picturesource="bind:Widgets.listPhonesMobile.currentItem.baseImage" height="100%" resizemode="contain" name="picture2" width="100%"></wm-picture>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="8" name="gridcolumn15_1" horizontalalign="left" class="col-xs-7" padding="unset unset unset 20px">
+                                            <wm-layoutgrid name="layoutgrid4">
+                                                <wm-gridrow name="gridrow15">
+                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn16_1" padding="0px">
+                                                        <wm-label caption="bind:Widgets.listPhonesMobile.currentItem.company+' '+Widgets.listPhonesMobile.currentItem.name" class="h5 font-bold" whitespace="nowrap" name="label5"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow16">
+                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn18" padding="6px unset unset unset">
+                                                        <wm-label caption="Colors" class="h6 text-muted-2" whitespace="nowrap" name="label8"></wm-label>
+                                                        <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Action List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list color-list" statehandler="none"
+                                                            dataset="bind:Widgets.listPhonesMobile.currentItem.phoneColorses" navigation="Scroll" direction="horizontal" name="list4">
+                                                            <wm-listtemplate layout="inline" name="listtemplate4">
+                                                                <wm-container class="color-indicator" conditionalstyle="bind:{'background' : Widgets.listPhonesMobile.currentItem.phoneColorses[$i].color.hexcode}" name="container2_1" margin="5px unset 8px unset"
+                                                                    backgroundcolor="bind:Widgets.listPhonesMobile.currentItem.phoneColorses[$i].color.hexcode" width="18px" height="18px"></wm-container>
+                                                            </wm-listtemplate>
+                                                        </wm-list>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow17">
+                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn20" padding="0px">
+                                                        <wm-label caption="From" class="h5 text-muted-2" whitespace="nowrap" name="label6" fontsize="14"></wm-label>
+                                                        <wm-label caption="bind:Widgets.listPhonesMobile.currentItem.startingPrice | toCurrency: '$': '2'" class="h2 font-semibold" whitespace="nowrap" name="label7"></wm-label>
+                                                        <wm-label padding="unset" name="label9" caption="Taxes &amp; Fees included" class="h6 text-muted-2" fontsize="11"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                            </wm-card-content>
+                        </wm-card>
+                    </wm-listtemplate>
+                </wm-list>
+            </wm-gridcolumn>
+        </wm-gridrow>
+    </wm-layoutgrid>
+</wm-prefab-container>

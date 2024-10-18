@@ -1,0 +1,180 @@
+{
+  "FlankerDBAPI_OrdersController_filterOrders" : {
+    "id" : "FlankerDBAPI_OrdersController_filterOrders",
+    "crudOperationId" : "FlankerDBAPI.OrdersController",
+    "service" : "FlankerDBAPI",
+    "controller" : "OrdersController",
+    "operationType" : null,
+    "type" : "com.wavemaker.orderslist.FlankerDBAPI.Page",
+    "wmServiceOperationInfo" : {
+      "name" : "FlankerDBAPI_OrdersController_filterOrders",
+      "methodType" : "post",
+      "relativePath" : "/FlankerDBAPI/flanker_db/Orders/filter",
+      "directPath" : null,
+      "httpMethod" : "post",
+      "parameters" : [ {
+        "name" : "q",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "java.lang.String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "page",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "size",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "sort",
+        "parameterType" : "query",
+        "required" : false,
+        "type" : "String",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : { },
+      "produces" : null,
+      "consumes" : [ "application/x-www-form-urlencoded" ],
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  },
+  "FlankerDBAPI_PhoneOrdersController_patchPhoneOrders" : {
+    "id" : "FlankerDBAPI_PhoneOrdersController_patchPhoneOrders",
+    "crudOperationId" : "FlankerDBAPI.PhoneOrdersController",
+    "service" : "FlankerDBAPI",
+    "controller" : "PhoneOrdersController",
+    "operationType" : null,
+    "type" : "com.wavemaker.orderslist.FlankerDBAPI.PhoneOrders",
+    "wmServiceOperationInfo" : {
+      "name" : "FlankerDBAPI_PhoneOrdersController_patchPhoneOrders",
+      "methodType" : "patch",
+      "relativePath" : "/FlankerDBAPI/flanker_db/PhoneOrders/{id}",
+      "directPath" : null,
+      "httpMethod" : "patch",
+      "parameters" : [ {
+        "name" : "id",
+        "parameterType" : "path",
+        "required" : true,
+        "type" : "java.lang.Integer",
+        "readOnly" : false,
+        "contentType" : null
+      }, {
+        "name" : "PhoneOrders",
+        "parameterType" : "body",
+        "required" : true,
+        "type" : "com.wavemaker.flankerapis.flanker_db.PhoneOrders",
+        "readOnly" : false,
+        "contentType" : null
+      } ],
+      "definitions" : {
+        "com.wavemaker.orderslist.FlankerDBAPI.PhoneOrders" : [ {
+          "name" : "isSimActivated",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.Boolean",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "phonePricePlan",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "com.wavemaker.orderslist.FlankerDBAPI.PhonePricePlan",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "phoneModelId",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "id",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "phoneModel",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "com.wavemaker.orderslist.FlankerDBAPI.PhoneModel",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "orderId",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "simType",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "price",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.Double",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "phoneVariant",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "com.wavemaker.orderslist.FlankerDBAPI.PhoneVariant",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "phonePlanId",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "phoneVariantId",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "orders",
+          "parameterType" : null,
+          "required" : false,
+          "type" : "com.wavemaker.orderslist.FlankerDBAPI.Orders",
+          "readOnly" : false,
+          "contentType" : null
+        } ]
+      },
+      "produces" : null,
+      "consumes" : null,
+      "proxySettings" : {
+        "web" : true,
+        "mobile" : true,
+        "withCredentials" : false
+      },
+      "securityDefinitions" : [ ]
+    }
+  }
+}

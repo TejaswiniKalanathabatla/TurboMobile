@@ -1,0 +1,1193 @@
+<wm-prefab-container name="prefab_container1">
+    <wm-layoutgrid name="layoutgrid1">
+        <wm-gridrow name="gridrow1">
+            <wm-gridcolumn columnwidth="4" name="gridcolumn148"></wm-gridcolumn>
+            <wm-gridcolumn columnwidth="4" name="gridcolumn1">
+                <wm-container name="containerBringYourOwPhone" show="bind:type == 'Bring Your Own Phone'" class="panel" padding="20px 20px unset 20px">
+                    <wm-container name="containerPortabilityCheck" show="true">
+                        <wm-layoutgrid name="layoutgrid24_1">
+                            <wm-gridrow name="gridrow69_1">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn90_1">
+                                    <wm-label name="label43_1" caption="Porting Eligibility Check" class="h4 font-medium" margin="unset unset 8px unset"></wm-label>
+                                    <wm-label name="label44_1" caption="Please enter the details below to check if you’re eligible for porting" class="h6 font-medium text-muted-2"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow71_1">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn92_2" padding="20px unset unset unset">
+                                    <wm-form errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.stvPortingCheckForm.dataSet" captionalign="left" name="stvPortingCheckFormForm1">
+                                        <wm-layoutgrid columns="1" name="layoutgrid25">
+                                            <wm-gridrow name="gridrow76">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn97_1">
+                                                    <wm-form-field name="phoneNumber" displayname="Enter Phone Number" key="phoneNumber" type="string" show="true" widget="text" inputtype="text" displayformat="(999) - 999 - 9999"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow77">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn98_1">
+                                                    <wm-form-field name="carrier" readonly="false" displayname="Select Carrier" key="carrier" type="string" show="true" widget="select" placeholder="Select value" dataset="Uniqo,Verizon,AT&amp;T"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow78">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn99_1">
+                                                    <wm-container name="container43" class="form-group">
+                                                        <wm-form-field name="accountNumber" displayname="Account Number" key="accountNumber" type="string" show="true" widget="text" displayformat="999-999-9999"></wm-form-field>
+                                                        <wm-label caption="Usually found on your paper bill or statement, or on your online account" name="label44_2" class="h6 font-medium text-muted-2"></wm-label>
+                                                    </wm-container>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                        </wm-layoutgrid>
+                                    </wm-form>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow72_1">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn93_1" horizontalalign="center">
+                                    <wm-button class="btn-primary btn-block" caption="Check Eligibility" type="button" margin="24px unset 8px unset" name="button7" on-click="Widgets.dialogPortingCheckSuccess.open()"></wm-button>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-container>
+                    <wm-container name="containerSelectCurrentPhone" show="false">
+                        <wm-layoutgrid name="layoutgrid27">
+                            <wm-gridrow name="gridrow80_1">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn101">
+                                    <wm-label name="label47" caption="Current Phone Details" class="h4 font-medium" margin="unset unset 8px unset"></wm-label>
+                                    <wm-label name="label49_1" caption="Please tell us which phone you currently use" width="100%" class="h6 font-medium text-muted-2"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow100">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn139" padding="20px unset unset unset">
+                                    <wm-container name="container48">
+                                        <wm-container name="container47">
+                                            <wm-container name="container49" class="form-elements">
+                                                <wm-layoutgrid name="layoutgrid32" columns="1">
+                                                    <wm-gridrow name="gridrow103">
+                                                        <wm-gridcolumn columnwidth="12" name="gridcolumn144" padding="10px unset">
+                                                            <wm-container name="container44" class="form-group">
+                                                                <wm-label name="label50_1" caption="Choose your phone brand" class="h5 text-muted"></wm-label>
+                                                                <wm-list listclass="list-group" template="true" template-name="Contact List" itemsperrow="xs-1 sm-4 md-4 lg-4" class="brand-list" datafield="All Fields" statehandler="none" name="GetPhoneBrandsList1"
+                                                                    dataset="bind:Variables.GetPhoneBrandsInvoke.dataSet.content" navigation="Scroll" direction="vertical">
+                                                                    <wm-listtemplate layout="inline" name="listtemplate9_1">
+                                                                        <wm-container name="container10" class="brand-container">
+                                                                            <wm-label name="Name" caption="bind:Variables.GetPhoneBrandsInvoke.dataSet.content[$i].name" fontunit="em"></wm-label>
+                                                                        </wm-container>
+                                                                    </wm-listtemplate>
+                                                                </wm-list>
+                                                            </wm-container>
+                                                        </wm-gridcolumn>
+                                                    </wm-gridrow>
+                                                    <wm-gridrow name="gridrow104">
+                                                        <wm-gridcolumn columnwidth="12" name="gridcolumn145" padding="10px unset">
+                                                            <wm-composite name="composite3" captionposition="top" class="model-select">
+                                                                <wm-label class="h5 text-muted col-xs-12" name="label51" caption="Select Model"></wm-label>
+                                                                <wm-container class="col-xs-12" name="container10_1">
+                                                                    <wm-select name="selectPhoneModel" placeholder="Select model of brands" disabled="bind:!Widgets.GetPhoneBrandsList1.selecteditem.id" dataset="bind:Variables.svGetPhoneModels.dataSet.content"
+                                                                        datafield="id" displayfield="name"></wm-select>
+                                                                </wm-container>
+                                                            </wm-composite>
+                                                        </wm-gridcolumn>
+                                                    </wm-gridrow>
+                                                </wm-layoutgrid>
+                                            </wm-container>
+                                        </wm-container>
+                                    </wm-container>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow84">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn107" horizontalalign="center">
+                                    <wm-button class="btn-primary btn-block" caption="Continue" type="button" margin="20px unset" name="buttonShowOwnPhone" disabled="bind:!Widgets.selectPhoneModel.datavalue" on-click="buttonShowOwnPhoneClick($event, widget)"></wm-button>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-container>
+                </wm-container>
+            </wm-gridcolumn>
+            <wm-gridcolumn columnwidth="4" name="gridcolumn149"></wm-gridcolumn>
+        </wm-gridrow>
+        <wm-gridrow name="gridrow2">
+            <wm-gridcolumn columnwidth="12" name="gridcolumn3">
+                <wm-wizard stepstyle="justified" class="number" name="wizard1" nextbtnlabel="Continue" previousbtnlabel="Back" show="bind:type == 'Shop Phone'" defaultstep="wizardstepPricePlan" donebtnlabel="Continue to Payment" on-done="Widgets.dialogPaymentConfirmation.open()"
+                    on-cancel="wizard1Cancel(widget, steps)" showindevice="md,lg">
+                    <wm-wizardstep name="wizardstepPricePlan" title="Price Plan" on-next="wizardstepPricePlanNext(widget, currentStep, stepIndex)">
+                        <wm-layoutgrid name="layoutgrid2">
+                            <wm-gridrow name="gridrow3">
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn118_1"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="8" name="gridcolumn5">
+                                    <wm-container name="containerQuiz">
+                                        <wm-layoutgrid name="layoutgrid3">
+                                            <wm-gridrow name="gridrow6">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn10" horizontalalign="left">
+                                                    <wm-label name="label1" caption="Tell us a little about your usage habits so we can provide  you with the most suitable plan." class="h4" margin="unset unset 12px unset"></wm-label>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow7">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn12">
+                                                    <wm-container name="container13" margin="16px unset 8px unset">
+                                                        <wm-label name="label2" caption="What activities does your household use the internet for?" class="h5 font-semibold inline"></wm-label>
+                                                        <wm-label caption="(Select all that apply)" name="label58" class="h5 inline" width="auto" margin="unset unset unset 8px"></wm-label>
+                                                    </wm-container>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow8">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn8">
+                                                    <wm-list listclass="list-group" itemclass="list-group-item col-xs-12 col-sm-6 col-md-3 col-lg-3" template="true" template-name="Contact List" itemsperrow="xs-1 sm-2 md-4 lg-4" class="media-list active-list check-list"
+                                                        datafield="All Fields" statehandler="none" name="stvInternetActivitiesList1" dataset="bind:Variables.stvInternetActivities.dataSet" navigation="None" multiselect="true" on-click="stvInternetActivitiesList1Click($event, widget)"
+                                                        direction="horizontal">
+                                                        <wm-listtemplate layout="inline" name="listtemplate1">
+                                                            <wm-container name="container19" horizontalalign="center" class="flex-v-center">
+                                                                <wm-icon name="icon14" iconclass="bind:Widgets.stvInternetActivitiesList1.currentItem.icon + ' icon-md'"></wm-icon>
+                                                                <wm-label name="label7" caption="bind:Widgets.stvInternetActivitiesList1.currentItem.name" class="p" margin="12px unset unset unset"></wm-label>
+                                                            </wm-container>
+                                                        </wm-listtemplate>
+                                                    </wm-list>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow9">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn9_1">
+                                                    <wm-container margin="20px unset 12px unset" name="container14">
+                                                        <wm-label caption="How much data do you typically use a month?" class="h5 font-semibold inline" name="label59"></wm-label>
+                                                    </wm-container>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow10">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn10_1">
+                                                    <wm-list listclass="list-group" itemclass="list-group-item col-xs-12 col-sm-6 col-md-3 col-lg-3" template="true" template-name="Contact List" itemsperrow="xs-1 sm-2 md-4 lg-4" class="media-list active-list radio-list"
+                                                        datafield="All Fields" statehandler="none" name="stvInternetNoOfDevicesList1" dataset="bind:Variables.stvInternetNoOfDevices.dataSet" navigation="Scroll" on-select="stvInternetNoOfDevicesList1Select(widget, $data)"
+                                                        direction="horizontal" multiselect="false">
+                                                        <wm-listtemplate layout="inline" name="listtemplate2">
+                                                            <wm-container name="container18" horizontalalign="center" class="flex-v-center">
+                                                                <wm-label caption="bind:Widgets.stvInternetNoOfDevicesList1.currentItem.dataValue" name="label7_1" class="p"></wm-label>
+                                                            </wm-container>
+                                                        </wm-listtemplate>
+                                                    </wm-list>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow11">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn11">
+                                                    <wm-container margin="20px unset 12px unset" name="container15">
+                                                        <wm-label caption="How much time do you typically stay connected to the internet?" class="h5 font-semibold inline" name="label61"></wm-label>
+                                                    </wm-container>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow12">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn12_1">
+                                                    <wm-list listclass="list-group" itemclass="list-group-item col-xs-12 col-sm-6 col-md-3 col-lg-3" template="true" template-name="Contact List" itemsperrow="xs-1 sm-2 md-4 lg-4" class="media-list active-list radio-list"
+                                                        datafield="All Fields" statehandler="none" dataset="bind:Variables.stvPlanPlaceSizes.dataSet" navigation="Scroll" name="list3" on-select="list3Select(widget, $data)" direction="horizontal" multiselect="false">
+                                                        <wm-listtemplate layout="inline" name="listtemplate3">
+                                                            <wm-container name="container17" horizontalalign="center" class="flex-v-center">
+                                                                <wm-label caption="bind:Widgets.list3.currentItem.name" name="label7_2" class="inline"></wm-label>
+                                                                <wm-label caption="bind:Widgets.list3.currentItem.value" name="label63_1" class="p" margin="0px unset unset unset"></wm-label>
+                                                            </wm-container>
+                                                        </wm-listtemplate>
+                                                    </wm-list>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow13">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn13" horizontalalign="center">
+                                                    <wm-button class="btn-secondary" caption="Show me Personalized Plans" type="button" margin="16px unset 8px unset" name="buttonShowPersonalisedPlans" on-click="buttonShowPersonalisedPlansClick($event, widget)"></wm-button>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow14">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn14" horizontalalign="center">
+                                                    <wm-anchor margin="unset 0.5em" name="anchorShowAllPlans" caption="Skip and show me unpersonalized Plans" on-click="anchorShowAllPlansClick($event, widget)" class="btn btn-transparent text-muted" textdecoration="underline"></wm-anchor>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                        </wm-layoutgrid>
+                                    </wm-container>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn117_1"></wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow4">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn7">
+                                    <wm-container name="containerRecommendedPlan" show="false">
+                                        <wm-layoutgrid name="layoutgrid12">
+                                            <wm-gridrow name="gridrow31">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn32">
+                                                    <wm-label name="label66_1" caption="Our recommendation" class="h3 font-semibold" margin="unset unset 16px unset"></wm-label>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow32">
+                                                <wm-gridcolumn columnwidth="9" name="gridcolumn34" padding="unset 60px unset unset" class="border-right">
+                                                    <wm-layoutgrid name="layoutgrid13">
+                                                        <wm-gridrow name="gridrow36">
+                                                            <wm-gridcolumn columnwidth="12" name="gridcolumn42">
+                                                                <wm-list listclass="list-group" itemclass="list-group-item col-xs-12 col-sm-4 col-md-4 col-lg-4" template="true" template-name="Contact List" itemsperrow="xs-1 sm-3 md-3 lg-3" class="media-list dummy-list"
+                                                                    datafield="All Fields" statehandler="none" dataset="bind:Variables.stvRecommendedPlan.dataSet.phonePricePlanFeatureses" navigation="Scroll" name="list7" direction="horizontal">
+                                                                    <wm-listtemplate layout="inline" name="listtemplate7_1">
+                                                                        <wm-layoutgrid name="layoutgrid13_1">
+                                                                            <wm-gridrow name="gridrow36_1">
+                                                                                <wm-gridcolumn columnwidth="12" name="gridcolumn40_1">
+                                                                                    <wm-container name="container34" class="media-left">
+                                                                                        <wm-icon name="icon11_2" iconclass="bind:Widgets.list7.currentItem.icon + &quot; icon-md text-primary&quot;"></wm-icon>
+                                                                                    </wm-container>
+                                                                                    <wm-container name="container35" class="media-body media-middle">
+                                                                                        <wm-label caption="bind:Widgets.list7.currentItem.category" name="label12_1" class="h5 inline font-semibold"></wm-label>
+                                                                                    </wm-container>
+                                                                                </wm-gridcolumn>
+                                                                            </wm-gridrow>
+                                                                            <wm-gridrow name="gridrow37_1" padding="unset 16px unset 8px">
+                                                                                <wm-gridcolumn columnwidth="12" name="gridcolumn41_1">
+                                                                                    <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Contact List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list dummy-list check"
+                                                                                        datafield="All Fields" statehandler="none" dataset="bind:Widgets.list7.currentItem.planFeatures" navigation="Scroll" name="list8">
+                                                                                        <wm-listtemplate layout="inline" name="listtemplate8">
+                                                                                            <wm-container class="media-left" name="container36">
+                                                                                                <wm-icon iconclass="fa fa-circle small" caption="" name="icon11_3"></wm-icon>
+                                                                                            </wm-container>
+                                                                                            <wm-container class="media-body" name="container37">
+                                                                                                <wm-label name="label67_1" caption="bind:Widgets.list8.currentItem.value"></wm-label>
+                                                                                            </wm-container>
+                                                                                        </wm-listtemplate>
+                                                                                    </wm-list>
+                                                                                </wm-gridcolumn>
+                                                                            </wm-gridrow>
+                                                                        </wm-layoutgrid>
+                                                                    </wm-listtemplate>
+                                                                </wm-list>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow37">
+                                                            <wm-gridcolumn columnwidth="12" name="gridcolumn44">
+                                                                <wm-layoutgrid name="layoutgrid15">
+                                                                    <wm-gridrow name="gridrow39" padding="32px unset unset unset">
+                                                                        <wm-gridcolumn columnwidth="12" name="gridcolumn41_2" class="border-top" padding="32px unset unset unset">
+                                                                            <wm-label name="label13" class="h4 font-medium" caption="Why this plan is great for you" margin="unset unset 16px unset"></wm-label>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                    <wm-gridrow name="gridrow40" padding="unset unset unset 8px">
+                                                                        <wm-gridcolumn columnwidth="12" name="gridcolumn43">
+                                                                            <wm-container name="container28" class="media-left">
+                                                                                <wm-icon iconclass="fa fa-circle small" caption="" name="icon11"></wm-icon>
+                                                                            </wm-container>
+                                                                            <wm-container name="container29" class="media-body">
+                                                                                <wm-label caption="A fast and powerful plan for endless surfing and streaming and 7-12 smart devices or multiple people connected at the same time." name="label68_1"></wm-label>
+                                                                            </wm-container>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                    <wm-gridrow name="gridrow41" padding="12px unset unset 8px">
+                                                                        <wm-gridcolumn columnwidth="12" name="gridcolumn43_1">
+                                                                            <wm-container name="container30" class="media-left">
+                                                                                <wm-icon iconclass="fa fa-circle small" name="icon8" caption=""></wm-icon>
+                                                                            </wm-container>
+                                                                            <wm-container name="container31" class="media-body">
+                                                                                <wm-label caption="Crystal-clear videos calls and lightning-fast file downloads." name="label69_1"></wm-label>
+                                                                            </wm-container>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                    <wm-gridrow name="gridrow43" padding="12px unset unset 8px">
+                                                                        <wm-gridcolumn columnwidth="12" name="gridcolumn45">
+                                                                            <wm-container name="container32" class="media-left">
+                                                                                <wm-icon iconclass="fa fa-circle small" name="icon10" caption=""></wm-icon>
+                                                                            </wm-container>
+                                                                            <wm-container name="container33" class="media-body">
+                                                                                <wm-label caption="And with Unlimited Data you can download or stream all the shows, movies, and music you want without limitations." name="label70"></wm-label>
+                                                                            </wm-container>
+                                                                        </wm-gridcolumn>
+                                                                    </wm-gridrow>
+                                                                </wm-layoutgrid>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                    </wm-layoutgrid>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="3" name="gridcolumn41" horizontalalign="center" padding="60px unset unset 60px">
+                                                    <wm-layoutgrid name="layoutgrid16">
+                                                        <wm-gridrow name="gridrow43_1">
+                                                            <wm-gridcolumn columnwidth="12" name="gridcolumn45_1" horizontalalign="left">
+                                                                <wm-label name="label14" class="h4 font-bold" caption="bind:Variables.stvRecommendedPlan.dataSet.name"></wm-label>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow44">
+                                                            <wm-gridcolumn columnwidth="12" name="gridcolumn47" horizontalalign="left">
+                                                                <wm-container name="container25_1" margin="unset unset 24px unset">
+                                                                    <wm-label name="label15" caption="bind:Variables.stvRecommendedPlan.dataSet.price | toCurrency: '$': '2'" class="h2 font-base" padding="unset 12px unset unset"></wm-label>
+                                                                    <wm-label name="label16" caption="Taxes &amp; Fees included" class="text-muted" margin="0px unset unset unset"></wm-label>
+                                                                </wm-container>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow45">
+                                                            <wm-gridcolumn columnwidth="12" name="gridcolumn49">
+                                                                <wm-button class="btn-secondary btn-block" caption="bind:&quot;Select &quot; + Variables.stvRecommendedPlan.dataSet.name" type="button" name="buttonSelectRecommendedPlan" on-click="buttonSelectRecommendedPlanClick($event, widget)"></wm-button>
+                                                                <wm-button class="btn-secondary outline btn-block" caption="bind:&quot;Remove &quot; + Variables.stvRecommendedPlan.dataSet.name" type="button" name="buttonremoveRecommendedPlan"
+                                                                    on-click="buttonremoveRecommendedPlanClick($event, widget)" show="false"></wm-button>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow88_2">
+                                                            <wm-gridcolumn columnwidth="12" name="gridcolumn114_1">
+                                                                <wm-anchor margin="100px unset unset unset" name="anchorAllPlans" caption="Explore Other Plans" on-click="anchorAllPlansClick($event, widget)" textdecoration="underline" class="btn btn-transparent"></wm-anchor>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow89_1">
+                                                            <wm-gridcolumn columnwidth="12" name="gridcolumn115_1">
+                                                                <wm-anchor margin="12px unset unset unset" name="anchorRetakeQuiz" caption="Re-take Quiz" on-click="anchorRetakeQuizClick($event, widget)" textdecoration="underline" class="btn btn-transparent"></wm-anchor>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                    </wm-layoutgrid>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow35">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn40"></wm-gridcolumn>
+                                            </wm-gridrow>
+                                        </wm-layoutgrid>
+                                    </wm-container>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow5">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn9">
+                                    <wm-container name="containerAllPlans" show="false">
+                                        <wm-layoutgrid name="layoutgrid11">
+                                            <wm-gridrow name="gridrow30">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn31_1" horizontalalign="right">
+                                                    <wm-button class="btn-secondary" caption="Take Quiz" type="button" name="buttonTakeQuiz" on-click="buttonTakeQuizClick($event, widget)" margin="unset unset 20px unset"></wm-button>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow28_1">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn29_1">
+                                                    <wm-prefab prefabname="PhonePricePlans" name="PhonePricePlans1" prepopulatedplanid="bind:selectedPlan ? selectedPlan.id : undefined" on-planchange="PhonePricePlans1Planchange($event, $data)"></wm-prefab>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow29">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn31"></wm-gridcolumn>
+                                            </wm-gridrow>
+                                        </wm-layoutgrid>
+                                    </wm-container>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-wizardstep>
+                    <wm-wizardstep name="wizardstepAddOns" title="Add-ons">
+                        <wm-layoutgrid name="layoutgridAddOnsList" show="bind:addonsview == 'List'" deferload="true">
+                            <wm-gridrow name="gridrow107">
+                                <wm-gridcolumn columnwidth="3" name="gridcolumn150"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn154">
+                                    <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Contact List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list separated-list active-list addons" datafield="All Fields" statehandler="none"
+                                        name="AddOnsListList1" dataset="bind:Variables.wsAddOnsList.dataSet.content" navigation="Scroll" direction="vertical" groupby="addOnCategory.name" orderby="id:asc" show="bind:addonsview == 'List'" deferload="true">
+                                        <wm-listtemplate layout="inline" name="listtemplate9">
+                                            <wm-container name="container6">
+                                                <wm-container name="container50" class="media-left media-middle">
+                                                    <wm-icon name="icon10_1" iconclass="bind:(Widgets.AddOnsListList1.currentItem.icon ? Widgets.AddOnsListList1.currentItem.icon : Widgets.AddOnsListList1.currentItem.addOnCategory.icon) + &quot; icon-lg&quot;"></wm-icon>
+                                                </wm-container>
+                                                <wm-container name="container52" class="media-body">
+                                                    <wm-layoutgrid name="layoutgrid17">
+                                                        <wm-gridrow name="gridrow46">
+                                                            <wm-gridcolumn columnwidth="5" name="gridcolumn50_1">
+                                                                <wm-label name="label17" caption="bind:Widgets.AddOnsListList1.currentItem.name" class="font-medium text-muted" margin="unset unset 0px unset"></wm-label>
+                                                                <wm-label name="label18" caption="bind:Widgets.AddOnsListList1.currentItem.description" class="h4 font-medium" margin="-10px unset -4px unset"></wm-label>
+                                                            </wm-gridcolumn>
+                                                            <wm-gridcolumn columnwidth="7" name="gridcolumn51_1" class="border-left" padding="4px unset unset 24px">
+                                                                <wm-label caption="bind:Widgets.AddOnsListList1.currentItem.price | toCurrency: '$': '2'" name="label19" class="h3 inline font-medium"></wm-label>
+                                                                <wm-label caption="bind:&quot; / &quot; + Widgets.AddOnsListList1.currentItem.addOnFrequency.name" name="label20" class="font-medium inline text-muted"></wm-label>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                    </wm-layoutgrid>
+                                                </wm-container>
+                                                <wm-container name="container51" class="media-right">
+                                                    <wm-button class="btn-secondary btn-block" caption="Select" type="button" name="buttonSelectAddon" on-click="buttonSelectAddonClick($event, widget, item, currentItemWidgets)" width="122"></wm-button>
+                                                    <wm-button class="btn-secondary outline" caption="Remove" type="button" name="buttonRemoveAddon" on-click="buttonRemoveAddonClick($event, widget, item, currentItemWidgets)" show="false" width="122"></wm-button>
+                                                </wm-container>
+                                            </wm-container>
+                                        </wm-listtemplate>
+                                    </wm-list>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="3" name="gridcolumn151"></wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                        <wm-list listclass="list-group m-0" template="true" template-name="Business Card" itemsperrow="xs-1 sm-2 md-4 lg-4" class="list-card active-card addons" statehandler="none" name="AddOnsListCards" dataset="bind:Variables.wsAddOnsList.dataSet.content"
+                            navigation="Scroll" show="bind:addonsview == 'Card'" groupby="addOnCategory.name" deferload="true">
+                            <wm-listtemplate layout="media" name="listtemplate10">
+                                <wm-card name="card1">
+                                    <wm-card-content name="card_content1">
+                                        <wm-container name="container17_1" class="card-header-container">
+                                            <wm-container name="container18_1" class="media-left">
+                                                <wm-icon iconclass="bind:(Widgets.AddOnsListCards.currentItem.icon ? Widgets.AddOnsListCards.currentItem.icon : Widgets.AddOnsListCards.currentItem.addOnCategory.icon) + &quot; icon-md&quot;" name="icon13"></wm-icon>
+                                            </wm-container>
+                                            <wm-container name="container19_1" class="media-body">
+                                                <wm-label caption="bind:Widgets.AddOnsListCards.currentItem.name" class="inline text-muted font-medium" name="label66"></wm-label>
+                                                <wm-label caption="bind:Widgets.AddOnsListCards.currentItem.description" class="p font-semibold" name="label67" margin="0px unset unset unset"></wm-label>
+                                            </wm-container>
+                                        </wm-container>
+                                        <wm-container name="container20" class="card-body-container">
+                                            <wm-label caption="bind:(Widgets.AddOnsListCards.currentItem.price | toCurrency: '$': '2') + &quot; / &quot;" class="h2 inline font-base" name="label68"></wm-label>
+                                            <wm-label caption="bind:Widgets.AddOnsListCards.currentItem.addOnFrequency.name" class="font-medium inline text-muted" name="label69"></wm-label>
+                                        </wm-container>
+                                        <wm-container name="container21" class="card-footer-conatiner">
+                                            <wm-button class="btn-secondary btn-block" caption="Select" type="button" on-click="buttonSelectAddonCardClick($event, widget, item, currentItemWidgets)" name="buttonSelectAddonCard"></wm-button>
+                                            <wm-button class="btn-block btn-secondary outline" caption="Remove" type="button" on-click="buttonRemoveAddoncardClick($event, widget, item, currentItemWidgets)" show="false" name="buttonRemoveAddoncard"></wm-button>
+                                        </wm-container>
+                                    </wm-card-content>
+                                </wm-card>
+                            </wm-listtemplate>
+                        </wm-list>
+                    </wm-wizardstep>
+                    <wm-wizardstep name="wizardstepSIM" title="SIM">
+                        <wm-layoutgrid name="layoutgrid17_1">
+                            <wm-gridrow name="gridrow46_1">
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn112_1"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="8" name="gridcolumn54_1" padding="28px unset 20px unset">
+                                    <wm-list listclass="list-group" itemclass="list-group-item col-xs-12 col-sm-6 col-md-6 col-lg-6" template="true" template-name="Contact List" itemsperrow="xs-1 sm-2 md-2 lg-2" class="media-list active-list radio-list" datafield="All Fields"
+                                        statehandler="none" name="stvSimTypesList1" dataset="bind:Variables.stvSimTypes.dataSet" navigation="Scroll" direction="horizontal" on-select="stvSimTypesList1Select(widget, $data)">
+                                        <wm-listtemplate layout="inline" name="listtemplate7">
+                                            <wm-layoutgrid name="layoutgrid15_1">
+                                                <wm-gridrow name="gridrow45_1">
+                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn49_1" horizontalalign="center">
+                                                        <wm-picture resizemode="contain" name="picture2" height="40" picturesource="bind:Widgets.stvSimTypesList1.currentItem.displayName === &quot;Physical SIM&quot; ? &quot;resources/images/imagelists/sim.svg&quot;:&quot;resources/images/imagelists/eSim.svg&quot;"
+                                                            margin="12px unset unset unset"></wm-picture>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow42">
+                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn46" horizontalalign="center">
+                                                        <wm-label name="label18_1" caption="bind:Widgets.stvSimTypesList1.currentItem.displayName" class="h4 font-medium" margin="8px unset 12px unset"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow43_2">
+                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn48" horizontalalign="left">
+                                                        <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Contact List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list dummy-list" datafield="All Fields" statehandler="none"
+                                                            name="List1" dataset="bind:Widgets.stvSimTypesList1.currentItem.features" navigation="None" disableitem="true">
+                                                            <wm-listtemplate layout="inline" name="listtemplate8_1">
+                                                                <wm-container name="container36_1" class="media-left">
+                                                                    <wm-icon name="icon11_4" iconclass="fa fa-circle small"></wm-icon>
+                                                                </wm-container>
+                                                                <wm-container name="container37_1" class="media-body">
+                                                                    <wm-label name="label64_1" caption="bind:Widgets.List1.currentItem.value"></wm-label>
+                                                                </wm-container>
+                                                            </wm-listtemplate>
+                                                        </wm-list>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-listtemplate>
+                                    </wm-list>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn113"></wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-wizardstep>
+                    <wm-wizardstep name="wizardstepSummary" title="Summary">
+                        <wm-layoutgrid name="layoutgrid17_2">
+                            <wm-gridrow name="gridrow46_2">
+                                <wm-gridcolumn columnwidth="9" name="gridcolumn50_2">
+                                    <wm-container name="container38" class="order-summary">
+                                        <wm-layoutgrid name="layoutgrid27_2" columns="1">
+                                            <wm-gridrow name="gridrow91">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn117_2">
+                                                    <wm-label name="label65_1" class="h3" caption="Order Summary"></wm-label>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow92_1">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn118_2">
+                                                    <wm-prefab prefabname="PhoneOrderSummary" name="PhoneOrderSummary1" phonevarient="bind:phonevariant" priceplan="bind:Widgets.PhonePricePlans1.selectedppriceplan.id ? Widgets.PhonePricePlans1.selectedppriceplan : selectedPlan"
+                                                        simtype="bind:selectedSim" addons="bind:Variables.stvSelectedAddOns.dataSet"></wm-prefab>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                        </wm-layoutgrid>
+                                    </wm-container>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="3" name="gridcolumn51_2">
+                                    <wm-container name="container23" class="summary-amount">
+                                        <wm-container name="container25" class="summary-amount-body">
+                                            <wm-layoutgrid name="layoutgrid18">
+                                                <wm-gridrow name="gridrow47_1" padding="24px unset unset unset">
+                                                    <wm-gridcolumn columnwidth="5" name="gridcolumn52">
+                                                        <wm-label name="label18_2" caption="Subtotal" class="h6 font-medium text-muted"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="7" name="gridcolumn53_1" horizontalalign="right">
+                                                        <wm-label name="label19_1" caption="bind:((phonevariant ? phonevariant.price : 0) + (Widgets.PhonePricePlans1.selectedppriceplan ? Widgets.PhonePricePlans1.selectedppriceplan.price : selectedPlan ? selectedPlan.price : 0))  | toCurrency: '$': '2'"
+                                                            class="h5 font-semibold"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow48_1" padding="24px unset unset unset">
+                                                    <wm-gridcolumn columnwidth="5" name="gridcolumn54_2">
+                                                        <wm-label name="label20_1" caption="Taxes" class="h6 font-medium text-muted"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="7" name="gridcolumn55" horizontalalign="right">
+                                                        <wm-label name="label22" caption="bind:0  | toCurrency: '$': '2'" class="h5 font-semibold"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow49" padding="24px unset">
+                                                    <wm-gridcolumn columnwidth="5" name="gridcolumn56">
+                                                        <wm-label name="label21" caption="Shipping" class="h6 font-medium text-muted"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="7" name="gridcolumn57" horizontalalign="right">
+                                                        <wm-label name="label23" caption="bind:16 | toCurrency: '$': '2'" class="h5 font-semibold"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow50" class="border-top" padding="24px unset">
+                                                    <wm-gridcolumn columnwidth="5" name="gridcolumn58">
+                                                        <wm-label name="label24" caption="SIM Card" class="h6 font-medium text-muted"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="7" name="gridcolumn59" horizontalalign="right">
+                                                        <wm-label name="label25" caption="bind:0 | toCurrency: '$': '2'" class="h5 font-semibold"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow51" class="border-top" padding="24px unset unset unset">
+                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn60">
+                                                        <wm-composite name="composite2_1" captionposition="top">
+                                                            <wm-label class="h6 font-medium text-muted" name="label28" caption="Promo/ Referral Code" margin="unset unset 12px unset"></wm-label>
+                                                            <wm-container name="container39" class="form-group input-group">
+                                                                <wm-text name="text1" placeholder="Enter Coupon Code"></wm-text>
+                                                                <wm-anchor name="anchor4" caption="Apply" class="input-group-addon"></wm-anchor>
+                                                            </wm-container>
+                                                        </wm-composite>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-container>
+                                        <wm-container name="container26" class="summary-amount-footer">
+                                            <wm-layoutgrid name="layoutgrid27_1">
+                                                <wm-gridrow name="gridrow88_1">
+                                                    <wm-gridcolumn columnwidth="5" name="gridcolumn114">
+                                                        <wm-label name="label26" caption="Total" class="h5 font-medium text-muted" margin="8px unset unset unset"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="7" name="gridcolumn115" horizontalalign="right">
+                                                        <wm-label name="label27" caption="bind:Variables.stvTotal.dataSet.dataValue | toCurrency: '$': '2'" class="h3 font-semibold"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-container>
+                                    </wm-container>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-wizardstep>
+                    <wm-wizardstep name="wizardstepAddress" title="Address">
+                        <wm-layoutgrid name="layoutgrid28_1">
+                            <wm-gridrow name="gridrow91_1">
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn115_2"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="8" name="gridcolumn119_1">
+                                    <wm-form errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded" method="get" dataset="bind:Variables.wsGetUserAddressDetails.dataSet.content[0]" captionalign="left" name="UserAddressDetailsForm1"
+                                        formdata="bind:Variables.wsGetUserAddressDetails.dataSet.content[0]" class="no-border">
+                                        <wm-layoutgrid columns="2" name="layoutgrid8">
+                                            <wm-gridrow name="gridrow37">
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn55_1">
+                                                    <wm-form-field name="addressLine1" key="addressLine1" displayname="Address Line1" show="true" type="string" widget="text" inputtype="text" placeholder="Enter value" required="true"></wm-form-field>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn name="gridcolumn1" columnwidth="6">
+                                                    <wm-form-field name="addressLine2" key="addressLine2" displayname="Address Line2" show="true" type="string" widget="text" inputtype="text" placeholder="Enter value" required="false"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow1">
+                                                <wm-gridcolumn name="gridcolumn3" columnwidth="6">
+                                                    <wm-form-field name="city" key="city" displayname="City" show="true" type="string" widget="text" inputtype="text" placeholder="Enter value" required="true"></wm-form-field>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn name="gridcolumn2" columnwidth="6">
+                                                    <wm-form-field name="state" key="state" displayname="State" show="true" type="list" widget="select" placeholder="Select value" dataset="bind:Variables.wsGetStates.dataSet.content" datafield="id" displayfield="name"
+                                                        required="true"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow2">
+                                                <wm-gridcolumn name="gridcolumn5" columnwidth="6">
+                                                    <wm-form-field name="zipCode" key="zipCode" displayname="Zip Code" show="true" type="string" widget="text" inputtype="text" placeholder="Enter value" required="true" regexp="^[0-9]{5,6}$"></wm-form-field>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn name="gridcolumn4" columnwidth="6">
+                                                    <wm-form-field name="country" key="country" displayname="Country" show="true" type="string" widget="text" inputtype="text" placeholder="Enter value" required="true"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                        </wm-layoutgrid>
+                                    </wm-form>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn116"></wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-wizardstep>
+                    <wm-wizardstep name="wizardstepPayment" title="Payment">
+                        <wm-layoutgrid name="layoutgrid9">
+                            <wm-gridrow name="gridrow43">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn65">
+                                    <wm-container name="container40" class="summary-amount" margin="unset 12px unset -56px" height="440">
+                                        <wm-container name="container41" class="summary-amount-body">
+                                            <wm-layoutgrid name="layoutgrid23">
+                                                <wm-gridrow name="gridrow68">
+                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn90">
+                                                        <wm-label name="label34" caption="Order Details" class="h3" margin="20px unset unset unset"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow66" padding="24px unset unset unset">
+                                                    <wm-gridcolumn columnwidth="5" name="gridcolumn86">
+                                                        <wm-label name="label35" caption="bind:phonevariant.name" class="h6 font-medium text-muted"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="7" name="gridcolumn87" horizontalalign="right">
+                                                        <wm-label name="label36" caption="bind:phonevariant.price | toCurrency: '$': '2'" class="h5 font-semibold"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow67" padding="24px unset unset unset">
+                                                    <wm-gridcolumn columnwidth="5" name="gridcolumn88">
+                                                        <wm-label name="label37" caption="bind:Widgets.PhonePricePlans1.selectedppriceplan ? Widgets.PhonePricePlans1.selectedppriceplan.name : selectedPlan ? selectedPlan.name : ''" class="h6 font-medium text-muted"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="7" name="gridcolumn89" horizontalalign="right">
+                                                        <wm-label name="label38" caption="bind:(Widgets.PhonePricePlans1.selectedppriceplan ? Widgets.PhonePricePlans1.selectedppriceplan.price : selectedPlan ? selectedPlan.price : 0) | toCurrency: '$': '2'"
+                                                            class="h5 font-semibold"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow69" padding="24px unset">
+                                                    <wm-gridcolumn columnwidth="5" name="gridcolumn92">
+                                                        <wm-label name="label39" caption="bind:selectedSim" class="h6 font-medium text-muted"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="7" name="gridcolumn93" horizontalalign="right">
+                                                        <wm-label name="label40" caption="bind:0 | toCurrency: '$': '2'" class="h5 font-semibold"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow70" padding="24px unset unset unset" class="border-top">
+                                                    <wm-gridcolumn columnwidth="5" name="gridcolumn94">
+                                                        <wm-label name="label42" caption="Taxes" class="h6 font-medium text-muted"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="7" name="gridcolumn95" horizontalalign="right">
+                                                        <wm-label name="label43" caption="bind:0 | toCurrency: '$': '2'" class="h5 font-semibold"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow71" padding="24px unset unset unset">
+                                                    <wm-gridcolumn columnwidth="5" name="gridcolumn96">
+                                                        <wm-label name="label44" caption="Shipping" class="h6 font-medium text-muted"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="7" name="gridcolumn97" horizontalalign="right">
+                                                        <wm-label name="label45" caption="bind:16 | toCurrency: '$': '2'" class="h5 font-semibold"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-container>
+                                        <wm-container name="container39_1" class="summary-amount-footer">
+                                            <wm-layoutgrid name="layoutgrid24">
+                                                <wm-gridrow name="gridrow72">
+                                                    <wm-gridcolumn columnwidth="5" name="gridcolumn98">
+                                                        <wm-label name="label40_1" caption="Total" class="h5 font-medium text-muted" margin="8px unset unset unset"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="7" name="gridcolumn99" horizontalalign="right">
+                                                        <wm-label name="label41" caption="bind:Variables.stvTotal.dataSet.dataValue | toCurrency: '$': '2'" class="h3 font-semibold"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-container>
+                                    </wm-container>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn66">
+                                    <wm-form errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.stvPaymentFormFieldDetails.dataSet" captionalign="left" name="stvPaymentFormFieldDetailsForm1"
+                                        class="no-border" margin="-12px 0px -20px 0px">
+                                        <wm-layoutgrid columns="1" name="layoutgrid10">
+                                            <wm-gridrow name="gridrow44">
+                                                <wm-gridcolumn columnwidth="8" name="gridcolumn67">
+                                                    <wm-form-field name="paymnetType" readonly="false" displayname="Paymnet Type" key="paymnetType" type="string" show="true" widget="switch" placeholder="" dataset="Card, Paypal" datafield="All Fields" defaultvalue="Card"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow45">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn68">
+                                                    <wm-form-field name="cardholderName" readonly="false" displayname="Cardholder Name" key="cardholderName" type="string" show="true" widget="text" inputtype="text" placeholder="Enter value" required="true"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow46">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn69">
+                                                    <wm-form-field name="cardNumber" readonly="false" displayname="Card Number" key="cardNumber" type="string" show="true" widget="text" inputtype="text" placeholder="" required="true" displayformat="9999 9999 9999 9999"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow47">
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn70">
+                                                    <wm-form-field name="expiryDate" displayname="Expiry Date" key="expiryDate" type="string" show="true" widget="text" inputtype="text" placeholder="" required="true" displayformat="99/99"></wm-form-field>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn73">
+                                                    <wm-form-field name="cvv" displayname="CVV" key="cvv" type="string" show="true" widget="text" required="true" inputtype="password"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow48">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn71">
+                                                    <wm-container name="container42" class="form-group" margin="unset unset 0px unset">
+                                                        <wm-form-field name="rememberChoice" readonly="false" key="rememberChoice" type="string" show="true" widget="checkbox" placeholder="" caption="Remember Choice"></wm-form-field>
+                                                    </wm-container>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                        </wm-layoutgrid>
+                                    </wm-form>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn119"></wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-wizardstep>
+                </wm-wizard>
+            </wm-gridcolumn>
+        </wm-gridrow>
+        <wm-gridrow name="gridrow88_3">
+            <wm-gridcolumn columnwidth="12" name="gridcolumn118">
+                <wm-wizard stepstyle="justified" class="number p-sw" nextbtnlabel="Continue" previousbtnlabel="Back" show="bind:type == 'Shop Phone'" defaultstep="null" donebtnlabel="Make Payment" on-done="Widgets.dialogPaymentConfirmation.open()" on-cancel="wizard1Cancel(widget, steps)"
+                    name="wizard4" showindevice="xs,sm" cancelbtnlabel="Cancel" cancelable="false">
+                    <wm-wizardstep title="Price Plan" on-next="wizardstepPlansMobileNext(widget, currentStep, stepIndex)" name="wizardstepPlansMobile" showindevice="xs,sm" class="number step">
+                        <wm-layoutgrid name="layoutgrid75">
+                            <wm-gridrow name="gridrow242">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn331">
+                                    <wm-container show="true" name="container150">
+                                        <wm-layoutgrid name="layoutgrid82">
+                                            <wm-gridrow name="gridrow244">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn333">
+                                                    <wm-prefab prefabname="PhonePricePlans" prepopulatedplanid="bind:selectedPlan ? selectedPlan.id : undefined" on-planchange="PhonePricePlansMobilePlanchange($event, $data)" name="PhonePricePlansMobile"></wm-prefab>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                        </wm-layoutgrid>
+                                    </wm-container>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-wizardstep>
+                    <wm-wizardstep title="Add-ons" name="wizardstepAddonsMobile" class="number step">
+                        <wm-layoutgrid show="bind:addonsview == 'List'" deferload="true" name="layoutgrid83"></wm-layoutgrid>
+                        <wm-layoutgrid name="layoutgrid42">
+                            <wm-gridrow name="gridrow112">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn158">
+                                    <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Contact List" itemsperrow="xs-3 sm-3 md-1 lg-1" class="media-list  tab-list" datafield="All Fields" statehandler="URL" dataset="bind:Variables.svGetAddonCategories.dataSet"
+                                        navigation="None" name="listMobileAddonCategories" on-select="listMobileAddonCategoriesSelect(widget, $data)" selectfirstitem="true" direction="horizontal">
+                                        <wm-listtemplate layout="inline" name="listtemplate13">
+                                            <wm-container name="container66">
+                                                <wm-label caption="bind:Variables.svGetAddonCategories.dataSet[$i].name" fontunit="px" name="label87" textalign="left" margin="0px unset" class="switch-text"></wm-label>
+                                            </wm-container>
+                                        </wm-listtemplate>
+                                    </wm-list>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow113">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn160">
+                                    <wm-list listclass="list-group" itemsperrow="xs-2 sm-4 md-6 lg-6" template="true" template-name="Contact Card" class="list-card addons-card-list" statehandler="URL" name="stvCurrentMobileAddonsList1" dataset="bind:Variables.stvCurrentMobileAddons.dataSet"
+                                        navigation="None" direction="vertical" multiselect="true" on-tap="stvCurrentMobileAddonsList1Tap($event, widget)" on-beforedatarender="stvCurrentMobileAddonsList1Beforedatarender(widget, $data)">
+                                        <wm-listtemplate layout="media" name="listtemplate14">
+                                            <wm-card name="ContactCard" class="addons-card">
+                                                <wm-card-content horizontalalign="center" name="card_content2" class="addons-card-content">
+                                                    <wm-layoutgrid name="layoutgrid44">
+                                                        <wm-gridrow name="gridrow115">
+                                                            <wm-gridcolumn columnwidth="12" name="gridcolumn161" horizontalalign="left" class="col-xs-10">
+                                                                <wm-picture resizemode="contain" name="picture6_1" width="24px" height="24px" picturesource="bind:&quot;resources/images/imagelists/&quot; + (Widgets.stvCurrentMobileAddonsList1.currentItem.icon ? Widgets.stvCurrentMobileAddonsList1.currentItem.icon : (Widgets.stvCurrentMobileAddonsList1.currentItem.addOnCategory.icon ? Widgets.stvCurrentMobileAddonsList1.currentItem.addOnCategory.icon : &quot;default-image&quot;)) + &quot;.png&quot;"
+                                                                    margin="unset unset 6px unset"></wm-picture>
+                                                                <wm-label padding="unset" name="label89" width="100%" caption="bind:Widgets.stvCurrentMobileAddonsList1.currentItem.name" class="h5 text-muted-3 font-medium"></wm-label>
+                                                                <wm-icon name="icon11_1" iconclass="bind:(Widgets.stvCurrentMobileAddonsList1.currentItem.icon ? Widgets.stvCurrentMobileAddonsList1.currentItem.icon : Widgets.stvCurrentMobileAddonsList1.currentItem.addOnCategory.icon) + &quot; icon-md&quot;"
+                                                                    iconsize="24px"></wm-icon>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow116">
+                                                            <wm-gridcolumn columnwidth="12" name="gridcolumn163" horizontalalign="left" class="col-xs-12">
+                                                                <wm-label padding="unset" width="100%" name="label90" caption="bind:Widgets.stvCurrentMobileAddonsList1.currentItem.description" class="h4 font-semibold"></wm-label>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                        <wm-gridrow name="gridrow117">
+                                                            <wm-gridcolumn columnwidth="12" name="gridcolumn165" horizontalalign="left" class="col-xs-12">
+                                                                <wm-label padding="unset" name="label91" caption="bind:(Widgets.stvCurrentMobileAddonsList1.currentItem.price | toCurrency: '$': '2') + &quot; / &quot;" color="rgb(31, 43, 87)" fontsize="24"></wm-label>
+                                                                <wm-label padding="unset" name="label93" caption="bind:Widgets.stvCurrentMobileAddonsList1.currentItem.addOnFrequency.name" margin="12px unset unset unset" class="h5 text-muted-3 font-medium"></wm-label>
+                                                            </wm-gridcolumn>
+                                                        </wm-gridrow>
+                                                    </wm-layoutgrid>
+                                                </wm-card-content>
+                                            </wm-card>
+                                        </wm-listtemplate>
+                                    </wm-list>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow127">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn182_1"></wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-wizardstep>
+                    <wm-wizardstep title="SIM" name="wizardstepSimMobile" class="number step">
+                        <wm-layoutgrid name="layoutgrid85">
+                            <wm-gridrow name="gridrow248">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn340"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn341">
+                                    <wm-list listclass="list-group" itemclass="list-group-item col-xs-12 col-sm-6 col-md-6 col-lg-6" template="true" template-name="Contact List" itemsperrow="xs-1 sm-2 md-2 lg-2" class="media-list active-list radio-list  sim-list"
+                                        datafield="All Fields" statehandler="none" dataset="bind:Variables.stvSimTypes.dataSet" navigation="Scroll" direction="vertical" on-select="listSimTypesMobileSelect(widget, $data)" name="listSimTypesMobile">
+                                        <wm-listtemplate layout="inline" name="listtemplate36">
+                                            <wm-layoutgrid name="layoutgrid86">
+                                                <wm-gridrow name="gridrow249">
+                                                    <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn342">
+                                                        <wm-picture resizemode="contain" height="45px" picturesource="bind:Widgets.listSimTypesMobile.currentItem.displayName === &quot;Physical SIM&quot; ? &quot;resources/images/imagelists/sim.png&quot;:&quot;resources/images/imagelists/eSim.png&quot;"
+                                                            margin="16px unset unset unset" name="picture6"></wm-picture>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow250">
+                                                    <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn343">
+                                                        <wm-label caption="bind:Widgets.listSimTypesMobile.currentItem.displayName" class="h3 font-semibold" margin="8px unset 12px unset" name="label206" width="100%" textalign="center"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow name="gridrow251">
+                                                    <wm-gridcolumn columnwidth="12" horizontalalign="left" name="gridcolumn344">
+                                                        <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Contact List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list dummy-list" datafield="All Fields" statehandler="none"
+                                                            dataset="bind:Widgets.listSimTypesMobile.currentItem.features" navigation="None" disableitem="true" name="listSimTypesFeaturesMobile">
+                                                            <wm-listtemplate layout="inline" name="listtemplate37">
+                                                                <wm-linearlayout direction="row" spacing="8" padding="4px unset" name="linearlayout1">
+                                                                    <wm-linearlayoutitem name="linearlayoutitem1" horizontalalign="center">
+                                                                        <wm-icon iconclass="fa fa-circle small" name="icon36" iconsize="6px" caption=""></wm-icon>
+                                                                    </wm-linearlayoutitem>
+                                                                    <wm-linearlayoutitem flexgrow="1" name="linearlayoutitem2">
+                                                                        <wm-label padding="unset" name="label111_1" caption="bind:Widgets.listSimTypesFeaturesMobile.currentItem.value" width="100%" margin="-3px unset unset unset"></wm-label>
+                                                                    </wm-linearlayoutitem>
+                                                                </wm-linearlayout>
+                                                            </wm-listtemplate>
+                                                        </wm-list>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-listtemplate>
+                                    </wm-list>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn345"></wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow135_1">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn191_1"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn192"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn193_1"></wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-wizardstep>
+                    <wm-wizardstep title="Address" name="wizardstepAddressaMobile" class="number step">
+                        <wm-layoutgrid name="layoutgrid91">
+                            <wm-gridrow name="gridrow261">
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn361"></wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="8" name="gridcolumn362">
+                                    <wm-form errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded" method="get" dataset="bind:Variables.wsGetUserAddressDetails.dataSet.content[0]" captionalign="left" formdata="bind:Variables.wsGetUserAddressDetails.dataSet.content[0]"
+                                        class="no-border" name="form8">
+                                        <wm-layoutgrid columns="2" name="layoutgrid92">
+                                            <wm-gridrow name="gridrow262">
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn363">
+                                                    <wm-form-field displayname="Address Line1" show="true" type="string" widget="text" inputtype="text" placeholder="Enter Address Line1" required="true" name="form_field40" key="form_field40"></wm-form-field>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn364">
+                                                    <wm-form-field displayname="Address Line2" show="true" type="string" widget="text" inputtype="text" placeholder="Enter Address Line2" required="false" name="form_field41" key="form_field41"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow263">
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn365">
+                                                    <wm-form-field displayname="City" show="true" type="string" widget="text" inputtype="text" placeholder="Enter City" required="true" name="form_field42" key="form_field42"></wm-form-field>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn366">
+                                                    <wm-form-field displayname="State" show="true" type="list" widget="select" placeholder="Select State" dataset="bind:Variables.wsGetStates.dataSet.content" datafield="id" displayfield="name" required="true"
+                                                        name="form_field43" key="form_field43"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow264">
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn367">
+                                                    <wm-form-field displayname="Zip Code" show="true" type="string" widget="text" inputtype="text" placeholder="Enter Zip Code" required="true" regexp="^[0-9]{5,6}$" name="form_field44" key="form_field44"></wm-form-field>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn368">
+                                                    <wm-form-field displayname="Country" show="true" type="string" widget="text" inputtype="text" placeholder="Enter Country" required="true" name="form_field45" key="form_field45"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                        </wm-layoutgrid>
+                                    </wm-form>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn369"></wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-wizardstep>
+                    <wm-wizardstep title="Payment" name="wizardstepPaymentMobile" class="number step">
+                        <wm-layoutgrid name="layoutgrid93">
+                            <wm-gridrow name="gridrow265">
+                                <wm-gridcolumn columnwidth="4" name="gridcolumn370">
+                                    <wm-container class="summary-amount" margin="unset 12px unset -56px" height="440" name="container167" showindevice="md,lg">
+                                        <wm-container class="summary-amount-body" name="container168">
+                                            <wm-layoutgrid name="layoutgrid94">
+                                                <wm-gridrow name="gridrow266">
+                                                    <wm-gridcolumn columnwidth="12" name="gridcolumn371">
+                                                        <wm-label caption="Order Details" class="h3" margin="20px unset unset unset" name="label220"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow padding="24px unset unset unset" name="gridrow267">
+                                                    <wm-gridcolumn columnwidth="5" name="gridcolumn372">
+                                                        <wm-label caption="bind:phonevariant.name" class="h6 font-medium text-muted" name="label221"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="7" horizontalalign="right" name="gridcolumn373">
+                                                        <wm-label caption="bind:phonevariant.price | toCurrency: '$': '2'" class="h5 font-semibold" name="label222"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow padding="24px unset unset unset" name="gridrow268">
+                                                    <wm-gridcolumn columnwidth="5" name="gridcolumn374">
+                                                        <wm-label caption="bind:Widgets.PhonePricePlans1.selectedppriceplan ? Widgets.PhonePricePlans1.selectedppriceplan.name : selectedPlan ? selectedPlan.name : ''" class="h6 font-medium text-muted" name="label223"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="7" horizontalalign="right" name="gridcolumn375">
+                                                        <wm-label caption="bind:(Widgets.PhonePricePlans1.selectedppriceplan ? Widgets.PhonePricePlans1.selectedppriceplan.price : selectedPlan ? selectedPlan.price : 0) | toCurrency: '$': '2'" class="h5 font-semibold"
+                                                            name="label224"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow padding="24px unset" name="gridrow269">
+                                                    <wm-gridcolumn columnwidth="5" name="gridcolumn376">
+                                                        <wm-label caption="bind:selectedSim" class="h6 font-medium text-muted" name="label225"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="7" horizontalalign="right" name="gridcolumn377">
+                                                        <wm-label caption="bind:0 | toCurrency: '$': '2'" class="h5 font-semibold" name="label226"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow padding="24px unset unset unset" class="border-top" name="gridrow270">
+                                                    <wm-gridcolumn columnwidth="5" name="gridcolumn378">
+                                                        <wm-label caption="Taxes" class="h6 font-medium text-muted" name="label227"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="7" horizontalalign="right" name="gridcolumn379">
+                                                        <wm-label caption="bind:0 | toCurrency: '$': '2'" class="h5 font-semibold" name="label228"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                                <wm-gridrow padding="24px unset unset unset" name="gridrow271">
+                                                    <wm-gridcolumn columnwidth="5" name="gridcolumn380">
+                                                        <wm-label caption="Shipping" class="h6 font-medium text-muted" name="label229"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="7" horizontalalign="right" name="gridcolumn381">
+                                                        <wm-label caption="bind:16 | toCurrency: '$': '2'" class="h5 font-semibold" name="label230"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-container>
+                                        <wm-container class="summary-amount-footer" name="container169">
+                                            <wm-layoutgrid name="layoutgrid95">
+                                                <wm-gridrow name="gridrow272">
+                                                    <wm-gridcolumn columnwidth="5" name="gridcolumn382">
+                                                        <wm-label caption="Total" class="h5 font-medium text-muted" margin="8px unset unset unset" name="label231"></wm-label>
+                                                    </wm-gridcolumn>
+                                                    <wm-gridcolumn columnwidth="7" horizontalalign="right" name="gridcolumn383">
+                                                        <wm-label caption="bind:Variables.stvTotal.dataSet.dataValue | toCurrency: '$': '2'" class="h3 font-semibold" name="label232"></wm-label>
+                                                    </wm-gridcolumn>
+                                                </wm-gridrow>
+                                            </wm-layoutgrid>
+                                        </wm-container>
+                                    </wm-container>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn384">
+                                    <wm-form errormessage="" captionposition="top" title="" enctype="application/x-www-form-urlencoded" method="post" dataset="bind:Variables.stvPaymentFormFieldDetails.dataSet" captionalign="left" class="no-border" name="form9">
+                                        <wm-layoutgrid columns="1" name="layoutgrid96">
+                                            <wm-gridrow name="gridrow273">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn385">
+                                                    <wm-form-field name="form_field46" readonly="false" displayname="Paymnet Type" type="string" show="true" widget="switch" placeholder="" dataset="Card, Paypal" datafield="All Fields" defaultvalue="Card" key="form_field46"
+                                                        width="100%" class="payment-switch"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow274">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn386">
+                                                    <wm-form-field name="form_field47" readonly="false" displayname="Cardholder Name" type="string" show="true" widget="text" inputtype="text" placeholder="Enter Cardholder Name" required="true" key="form_field47"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow275">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn387">
+                                                    <wm-form-field name="form_field48" readonly="false" displayname="Card Number" type="string" show="true" widget="text" inputtype="text" placeholder="Enter Card Number" required="true" displayformat="9999 9999 9999 9999"
+                                                        key="form_field48"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow276">
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn388">
+                                                    <wm-form-field name="form_field49" displayname="Expiry Date" type="string" show="true" widget="text" inputtype="text" placeholder="Enter Expiry Date" required="true" displayformat="99/99" key="form_field49"></wm-form-field>
+                                                </wm-gridcolumn>
+                                                <wm-gridcolumn columnwidth="6" name="gridcolumn389">
+                                                    <wm-form-field name="form_field50" displayname="CVV" type="string" show="true" widget="text" inputtype="password" key="form_field50" required="true" placeholder="Enter CVV"></wm-form-field>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                            <wm-gridrow name="gridrow277">
+                                                <wm-gridcolumn columnwidth="12" name="gridcolumn390">
+                                                    <wm-container class="form-group" margin="unset unset 0px unset" name="container170">
+                                                        <wm-form-field name="form_field51" readonly="false" type="string" show="true" widget="checkbox" placeholder="" caption="Remember Choice" key="form_field51"></wm-form-field>
+                                                    </wm-container>
+                                                </wm-gridcolumn>
+                                            </wm-gridrow>
+                                        </wm-layoutgrid>
+                                    </wm-form>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn391"></wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-wizardstep>
+                </wm-wizard>
+                <wm-container name="container62_1" class="col-xs-4 footer-fixed-left" show="bind:type == 'Shop Phone'" showindevice="xs,sm">
+                    <wm-label padding="unset" name="label110_2" class="h2 font-semibold" caption="bind:Variables.stvTotal.dataSet.dataValue | toCurrency: '$': '2'" show="true"></wm-label>
+                    <wm-button class="btn-transparent p-0" caption="order details" type="button" margin="unset" name="button20" on-click="Widgets.dialogOrderSummaryMobile.open()" iconclass="wi wi-keyboard-arrow-down" iconposition="right" show="true"
+                        fontsize="12"></wm-button>
+                </wm-container>
+            </wm-gridcolumn>
+        </wm-gridrow>
+    </wm-layoutgrid>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="" iconclass="" name="dialogPortingCheckSuccess" showheader="false" class="modal-login">
+        <wm-dialogactions name="dialogactions1" show="false">
+            <wm-button class="btn-primary" caption="Close" on-click="closeDialog()" name="button8"></wm-button>
+        </wm-dialogactions>
+        <wm-layoutgrid name="layoutgrid26">
+            <wm-gridrow name="gridrow79">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn100" horizontalalign="center">
+                    <wm-picture resizemode="contain" picturesource="resources/images/imagelists/sucess.png" height="82" margin="32px unset 8px unset" name="picture3" width="100%"></wm-picture>
+                    <wm-label caption="Success" class="h3 font-bold" name="label71" textalign="center"></wm-label>
+                    <wm-label name="label50" caption="Your old number is eligible for porting to Turbo Mobile!" width="100%" class="h4 text-muted" textalign="center"></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow80">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn102" horizontalalign="center" padding="unset unset 10px unset">
+                    <wm-button class="btn-primary btn-block" caption="Continue" type="button" margin="24px unset unset unset" name="buttonContinuePorting" on-click="Widgets.dialogPortingCheckSuccess.close();buttonContinuePortingClick($event, widget)"></wm-button>
+                </wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+    </wm-dialog>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Payment Confirmation" iconclass="" name="dialogPaymentConfirmation" showheader="true" class="modal-login" closable="false">
+        <wm-dialogactions name="dialogactions2" show="false">
+            <wm-button class="btn-primary" caption="Close" on-click="closeDialog()" name="button11"></wm-button>
+        </wm-dialogactions>
+        <wm-layoutgrid name="layoutgrid28">
+            <wm-gridrow name="gridrow86">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn108" horizontalalign="center" class="label-column">
+                    <wm-label caption="Please click Confirm to pay for the following amount" name="label54" width="100%" class="h4 text-muted flex-col" textalign="left"></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow87">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn110" horizontalalign="center">
+                    <wm-label name="label57" caption="bind:Variables.stvTotal.dataSet.dataValue | toCurrency: '$': '2'" class="h1 font-semibold" margin="12px unset" textalign="left" width="100%"></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow88">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn111" horizontalalign="center" padding="10px 6px 10px unset" class="col-xs-6">
+                    <wm-button class="btn-default btn-block" caption="Cancel" type="button" name="button17" on-click="Widgets.dialogPaymentConfirmation.close()"></wm-button>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="6" name="gridcolumn194" padding="10px unset 10px 6px" horizontalalign="center" class="col-xs-6">
+                    <wm-button class="btn-primary btn-block" caption="Confirm" type="button" name="buttonConfirmPayment" on-click="Variables.svCreateOrder.invoke()"></wm-button>
+                </wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+    </wm-dialog>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Information" iconclass="wi wi-file-text" name="dialogPaymentSuccessful" showheader="false" class="modal-login">
+        <wm-dialogactions name="dialogactions3" show="false">
+            <wm-button class="btn-primary" caption="Close" on-click="closeDialog()" name="button13"></wm-button>
+        </wm-dialogactions>
+        <wm-layoutgrid name="layoutgrid30">
+            <wm-gridrow name="gridrow97">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn122" horizontalalign="center">
+                    <wm-picture resizemode="contain" name="picture2_1" picturesource="resources/images/imagelists/sucess.png" height="82px" margin="32px unset 8px unset" width="120px" pictureplaceholder="sucees-image"></wm-picture>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow92">
+                <wm-gridcolumn columnwidth="12" horizontalalign="center" name="gridcolumn117">
+                    <wm-label caption="Payment Successful!" name="label63" class="h3 font-bold" width="100%" textalign="center"></wm-label>
+                    <wm-label caption="Your order was placed successfully!" name="label64" width="100%" margin="5px unset unset unset" textalign="center" class="h4 text-muted font-medium"></wm-label>
+                    <wm-label caption="You can view your order details in the Orders section of your Account page." name="label65" margin="5px unset unset unset" width="100%" textalign="center" class="h4 text-muted"></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow93">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn123" padding="unset unset 10px unset">
+                    <wm-button class="btn-primary btn-block" caption="Go to Orders" type="button" margin="24px unset" name="buttonViewOrders" on-click="buttonViewOrdersClick($event, widget)"></wm-button>
+                    <wm-button class="btn-link btn-block" caption="Continue Shopping" type="button" name="buttonContinueShopping" on-click="buttonContinueShoppingClick($event, widget)"></wm-button>
+                </wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+    </wm-dialog>
+    <wm-dialog dialogtype="design-dialog" modal="true" title="Order Details" iconclass="" name="dialogOrderSummaryMobile" showheader="true" on-opened="dialogOrderSummaryMobileOpened($event, widget)" closable="false">
+        <wm-dialogactions name="dialogactions4" show="false">
+            <wm-button class="btn-primary" caption="Close" on-click="closeDialog()" name="button19"></wm-button>
+        </wm-dialogactions>
+        <wm-layoutgrid name="layoutgrid47">
+            <wm-gridrow name="gridrow128">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn183">
+                    <wm-container name="containerShopPhoneDetails" show="bind:type == 'Shop Phone'" class="border-bottom">
+                        <wm-layoutgrid name="layoutgrid45">
+                            <wm-gridrow name="gridrow126">
+                                <wm-gridcolumn columnwidth="2" name="gridcolumn179" class="col-xs-2">
+                                    <wm-picture resizemode="contain" name="picture5" picturesource="bind:phonevariant.phone.baseImage" width="53px" height="53px" class="order-summry-img"></wm-picture>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="10" name="gridcolumn180" class="col-xs-10" padding="unset unset unset 5px">
+                                    <wm-label padding="unset" name="label95" class="h4 font-semibold" caption="bind:phonevariant.phone.name" margin="0px unset"></wm-label>
+                                    <wm-label padding="unset" name="label96" caption="bind:phonevariant.phoneColors.color.name" width="100%" class="h6  text-muted"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                            <wm-gridrow name="gridrow127_1">
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn181" class="col-xs-6">
+                                    <wm-label padding="unset" name="label97" caption="without insurance" class="h6  text-muted" width="100%" textalign="left"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn182" horizontalalign="right" class="col-xs-6">
+                                    <wm-label padding="unset" name="label98" caption="bind:phonevariant.price | toCurrency: '$': '2'" class="h5 font-semibold" width="100%" textalign="right"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-container>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow125">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn178">
+                    <wm-container show="bind:type == 'Bring Your Own Phone'" name="containerBYOPSummary" class="border-bottom">
+                        <wm-layoutgrid name="layoutgrid46">
+                            <wm-gridrow name="gridrow128_1">
+                                <wm-gridcolumn columnwidth="12" name="gridcolumn184">
+                                    <wm-label padding="unset" class="h4 font-semibold" caption="bind:Widgets.GetPhoneBrandsList1.selecteditem.name  + ' ' + Widgets.selectPhoneModel.displayValue" name="label99"></wm-label>
+                                    <wm-label padding="unset" caption="bind:Widgets.selectPhoneModel.displayValue" name="label100" class="h5" show="false"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-container>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow135">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn193">
+                    <wm-container name="container62" show="bind:selectedPlan.id" class="border-bottom" margin="unset unset 0px unset">
+                        <wm-layoutgrid name="layoutgrid48">
+                            <wm-gridrow name="gridrow136">
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn195" class="col-xs-6">
+                                    <wm-label padding="unset" name="label103" caption="bind:selectedPlan.name" class="h4 font-semibold"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn196" horizontalalign="right" class="col-xs-6">
+                                    <wm-label padding="unset" name="label110_1" class="h5 font-semibold" caption="bind:selectedPlan.price | toCurrency: '$': '2'"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-container>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow122">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn172">
+                    <wm-container name="containerSelectedMobileAddons" class="border-bottom" show="bind:Variables.stvSelectedMobileAddons.dataSet.length > 0">
+                        <wm-list listclass="list-group" itemclass="list-group-item" template="true" template-name="Contact List" itemsperrow="xs-1 sm-1 md-1 lg-1" class="media-list" datafield="All Fields" statehandler="URL" name="stvSelectedMobileAddonsList1"
+                            dataset="bind:Variables.stvSelectedMobileAddons.dataSet" navigation="None" groupby="addOnCategory.name" show="true">
+                            <wm-listtemplate layout="inline" name="listtemplate15">
+                                <wm-layoutgrid name="layoutgrid47_1">
+                                    <wm-gridrow name="gridrow129_1">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn182_2" class="col-xs-6"></wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn183_1" class="col-xs-6"></wm-gridcolumn>
+                                    </wm-gridrow>
+                                    <wm-gridrow name="gridrow130">
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn184_1" class="col-xs-6">
+                                            <wm-label padding="unset" name="label106_1" caption="bind:Widgets.stvSelectedMobileAddonsList1.currentItem.name + ' ' + Widgets.stvSelectedMobileAddonsList1.currentItem.description" class="h6  text-muted"></wm-label>
+                                            <wm-label padding="unset" caption="bind:Widgets.stvSelectedMobileAddonsList1.currentItem.description" name="label106_2" class="h6 text-muted font-semibold" margin="unset 0px" show="false"></wm-label>
+                                        </wm-gridcolumn>
+                                        <wm-gridcolumn columnwidth="6" name="gridcolumn185_1" horizontalalign="right" class="col-xs-6">
+                                            <wm-label padding="unset" caption="bind:Widgets.stvSelectedMobileAddonsList1.currentItem.price | toCurrency: '$': '2'" name="label107" class="h5 font-semibold" width="100%"></wm-label>
+                                        </wm-gridcolumn>
+                                    </wm-gridrow>
+                                </wm-layoutgrid>
+                            </wm-listtemplate>
+                        </wm-list>
+                    </wm-container>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow134">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn191">
+                    <wm-container name="container63" show="bind:selectedSim" class="border-bottom">
+                        <wm-layoutgrid name="layoutgrid49">
+                            <wm-gridrow name="gridrow138">
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn199" class="col-xs-6">
+                                    <wm-label padding="unset" name="label104" caption="bind:selectedSim" class="h4 font-semibold" textalign="left"></wm-label>
+                                </wm-gridcolumn>
+                                <wm-gridcolumn columnwidth="6" name="gridcolumn200" horizontalalign="right" class="col-xs-6">
+                                    <wm-label padding="unset" name="label106" caption="bind:0 | toCurrency: '$': '2'" class="h5 font-semibold"></wm-label>
+                                </wm-gridcolumn>
+                            </wm-gridrow>
+                        </wm-layoutgrid>
+                    </wm-container>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow131_1">
+                <wm-gridcolumn columnwidth="12" name="gridcolumn186_1" class="col-xs-12">
+                    <wm-container name="container61" show="bind:Widgets.form8.formWidgets.form_field40.datavalue" class="border-bottom">
+                        <wm-label padding="unset" name="label108" class="h4 font-semibold" caption="Address" margin="unset 0px"></wm-label>
+                        <wm-label padding="unset" caption="bind:(Widgets.form8.formWidgets.form_field40.datavalue || '') + (Widgets.form8.formWidgets.form_field41.datavalue ? ', ' + Widgets.form8.formWidgets.form_field41.datavalue : '') + (Widgets.form8.formWidgets.form_field42.datavalue ? ', ' + Widgets.form8.formWidgets.form_field42.datavalue : '') + (Widgets.form8.formWidgets.form_field43.displayValue ? ', ' + Widgets.form8.formWidgets.form_field43.displayValue : '') + (Widgets.form8.formWidgets.form_field44.datavalue ? ', ' + Widgets.form8.formWidgets.form_field44.datavalue : '') + (Widgets.form8.formWidgets.form_field45.datavalue ? ', ' + Widgets.form8.formWidgets.form_field45.datavalue : '')"
+                            name="label109" width="100%" class="h6 text-muted"></wm-label>
+                    </wm-container>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow123">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn174" class="col-xs-6" horizontalalign="left">
+                    <wm-label padding="unset" name="label91_1" caption="Taxes" class="h6 text-muted" textalign="left"></wm-label>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="6" name="gridcolumn175" horizontalalign="right" class="col-xs-6">
+                    <wm-label caption="bind:0 | toCurrency: '$': '2'" class="h5 font-semibold" name="label92" width="100%" textalign="right"></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow124" class="border-bottom">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn176" class="col-xs-6" horizontalalign="left">
+                    <wm-label padding="unset" name="label93_1" caption="Shipping" class="h6 text-muted" textalign="left"></wm-label>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="6" name="gridcolumn177" horizontalalign="right" class="col-xs-6">
+                    <wm-label caption="bind:16 | toCurrency: '$': '2'" class="h5 font-semibold" name="label94" width="100%" textalign="right"></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+            <wm-gridrow name="gridrow132">
+                <wm-gridcolumn columnwidth="6" name="gridcolumn188" class="col-xs-6" padding="12px unset unset unset" horizontalalign="left">
+                    <wm-label padding="unset" name="label110" class="h6 text-muted" caption="Total" textalign="left"></wm-label>
+                </wm-gridcolumn>
+                <wm-gridcolumn columnwidth="6" name="gridcolumn189" horizontalalign="right" class="col-xs-6">
+                    <wm-label padding="unset" class="h2 font-semibold" caption="bind:Variables.stvTotal.dataSet.dataValue | toCurrency: '$': '2'" name="label111" width="100%" textalign="right"></wm-label>
+                </wm-gridcolumn>
+            </wm-gridrow>
+        </wm-layoutgrid>
+    </wm-dialog>
+</wm-prefab-container>

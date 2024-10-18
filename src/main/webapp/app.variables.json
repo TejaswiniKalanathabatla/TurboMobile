@@ -1,0 +1,308 @@
+{
+  "appNotification" : {
+    "_id" : "wm-appErrorHandler-wm.NotificationVariable-1454664620943",
+    "name" : "appNotification",
+    "owner" : "App",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "class",
+      "value" : "Error",
+      "type" : "list"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "bottom right",
+      "type" : "list"
+    } ],
+    "operation" : "toast"
+  },
+  "goToPage_BringYourOwnPhone" : {
+    "_id" : "wm-goToPage_BringYourOwnPhone-wm.NavigationVariable-1682307397779",
+    "name" : "goToPage_BringYourOwnPhone",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "BringYourOwnPhone",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Configuration" : {
+    "_id" : "wm-goToPage_Configuration-wm.NavigationVariable-1682601298164",
+    "name" : "goToPage_Configuration",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Configuration",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Home" : {
+    "_id" : "wm-goToPage_Home-wm.NavigationVariable-1682061430433",
+    "name" : "goToPage_Home",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "Home",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_Main" : {
+    "_id" : "wm-wm.NavigationVariable1389180517517",
+    "name" : "goToPage_Main",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "operation" : "gotoPage",
+    "pageName" : "Main"
+  },
+  "goToPage_OrdersList" : {
+    "_id" : "wm-goToPage_Orders-wm.NavigationVariable-1682321764602",
+    "name" : "goToPage_OrdersList",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "OrdersList",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_ProductDetails" : {
+    "_id" : "wm-goToPage_ProductDetails-wm.NavigationVariable-1682320928811",
+    "name" : "goToPage_ProductDetails",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "ProductDetails",
+      "type" : "string"
+    } ],
+    "operation" : "gotoPage",
+    "pageName" : "ProductDetails",
+    "dataSet" : [ {
+      "type" : "integer",
+      "target" : "product_id",
+      "value" : "bind:Widgets.PhonesList1.selectedphone"
+    } ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_ProductList" : {
+    "_id" : "wm-goToPage_ProductList-wm.NavigationVariable-1682320917123",
+    "name" : "goToPage_ProductList",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "ProductList",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_ShopBroadbands" : {
+    "_id" : "wm-goToPage_ShopBroadbands-wm.NavigationVariable-1682307490663",
+    "name" : "goToPage_ShopBroadbands",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "ShopBroadbands",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_ShopPhones" : {
+    "_id" : "wm-goToPage_ShopPhones-wm.NavigationVariable-1682307181118",
+    "name" : "goToPage_ShopPhones",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ {
+      "target" : "pageName",
+      "value" : "ShopPhones",
+      "type" : "string"
+    } ],
+    "operation" : "gotoPage",
+    "pageName" : "ShopPhones",
+    "dataSet" : [ {
+      "type" : "integer",
+      "target" : "product_variant_id",
+      "value" : "bind:Widgets.ProductDetails1.productvariantid"
+    } ],
+    "pageTransitions" : "none"
+  },
+  "goToPage_test" : {
+    "_id" : "wm-goToPage_test-wm.NavigationVariable-1682061945190",
+    "name" : "goToPage_test",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "test",
+    "dataSet" : [ ],
+    "pageTransitions" : "none"
+  },
+  "loggedInUser" : {
+    "_id" : "wm-loggedInUser-wm.Variable-1682509573159",
+    "name" : "loggedInUser",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "name" : "",
+      "id" : "",
+      "tenantId" : "",
+      "isAuthenticated" : false,
+      "isSecurityEnabled" : true,
+      "roles" : [ ]
+    },
+    "type" : "string",
+    "isList" : false,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "loginAction" : {
+    "_id" : "wm-loginAction-wm.LoginVariable-1682509573159",
+    "name" : "loginAction",
+    "owner" : "App",
+    "category" : "wm.LoginVariable",
+    "dataBinding" : [ ],
+    "dataSet" : { },
+    "type" : "string",
+    "saveInPhonegap" : false,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "useDefaultSuccessHandler" : true
+  },
+  "logoutAction" : {
+    "_id" : "wm-logoutAction-wm.LogoutVariable-1682509573159",
+    "name" : "logoutAction",
+    "owner" : "App",
+    "category" : "wm.LogoutVariable",
+    "type" : "string",
+    "saveInPhonegap" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "redirectTo" : "Home",
+    "useDefaultSuccessHandler" : true
+  },
+  "stvBreadcrumbDataset" : {
+    "_id" : "wm-stvBreadcrumbDataset-wm.Variable-1682669831446",
+    "name" : "stvBreadcrumbDataset",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : [ {
+      "label" : "Shop",
+      "icon" : "",
+      "link" : "#/Home",
+      "id" : "Home",
+      "children" : [ {
+        "label" : "Shop Phone",
+        "icon" : "",
+        "link" : "#/ProductList",
+        "id" : "ProductList",
+        "children" : [ {
+          "label" : "?",
+          "icon" : "",
+          "link" : "#/ProductDetails",
+          "id" : "ProductDetails"
+        }, {
+          "label" : "?",
+          "icon" : "",
+          "link" : "#/ShopPhones",
+          "id" : "ShopPhones"
+        } ]
+      }, {
+        "label" : "Shop Broadband",
+        "icon" : "",
+        "link" : "#/ShopBroadbands",
+        "id" : "ShopBroadbands"
+      }, {
+        "label" : "Bring Your Own Phone",
+        "id" : "BringYourOwnPhone",
+        "icon" : "",
+        "link" : "#/BringYourOwnPhone",
+        "children" : [ {
+          "label" : "",
+          "icon" : "",
+          "link" : "",
+          "id" : ""
+        } ]
+      }, {
+        "label" : "Configuration",
+        "id" : "Configuration",
+        "icon" : "",
+        "link" : "#/Configuration"
+      } ]
+    } ],
+    "type" : "entry",
+    "isList" : true,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "supportedLocale" : {
+    "_id" : "wm-wm.Variable1402640443182",
+    "name" : "supportedLocale",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataSet" : {
+      "en" : "English"
+    },
+    "type" : "string",
+    "isList" : false,
+    "saveInPhonegap" : false
+  },
+  "svGetThemeDetail" : {
+    "_id" : "wm-svGetThemeDetail-wm.ServiceVariable-1716552399304",
+    "name" : "svGetThemeDetail",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "size",
+      "value" : "5000",
+      "type" : "string"
+    } ],
+    "type" : "GetThemeDetail.RootResponse",
+    "service" : "GetThemeDetail",
+    "operation" : "invoke",
+    "operationId" : "GetThemeDetail_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onSuccess" : "svGetThemeDetailonSuccess(variable, data, options)",
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "svGetThemeType" : {
+    "_id" : "wm-svGetThemeType-wm.ServiceVariable-1716552426709",
+    "name" : "svGetThemeType",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "size",
+      "value" : "5000",
+      "type" : "string"
+    } ],
+    "type" : "GetThemeType.RootResponse",
+    "service" : "GetThemeType",
+    "operation" : "invoke",
+    "operationId" : "GetThemeType_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "onSuccess" : "svGetThemeTypeonSuccess(variable, data, options)",
+    "startUpdate" : true,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  }
+}

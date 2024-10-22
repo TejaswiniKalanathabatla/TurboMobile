@@ -29,8 +29,8 @@ jobs:
         mvn clean install -Dprofile.props.file="deployment.properties"
         
     - name: List target directory
-       run:|
-       ls -l TurboMobile/target
+      run: |
+        ls -l TurboMobile/target
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2

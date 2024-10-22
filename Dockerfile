@@ -3,7 +3,7 @@ FROM tejaswini25/dockerimage:PROD.5
 
 
 # Copy any additional files or configurations to the container
-COPY target/TurboMobile.war /usr/local/tomcat/webapps/ROOT.war
+COPY /home/runner/work/TurboMobile/TurboMobile/target/TurboMobile.war /usr/local/tomcat/webapps/ROOT.war
 
 
 # Expose any necessary ports
